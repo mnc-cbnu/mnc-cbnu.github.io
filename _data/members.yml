@@ -24,10 +24,10 @@ current:
   #     image: /assets/img/members/alex.jpg
 
 alumni:
-  # - name: Minho Park
-  #   role: Ph.D. 2023
-  #   topic: Samsung Research
-  #   image: /assets/img/members/alumni1.jpg
+  - name: test
+    role: test
+    topic: test
+    image: test
   # - name: Jiyoon Lee
   #   role: M.S. 2022
   #   topic: Naver
