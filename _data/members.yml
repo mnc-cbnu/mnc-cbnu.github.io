@@ -1,21 +1,27 @@
-faculty:
-  - name: Prof. John Doe
-    role: Principal Investigator
-    email: johndoe@univ.edu
-    image: /assets/prof.jpg
+current:
+  phd:
+    - name: John Doe
+      role: Ph.D. Student
+      topic: Wireless Networks
+      image: /assets/img/members/john.jpg
+      email: john@example.com
+    - name: Jane Smith
+      role: Ph.D. Student
+      topic: Edge AI
+      image: /assets/img/members/jane.jpg
 
-phd:
-  - name: Alice Kim
-    role: Ph.D. Student
-    topic: Wireless Networks
-    image: /assets/alice.jpg
-
-ms:
-  - name: Bob Lee
-    role: M.S. Student
-    topic: Machine Learning
-    image: /assets/bob.jpg
+  ms:
+    - name: Alex Kim
+      role: M.S. Student
+      topic: Federated Learning
+      image: /assets/img/members/alex.jpg
 
 alumni:
-  - name: Jane Park
-    role: Ph.D. 2023 → Samsung Research
+  - name: Minho Park
+    role: Ph.D. 2023
+    topic: Samsung Research
+    image: /assets/img/members/alumni1.jpg
+  - name: Jiyoon Lee
+    role: M.S. 2022
+    topic: Naver
+    image: /assets/img/members/alumni2.jpg
