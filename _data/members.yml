@@ -1,0 +1,21 @@
+faculty:
+  - name: Prof. John Doe
+    role: Principal Investigator
+    email: johndoe@univ.edu
+    image: /assets/prof.jpg
+
+phd:
+  - name: Alice Kim
+    role: Ph.D. Student
+    topic: Wireless Networks
+    image: /assets/alice.jpg
+
+ms:
+  - name: Bob Lee
+    role: M.S. Student
+    topic: Machine Learning
+    image: /assets/bob.jpg
+
+alumni:
+  - name: Jane Park
+    role: Ph.D. 2023 → Samsung Research
