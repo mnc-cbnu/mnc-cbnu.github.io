@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="hero">
+    <img src="{{ '/assets/hero.jpg' | relative_url }}" alt="Lab banner Image">
+  </div>
+  {% include navbar.html %}
+  <main class="container">
+    {{ content }}
+  </main>
+</body>
+</html>
