@@ -3,12 +3,19 @@
     <div class="nav-title">
       <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     </div>
-    <div class="nav-links">
-      <a href="{{ '/research' | relative_url }}">Research</a>
-      <a href="{{ '/publications' | relative_url }}">Publications</a>
-      <a href="{{ '/people' | relative_url }}">People</a>
-      <a href="{{ '/join' | relative_url }}">Join</a>
-      <a href="{{ '/contact' | relative_url }}">Contact</a>
-    </div>
+    <ul class="nav-links">
+      <li><a href="{{ '/professor' | relative_url }}">Professor</a></li>
+      <li><a href="{{ '/lab' | relative_url }}">Lab</a></li>
+
+      <li class="dropdown">
+        <a href="{{ '/member' | relative_url }}">Member ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ '/member/current' | relative_url }}">Current</a></li>
+          <li><a href="{{ '/member/alumni' | relative_url }}">Alumni</a></li>
+        </ul>
+      </li>
+
+      <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
+    </ul>
   </div>
 </nav>
