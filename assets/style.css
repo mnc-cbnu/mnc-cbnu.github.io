@@ -58,6 +58,7 @@ body {
   color: #444;
   font-size: 16px;
   padding: 8px 4px;
+  list-style: none;
 }
 .nav-links > li > span {
   margin: 0 20px;
@@ -70,11 +71,14 @@ h1, h2, h3 {
   font-weight: 600;
   margin-top: 32px;
 }
+.dropdown {
+  position: relative;
+}
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
-  left: 24px;
+  left: 0;
   background: #fff;
   border: 1px solid #ddd;
   min-width: 140px;
