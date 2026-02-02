@@ -5,4 +5,4 @@ baseurl: ""
 url: "https://mnc-cbnu.github.io"
 
 markdown: kramdown
-theme: jekyll-theme-minimal
+theme: null
