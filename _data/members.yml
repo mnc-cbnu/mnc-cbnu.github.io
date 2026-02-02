@@ -2,17 +2,17 @@ current:
   phd:
     - name: Jongpil Youn
       role: Ph.D. Student
-      topic: -
+      topic: none
       image: /assets/img/members/john.jpg
       email: whdvlf1919@chungbuk.ac.kr
     - name: Irina Em
       role: Ph.D. Student
-      topic: -
+      topic: none
       image: /assets/img/members/john.jpg
       email: ira.em@chungbuk.ac.kr
     - name: Jeongtak Na
       role: Ph.D. Student
-      topic: -
+      topic: none
       image: /assets/img/members/john.jpg
       email: jeongtak_na@chungbuk.ac.kr
     
