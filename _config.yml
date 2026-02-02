@@ -1,20 +1,8 @@
 title: MNC-LAB
 description: ""
 baseurl: ""
-<<<<<<< HEAD
-<<<<<<< HEAD
-url: "https://mnc-lab.github.io"
 
-markdown: kramdown
-theme: null
-=======
-=======
->>>>>>> 17aa064ca54ec2ae7d6641665d9a8fe822c0a55b
 url: "https://mnc-cbnu.github.io"
 
 markdown: kramdown
 theme: jekyll-theme-minimal
-<<<<<<< HEAD
->>>>>>> 17aa064 (first)
-=======
->>>>>>> 17aa064ca54ec2ae7d6641665d9a8fe822c0a55b
