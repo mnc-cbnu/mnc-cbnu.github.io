@@ -5,4 +5,8 @@ title: Alumni
 
 <h1>Alumni</h1>
 
-{% include member-grid.html list=site.data.members.alumni %}
+<div class="member-grid">
+  {% for m in site.data.members.alumni %}
+    {% include member-card.html member=m %}
+  {% endfor %}
+</div>

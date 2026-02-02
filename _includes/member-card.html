@@ -1,5 +1,6 @@
 <div class="member-card">
-  <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+  <img src="{{ member.image | default: '/assets/img/members/default.jpg' | relative_url }}"
+       alt="{{ member.name }}">
   <div class="member-card-details">
     <h3>{{ member.name }}</h3>
     <p>{{ member.role }}</p>
