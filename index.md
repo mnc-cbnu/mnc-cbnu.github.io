@@ -8,7 +8,7 @@ title: Home
 <div class="home-video">
   <video autoplay muted loop playsinline 
          style="width:100%; max-height:500px; object-fit: contain;">
-    <source src="/assets/videos/home.mp4" type="video/mp4">
+    <source src="/assets/videos/home_4x.mp4" type="video/mp4">
   </video>
 </div>
 
