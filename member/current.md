@@ -1,10 +1,10 @@
-<div class="member-card">
-  <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
-  <div class="member-card-details">
-    <h3>{{ member.name }}</h3>
-    <p>{{ member.role }}</p>
-    {% if member.topic %}
-      <p class="member-topic">{{ member.topic }}</p>
-    {% endif %}
-  </div>
+---
+layout: default
+title: Current Members
+---
+<h1>Current Members</h1>
+<div class="member-grid">
+  {% for m in site.data.members.current %}
+    {% include member-card.html member=m %}
+  {% endfor %}
 </div>
