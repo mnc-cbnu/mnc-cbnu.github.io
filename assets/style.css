@@ -30,15 +30,15 @@ a {
 /* Navbar */
 
 .navbar {
-  border-bottom: 1px solid #e5e5e5;
-  background: #fff;
+  border-bottom: none;
+  background: #000;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .nav-container {
-  background: #000;
+  /* background: #000; */
   max-width: 1100px;
   margin: 0 auto;
   padding: 12px 20px;
@@ -57,6 +57,7 @@ a {
 }
 
 .nav-links > li > a {
+  color: #888;
   font-size: 15px;
   font-weight: 500;
   padding: 6px 4px;
@@ -66,9 +67,16 @@ a {
 }
 
 .nav-links > li > a:hover {
-  color: #0056b3;
+  color: #ddd;
 }
-
+.nav-links,
+.nav-links li,
+.dropdown-menu,
+.dropdown-menu li {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
 /* =========================
    Dropdown (Hover Stable)
 ========================= */
@@ -96,6 +104,7 @@ a {
   padding: 6px 0;
   display: none;
   z-index: 2000;
+  overflow: hidden;
 }
 
 .dropdown:hover > .dropdown-menu {
@@ -108,10 +117,9 @@ a {
 
 .dropdown-menu li a {
   display: block;
-  padding: 8px 14px;
+  width: 100%;
+  box-sizing: border-box;
   font-size: 13px;
-  line-height: 1.25;
-  white-space: nowrap;
 }
 
 .dropdown-menu li a:hover {
