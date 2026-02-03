@@ -14,8 +14,7 @@ title: Publications
     <ul class="publication-list">
       {% for paper in types.journal %}
         <li>
-          <strong>{{ paper.title }}</strong><br>
-          {{ paper.authors }}
+          <strong>{{ paper.title }}</strong><br> {{ paper.authors }}
         </li>
       {% endfor %}
     </ul>
@@ -26,9 +25,14 @@ title: Publications
     <ul class="publication-list">
       {% for paper in types.conference %}
         <li>
-          <strong>{{ paper.title }}</strong>, {{ paper.authors }}
+          <strong>{{ paper.title }}</strong><br> {{ paper.authors }}
         </li>
       {% endfor %}
     </ul>
+  {% unless forloop.last %}
+    <br>
+    <hr class="year-divider">
+    <br>
+  {% endunless %}
   {% endif %}
 {% endfor %}

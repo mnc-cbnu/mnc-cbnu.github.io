@@ -262,3 +262,11 @@ img {
 .publication-list li {
   margin-bottom: 0.5em;
 }
+
+
+/* 연도별 구분선 스타일 */
+.year-divider {
+  border: 0;
+  border-top: 2px solid #ccc;
+  margin: 2em 0;
+}
