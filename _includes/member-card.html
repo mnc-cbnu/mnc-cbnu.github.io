@@ -1,11 +1,18 @@
 <div class="member-card">
-  <img src="{{ member.image | default: '/assets/img/members/default.jpg' | relative_url }}"
-       alt="{{ member.name }}">
-  <div class="member-card-details">
-    <h3>{{ member.name }}</h3>
-    <p>{{ member.role }}</p>
+  <img
+    src="{{ member.image | default: '/assets/img/members/default.png' }}"
+    alt="{{ member.name }}"
+    onerror="this.src='/assets/img/members/default.png'"
+  />
+
+  <div class="member-info">
+    <div class="member-name">{{ member.name }}</div>
+    <div class="member-role">{{ member.role }}</div>
     {% if member.topic %}
-      <p class="member-topic">{{ member.topic }}</p>
+      <div class="member-affiliation">{{ member.topic }}</div>
+    {% endif %}
+    {% if member.email %}
+      <div class="member-email">{{ member.email }}</div>
     {% endif %}
   </div>
 </div>

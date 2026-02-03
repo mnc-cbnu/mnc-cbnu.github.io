@@ -17,18 +17,18 @@ current:
       email: jeongtak_na@chungbuk.ac.kr
     
 
-  # ms:
+  ms:
   #   - name: Alex Kim
   #     role: M.S. Student
   #     topic: Federated Learning
   #     image: /assets/img/members/alex.jpg
 
 alumni:
-  - name: test
-    role: test
-    topic: test
-    image: test
-  # - name: Jiyoon Lee
-  #   role: M.S. 2022
-  #   topic: Naver
-  #   image: /assets/img/members/alumni2.jpg
+  phd:
+    - name: test
+      role: test
+      topic: test
+      image: test
+      email: test
+
+  ms:

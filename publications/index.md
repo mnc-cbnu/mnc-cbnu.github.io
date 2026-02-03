@@ -4,4 +4,4 @@ title: Home
 ---
 
 # {{ site.title }}
-논문, 등등
+논문, 등등?
