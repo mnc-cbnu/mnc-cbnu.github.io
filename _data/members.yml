@@ -25,10 +25,11 @@ current:
 
 alumni:
   phd:
+    
+
+  ms:
     - name: test
       role: test
       topic: test
       image: test
       email: test
-
-  ms:

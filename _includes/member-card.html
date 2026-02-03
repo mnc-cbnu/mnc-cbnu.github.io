@@ -1,8 +1,8 @@
 <div class="member-card">
   <img
-    src="{{ member.image | default: '/assets/img/members/default.png' }}"
+    src="{{ member.image | default: '/assets/img/members/default.jpg' }}"
     alt="{{ member.name }}"
-    onerror="this.src='/assets/img/members/default.png'"
+    onerror="this.onerror=null;this.src='/assets/img/members/default.jpg';"
   />
 
   <div class="member-info">
