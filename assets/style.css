@@ -253,3 +253,12 @@ img {
     font-size: 14px;
   }
 }
+.publication-list {
+  list-style: disc;        /* marker 표시 */
+  padding-left: 1.5em;     /* marker와 글자 간격 */
+  margin-bottom: 1em;
+}
+
+.publication-list li {
+  margin-bottom: 0.5em;
+}

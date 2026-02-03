@@ -1,10 +1,85 @@
-- year: 2025
-  title: "Fast mmWave Beam Tracking Using Neural Estimation"
-  authors: J. Doe, A. Kim
-  venue: IEEE TWC
-  link: https://example.com
-
-- year: 2024
-  title: "Cross-layer Optimization for 6G Networks"
-  authors: J. Doe, B. Lee
-  venue: IEEE INFOCOM
+2026:
+  journal:
+  conference:
+2025:
+  journal:
+    - title: "Content Storage Management and Precaching Scheme in Content-Centric-Network-Based Internet of Vehicles. IEEE Internet of Things Journal 12(9): 12927-12947 (2025)"
+      authors: "Youngju Nam, Hyunseok Choi, Euisin Lee"
+  conference:
+2024:
+  journal:
+    - title: "Resource Cluster-Based Resource Search and Allocation Scheme for Vehicular Clouds in Vehicular Ad Hoc Networks. Sensors 24(7): 2175 (2024)"
+      authors: "Hyunseok Choi, Yoonhyeong Lee, Gayeong Kim, Euisin Lee, Youngju Nam"
+    - title: "Adaptive Mobility-Based IoT LoRa Clustering Communication Scheme. Electronics 13(11): 2052 (2024)"
+      authors: "Dick Mugerwa,Youngju Nam,Hyunseok Choi,Yongje Shin andEuisin Lee"
+    - title: "Particle Swarm Optimization-Based Content Delivery Protocol for UAV VAENTs. IEEE Access 13: 1594-1608 (2024)"
+      authors: "Yongje Shin, Hyun-Seok Choi, Youngju Nam, Euisin Lee"
+    - title: "Mobility-Based Multi-Hop Content Precaching Scheme in Content-Centric Vehicular Networks. Electronics 13(22): 4367 (2024)"
+      authors: "Hyunseok Choi, Youngju Nam, Gayeong Kim, Euisin Lee"
+  conference:
+2023:
+  journal:
+    - title: "Traffic Optimized Content Precaching Scheme Based on Tolerable Delay Time in Content-Centric Vehicular Networks. IEEE Access 11: 53862-53879 (2023)"
+      authors: "Youngju Nam, Hyunseok Choi, Yongje Shin, Euisin Lee"
+    - title: "Implicit Overhearing Node-Based Multi-Hop Communication Scheme in IoT LoRa Networks. Sensors 23(8): 3874 (2023)"
+      authors: "Dick Mugerwa, Youngju Nam, Hyunseok Choi, Yongje Shin, Euisin Lee"
+    - title: "Multiple Precaching Vehicle Selection Scheme Based on Set Ranking in Intermittently Connected Vehicular Networks. Sensors 23(13): 5800 (2023)"
+      authors: "Youngju Nam, Jaejeong Bang, Hyunseok Choi, Yongje Shin, Seungmin Oh, Euisin Lee"
+  conference:
+    - title: "Delay Tolerable Precaching Scheme in Content-Centric Vehicular Networks. CCNC 2023: 849-854"
+      authors: "Youngju Nam, Hyunseok Choi, Yongje Shin, Dick Mugerwa, Euisin Lee"
+    - title: "Set Ranking-Based Precaching Protocol in Vehicular Ad hoc Networks. CCNC 2023: 963-964"
+      authors: "Youngju Nam, Hyunseok Choi, Jaejeong Bang, Yongje Shin, Euisin Lee"
+    - title: "Enhanced Hybrid Energy-Efficient Distributed Clustering Protocol for IoT-Based WSNs with Multiple Sinks. SAS 2023: 1-6"
+      authors: "Youngju Nam, Dick Mugerwa, Hyunseok Choi, Youngmi Kwon, Euisin Lee"
+    - title: "Multi-hop Precaching scheme with Relaying in Intermittently Connected Vehicular Networks. SmartNets 2023: 1-6"
+      authors: "Gayeong Kim, Youngju Nam, Hyunseok Choi, Euisin Lee"
+2022:
+  journal:
+    - title: "Particle Swarm Optimization Video Streaming Service in Vehicular Ad-Hoc Networks. IEEE Access 10: 102710-102723 (2022)"
+      authors: "Yongje Shin, Hyun-Seok Choi, Youngju Nam, Hyunchong Cho, Euisin Lee"
+    - title: "The partial cloud member replacement for reconstructing vehicular clouds in VANETs: Reactive and proactive schemes. Ad Hoc Networks 136: 102959 (2022)"
+      authors: "Hyunseok Choi, Youngju Nam, Yongje Shin, Euisin Lee"
+    - title: "SF-Partition-Based Clustering and Relaying Scheme for Resolving Near-Far Unfairness in IoT Multihop LoRa Networks. Sensors 22(23): 9332 (2022)"
+      authors: "Dick Mugerwa, Youngju Nam, Hyunseok Choi, Yongje Shin, Euisin Lee"
+    - title: "Cooperative Content Precaching Scheme Based on the Mobility Information of Vehicles in Intermittently Connected Vehicular Networks. Electronics 11(22): 3663 (2022)"
+      authors: "Youngju Nam,Jaejeong Bang,Hyunseok Choi,Yongje Shin andEuisin Lee"
+    - title: "Expected Area-Based Real-Time Routing Protocol for Supporting Mobile Sinks in Wireless Sensor Networks. Electronics 11(20): 3350 (2022)"
+      authors: "Youngju Nam,Hyunseok Choi,Yongje Shin,Soochang Park andEuisin Lee"
+    - title: "RSU-Aided Optimal Member Replacement Scheme with Improved Mobility Prediction for Vehicular Clouds in VANETs. Electronics 11(17): 2787 (2022)"
+      authors: "Youngju Nam,Hyunseok Choi,Yongje Shin,Dick Mugerwa andEuisin Lee"
+    - title: "Design and Evaluation of Schemes for Replacing Multiple Member Vehicles in Vehicular Clouds. Electronics 11(13): 2085 (2022)"
+      authors: "Hyunseok Choi,Youngju Nam,Yongje Shin,Kwansoo Jung andEuisin Lee"
+  conference:
+    - title: "Implicit Multi-hop Communication Scheme based on Overhearing in IoT LoRa Networks. ICUFN 2022: 190-195"
+      authors: "Dick Mugerwa, Youngju Nam, Hyunchong Cho, Hyunseok Choi, Yongje Shin, Euisin Lee"
+2021:
+  journal:
+    - title: "Adaptive Content Precaching Scheme Based on the Predictive Speed of Vehicles in Content-Centric Vehicular Networks. Sensors 21(16): 5376 (2021) "
+      authors: "Youngju Nam, Hyun-Seok Choi, Yongje Shin, Euisin Lee, Eun-Kyu Lee"
+    - title: "Video Packet Distribution Scheme for Multimedia Streaming Services in VANETs. Sensors 21(21): 7368 (2021)"
+      authors: "Yongje Shin, Hyunseok Choi, Youngju Nam, Euisin Lee"
+  conference:
+2020:
+  journal:
+    - title: "Data delivery protocol using the trajectory information on a road map in VANETs. Ad Hoc Networks 107: 102260"
+      authors: "Yongje Shin, Hyun-Seok Choi, Youngju Nam, Euisin Lee"
+  conference:
+    - title: "Cooperative Content Downloading Protocol Based on the Mobility Information of Vehicles in Intermittently Connected Vehicular Networks. ICOIN 2020: 273-277"
+      authors: "Jaejeong Bang, Youngju Nam, Hyun-Seok Choi, Euisin Lee, Seungmin Oh"
+2019:
+  journal:
+  conference:
+    - title: "RSU-driven Cloud Construction and Management Mechanism in VANETs. CloudNet 2019: 1-4"
+      authors: "Yoonhyeong Lee, Hyun-Seok Choi, Youngju Nam, Sungjin Park, Euisin Lee"
+    - title: "Efficient Multipath Routing Protocol Against Path Failures in Wireless Sensor Networks. WMNC 2019: 136-140"
+      authors: "Jinhyuk Yim, Jaejeong Bang, Youngju Nam, Yongje Shin, Euisin Lee"
+    - title: "Mobility-aware Distributed Proactive Caching in Content-Centric Vehicular Networks. WMNC 2019: 175-180"
+      authors: "Sungjin Park, Seungmin Oh, Youngju Nam, Jaejeong Bang, Euisin Lee"
+2018:
+  journal:
+  conference:
+    - title: "Efficient Data Delivery Protocol Using Vehicle Mobility Information in VANETs. ICUFN 2018: 644-649"
+      authors: "Yongje Shin, Hyun-Seok Choi, Youngjoo Nam, Euisin Lee"
+    - title: "Multi-hop Vehicular Cloud Construction with Connection Time based Resource Allocation in VANETs. APCC 2018: 100-105"
+      authors: "Hyun-Seok Choi, Youngju Nam, Jaejeong Bang, Euisin Lee"

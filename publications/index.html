@@ -1,0 +1,34 @@
+---
+layout: default
+title: Publications
+---
+
+<h1>Publications</h1>
+
+{% for year in site.data.publications | sort_natural: "reverse" %}
+  <h2>{{ year[0] }}</h2>
+  {% assign types = year[1] %}
+
+  {% if types.journal %}
+    <h3>Journal</h3>
+    <ul class="publication-list">
+      {% for paper in types.journal %}
+        <li>
+          <strong>{{ paper.title }}</strong><br>
+          {{ paper.authors }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if types.conference %}
+    <h3>Conference</h3>
+    <ul class="publication-list">
+      {% for paper in types.conference %}
+        <li>
+          <strong>{{ paper.title }}</strong>, {{ paper.authors }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}

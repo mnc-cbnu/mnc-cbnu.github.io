@@ -3,6 +3,8 @@ layout: default
 title: Home
 ---
 
+<h1>Welcome to MNC Lab</h1>
+<p>Our lab focuses on wireless communications and networks...</p>
 <div class="home-video">
   <video autoplay muted loop playsinline 
          style="width:100%; max-height:500px; object-fit: contain;">
@@ -10,5 +12,3 @@ title: Home
   </video>
 </div>
 
-<h1>Welcome to MNC Lab</h1>
-<p>Our lab focuses on wireless communications and networks...</p>
