@@ -31,10 +31,10 @@ We aim to design scalable, intelligent, and efficient communication systems.
   <li>Network protocol emulation platform</li>
 </ul>
 
-<hr>
+<!-- <hr> -->
 
-<h2>Join Us</h2>
+<!-- <h2>Join Us</h2>
 <p>
 We are looking for motivated undergraduate, master’s, and Ph.D. students.
 Please contact <strong>eslee@cbnu.ac.kr</strong> if interested.
-</p>
+</p> -->

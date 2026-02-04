@@ -5,34 +5,37 @@ title: Publications
 
 <h1>Publications</h1>
 
-{% for year in site.data.publications | sort_natural: "reverse" %}
-<h2>{{ year[0] }}</h2>
-{% assign types = year[1] %}
+{% assign years = site.data.publications %}
 
-{% if types.journal %}
-<h3>Journal</h3>
-<ul class="publication-list">
-  {% for paper in types.journal %}
-  <li>
-    <strong>{{ paper.title }}</strong><br> {{ paper.authors }}
-  </li>
-  {% endfor %}
-</ul>
-{% endif %}
+{% for year in years %}
+<details {% if forloop.first %}open{% endif %}>
+  <summary><strong>{{ year[0] }}</strong></summary>
 
-{% if types.conference %}
-<h3>Conference</h3>
-<ul class="publication-list">
-  {% for paper in types.conference %}
-  <li>
-    <strong>{{ paper.title }}</strong><br> {{ paper.authors }}
-  </li>
-  {% endfor %}
-</ul>
-{% unless forloop.last %}
-<br>
-<hr class="year-divider">
+  {% assign types = year[1] %}
 
-{% endunless %}
-{% endif %}
+  {% if types.journal %}
+  <h3>Journal</h3>
+  <ul class="publication-list">
+    {% for paper in types.journal %}
+    <li>
+      <strong>{{ paper.title }}</strong><br>
+      {{ paper.authors }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if types.conference %}
+  <h3>Conference</h3>
+  <ul class="publication-list">
+    {% for paper in types.conference %}
+    <li>
+      <strong>{{ paper.title }}</strong><br>
+      {{ paper.authors }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</details>
+<hr>
 {% endfor %}

@@ -8,14 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+
 <body>
-  <div class="banner">
-    <img src="{{ '/assets/banner.jpg' | relative_url }}" alt="Lab banner Image">
+  <div id="page-wrapper">
+
+    <div class="banner">
+      <img src="{{ '/assets/banner.jpg' | relative_url }}" alt="Lab banner Image">
+    </div>
+
+    {% include navbar.html %}
+
+    <main id="main-area">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
   </div>
-  {% include navbar.html %}
-  <main class="container">
-    {{ content }}
-  </main>
 </body>
 
 </html>
