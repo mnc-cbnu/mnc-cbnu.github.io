@@ -26,7 +26,7 @@ We aim to design scalable, intelligent, and efficient communication systems.
 
 <h2>Facilities</h2>
 <ul>
-  <li>High-performance GPU servers</li>
+  <!-- <li>High-performance GPU servers</li> -->
   <li>Vehicular mobility simulation testbed</li>
   <li>Network protocol emulation platform</li>
 </ul>
