@@ -1,14 +1,17 @@
 current:
   phd:
     - name: Jongpil Youn
+      role: Ph.D. Student
       topic: none
       image: /assets/img/members/john.jpg
       email: whdvlf1919@chungbuk.ac.kr
     - name: Irina Em
+      role: Ph.D. Student
       topic: none
       image: /assets/img/members/john.jpg
       email: ira.em@chungbuk.ac.kr
     - name: Jeongtak Na
+      role: Ph.D. Student
       topic: none
       image: /assets/img/members/john.jpg
       email: jeongtak_na@chungbuk.ac.kr
@@ -23,49 +26,64 @@ current:
 alumni:
   phd:
     - name: Yongje Shin
+      role: Ph.D. Student
       topic: test
       image: test
     - name: Hyunseok Choi
+      role: Ph.D. Student
       topic: test
       image: test
     - name: Youngju Nam
+      role: Ph.D. Student
       topic: test
       image: test
     - name: Mugerwa Dick
+      role: Ph.D. Student
       topic: test
       image: test
 
   ms:
     - name: Yoon Min
+      role: M.S. Student
       topic: test
       image: test
     - name: Hoewon Kim
+      role: M.S. Student
       topic: test
       image: test
     - name: Jaeyeong Jang
+      role: M.S. Student
       topic: test
       image: test
     - name: Jinhyuk Yim
+      role: M.S. Student
       topic: test
       image: test
     - name: Hyunkyu Lee
+      role: M.S. Student
       topic: test
       image: test
     - name: Jaejeong Bang
+      role: M.S. Student
       topic: test
       image: test
     - name: Donggeun Shin
+      role: M.S. Student
       topic: test
       image: test
     - name: Yoonhyeong Lee
+      role: M.S. Student
       topic: test
       image: test
     - name: Sungjin Park
+      role: M.S. Student
       topic: test
       image: test
     - name: Gayeong Kim
+      role: M.S. Student
       topic: test
       image: test
     - name: Baigalmaa Khulan
+      role: M.S. Student
       topic: test
       image: test
