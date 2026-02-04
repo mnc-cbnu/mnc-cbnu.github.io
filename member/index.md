@@ -10,7 +10,7 @@ title: Members
 
 <h2>Current Members</h2>
 
-{% if current.phd %}
+{% if current.phd and current.phd.size > 0 %}
 <h3>Ph.D. Students</h3>
 <div class="member-grid">
   {% for m in current.phd %}
@@ -19,7 +19,7 @@ title: Members
 </div>
 {% endif %}
 
-{% if current.ms %}
+{% if current.ms and current.ms.size > 0 %}
 <h3>M.S. Students</h3>
 <div class="member-grid">
   {% for m in current.ms %}
@@ -32,7 +32,7 @@ title: Members
 
 <h2>Alumni</h2>
 
-{% if alumni %}
+{% if alumni and alumni.size > 0 %}
 <div class="member-grid">
   {% for m in alumni %}
     {% include member-card.html member=m %}

@@ -16,12 +16,7 @@ current:
       image: /assets/img/members/john.jpg
       email: jeongtak_na@chungbuk.ac.kr
     
-
-  ms:
-  #   - name: Alex Kim
-  #     role: M.S. Student
-  #     topic: Federated Learning
-  #     image: /assets/img/members/alex.jpg
+  ms: []
 
 alumni:
   phd:
