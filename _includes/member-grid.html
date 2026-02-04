@@ -1,17 +1,17 @@
 <div class="member-grid">
   {% for m in include.list %}
-    <div class="member-card">
-      <img src="{{ m.image | relative_url }}" alt="{{ m.name }}">
-      <h3>{{ m.name }}</h3>
-      <p>{{ m.role }}</p>
-      {% if m.topic %}
-        <p class="member-topic">{{ m.topic }}</p>
-      {% endif %}
-      {% if m.email %}
-        <p class="member-email">
-          <a href="mailto:{{ m.email }}">{{ m.email }}</a>
-        </p>
-      {% endif %}
-    </div>
+  <div class="member-card">
+    <img src="{{ m.image | relative_url }}" alt="{{ m.name }}">
+    <h3>{{ m.name }}</h3>
+    <p>{{ m.role }}</p>
+    {% if m.topic %}
+    <p class="member-topic">{{ m.topic }}</p>
+    {% endif %}
+    {% if m.email %}
+    <p class="member-email">
+      <a href="mailto:{{ m.email }}">{{ m.email }}</a>
+    </p>
+    {% endif %}
+  </div>
   {% endfor %}
 </div>
