@@ -168,8 +168,9 @@ def main():
             f.write(f"date: {date_str}\n")
             f.write(f"permalink: /{target_conf['folder']}/{safe_title}/\n")
             f.write("---\n\n")
+            f.write(f"## {title}\n\n")
             f.write(content_md)
-        
+
         print(f"[생성 완료] ({category}) {filepath}")
 
         new_entry = {
@@ -190,11 +191,6 @@ def main():
     
     print("모든 작업 완료!")
     
-
-if __name__ == "__main__":
-    main()
-
-
 
 if __name__ == "__main__":
     main()
