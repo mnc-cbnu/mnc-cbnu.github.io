@@ -44,4 +44,4 @@ jobs:
         with:
           commit_message: "Update news from Notion (Auto)"
           branch: main # 현재 사용중인 브랜치명 (main 또는 master)
-          file_pattern: "news/* notice/* _data/*.yml" # 변경된 파일만 지정
+          file_pattern: .
