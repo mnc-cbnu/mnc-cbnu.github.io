@@ -1,4 +1,7 @@
 issue:
-  - text: 남영주 교수의 논문이 AIMS Mathematics에 publication
-    date: 2026/02/04
-    url: /news/남영주-교수의-논문이-AIMS-Mathematics에-publication/
+- text: 남영주 교수의 논문이 AIMS Mathematics에 publication
+  date: 2026/02/04
+  url: /news/남영주-교수의-논문이-AIMS-Mathematics에-publication/
+- text: test1
+  date: 2026/02/05
+  url: /news/test1/
