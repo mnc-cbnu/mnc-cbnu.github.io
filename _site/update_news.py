@@ -154,7 +154,7 @@ def main():
         
         with open(filepath, "w", encoding="utf-8") as f:
             f.write("---\n")
-            f.write("layout: default\n")
+            f.write("layout: pretty_post\n")
             f.write(f"title: {title}\n")
             f.write(f"date: {date_str}\n")
             f.write(f"permalink: {target_url}\n")
