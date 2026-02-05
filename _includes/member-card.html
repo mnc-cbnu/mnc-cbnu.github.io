@@ -8,6 +8,9 @@
     {% if member.topic %}
     <div class="member-affiliation">{{ member.topic }}</div>
     {% endif %}
+    {% if member.workplace %}
+    <div class="member-affiliation">{{ member.workplace }}</div>
+    {% endif %}
     {% if member.email %}
     <div class="member-email">{{ member.email }}</div>
     {% endif %}
