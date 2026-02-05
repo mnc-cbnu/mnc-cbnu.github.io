@@ -17,6 +17,8 @@ jobs:
       # 1. 내 코드를 내려받음
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.MY_PAT }}
 
       # 2. 파이썬 설치
       - name: Set up Python
