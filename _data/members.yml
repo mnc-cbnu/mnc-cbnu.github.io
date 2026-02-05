@@ -18,19 +18,19 @@ current:
 alumni:
   - name: Yongje Shin
     role: Ph.D. Student
-    topic: test
+    workplace: School of Smart IT, Semyung University
     image: test
   - name: Hyunseok Choi
     role: Ph.D. Student
-    topic: test
+    workplace: Department of Computer Engineering, Seowon University
     image: test
   - name: Youngju Nam
     role: Ph.D. Student
-    topic: test
+    workplace: Department of Software, Kunsan National University
     image: test
-  - name: Mugerwa Dick
+  - name: Mugerwa Dickson
     role: Ph.D. Student
-    topic: test
+    workplace: Kyambogo University
     image: test
 
   - name: Yoon Min
