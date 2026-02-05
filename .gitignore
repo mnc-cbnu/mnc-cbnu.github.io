@@ -1,0 +1,19 @@
+# 1. Jekyll(홈페이지) 결과물 및 캐시 (가장 중요!)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.jekyll-perf
+
+# 2. Python 실행 시 생기는 임시 파일 (자동화 스크립트용)
+__pycache__/
+*.pyc
+
+# 3. 운영체제 자동 생성 파일 (Mac/Windows)
+.DS_Store
+Thumbs.db
+
+# 4. 보안 및 환경 설정 (혹시 모를 유출 방지)
+.env
+.vscode/
+.idea/
