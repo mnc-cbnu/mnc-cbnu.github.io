@@ -347,9 +347,12 @@ body {
   flex-direction: column;
 }
 
+
 #main-area {
   flex: 1;
+  flex-direction: column;
   padding: 20px 15px;
+
 }
 
 footer {
@@ -392,3 +395,108 @@ summary::after {
 details[open] summary::after {
   transform: rotate(90deg);
 }
+
+.home-grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "area-intro area-intro"
+    "area-papers area-papers"
+    "area-notice area-news";
+
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  /* 간격을 조금 더 넓혀서 시원하게 */
+  margin-top: 20px;
+}
+
+.box {
+  background-color: #fff;
+  /* border: 1px solid #e0e0e0; <-- 테두리 삭제 */
+  border-radius: 12px;
+  padding: 30px;
+  /* 내부 여백을 조금 더 줌 */
+  /* 테두리 대신 부드러운 그림자로 구분감 주기 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* 3. 영역 지정 (왼쪽 색상 포인트 테두리 제거됨) */
+.area-intro {
+  grid-area: area-intro;
+  /* border-left 삭제 */
+}
+
+.area-papers {
+  grid-area: area-papers;
+  /* border-left 삭제 */
+}
+
+.area-notice {
+  grid-area: area-notice;
+}
+
+.area-news {
+  grid-area: area-news;
+}
+
+/* 제목 스타일 */
+.box h2,
+.box h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* h2는 조금 더 크게 */
+.box h2 {
+  font-size: 1.5rem;
+}
+
+/* h3는 조금 작게 */
+.box h3 {
+  font-size: 1.25rem;
+}
+
+/* 본문 글씨 스타일 */
+.box p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 리스트 아이템 스타일 (공지/뉴스) */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  /* 아이템 사이의 옅은 구분선은 유지 (필요 없으면 삭제 가능) */
+  color: #444;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.date {
+  color: #999;
+  font-size: 0.9rem;
+  min-width: 90px;
+  text-align: right;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .home-grid-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    grid-template-areas:
+      "area-intro"
+      "area-papers"
+      "area-notice"
+      "area-news";
+  }
+
+  .box {
+    padding: 20px;
+  }

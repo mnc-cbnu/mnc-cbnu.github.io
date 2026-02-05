@@ -1,0 +1,45 @@
+name: Update News from Notion
+
+# 언제 실행할 것인가?
+on:
+  workflow_dispatch: # 1. 수동으로 버튼 눌렀을 때 (교수님용)
+  schedule:
+    - cron: "0 0 * * *" # 2. 매일 자정(UTC)에 자동 실행 (선택사항)
+
+permissions:
+  contents: write # 깃허브에 파일을 쓸 수 있는 권한 부여
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 내 코드를 내려받음
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. 파이썬 설치
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      # 3. 필요한 라이브러리 설치
+      - name: Install dependencies
+        run: |
+          pip install requests pyyaml
+
+      # 4. 파이썬 스크립트 실행 (비밀키 주입)
+      - name: Run update script
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID }}
+        run: python update_news.py
+
+      # 5. 변경 사항이 있으면 깃허브에 저장(Commit & Push)
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update news from Notion (Auto)"
+          branch: main # 현재 사용중인 브랜치명 (main 또는 master)
+          file_pattern: "news/* _data/news.yml" # 변경된 파일만 지정
