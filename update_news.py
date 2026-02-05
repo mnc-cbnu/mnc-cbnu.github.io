@@ -159,7 +159,6 @@ def main():
             f.write(f"date: {date_str}\n")
             f.write(f"permalink: {target_url}\n")
             f.write("---\n\n")
-            f.write(f"## {title}\n\n")
             f.write(content_md)
         print(f"[생성] {filepath}")
 
