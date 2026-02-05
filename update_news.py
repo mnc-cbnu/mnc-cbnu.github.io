@@ -29,13 +29,11 @@ def get_pages_by_status(status_option):
     """특정 상태(Status)인 페이지들을 가져옵니다."""
     url = f"https://api.notion.com/v1/databases/{DATABASE_ID}/query"
     
-    # [주의] Notion 속성 이름이 "Status"가 아니라 "상태"라면 아래 property를 수정하세요.
-    # [주의] 속성 타입이 '선택(Select)'인지 '상태(Status)'인지에 따라 구조가 다릅니다.
-    # 아래는 '선택(Select)' 타입 기준입니다.
+    # [수정됨] 속성 타입이 'Status(상태)'이므로 'status' 키를 사용해야 합니다.
     payload = {
         "filter": {
             "property": "Status", 
-            "select": {
+            "status": {  # <--- 여기를 select에서 status로 변경했습니다.
                 "equals": status_option
             }
         }
@@ -84,10 +82,12 @@ def notion_blocks_to_markdown(blocks):
 
 def update_notion_status(page_id, new_status):
     url = f"https://api.notion.com/v1/pages/{page_id}"
+    
+    # [수정됨] 상태 업데이트도 'status' 키를 사용해야 합니다.
     payload = {
         "properties": {
-            "Status": { # 속성 이름 확인
-                "select": {
+            "Status": { 
+                "status": {  # <--- 여기를 select에서 status로 변경했습니다.
                     "name": new_status
                 }
             }
@@ -113,18 +113,28 @@ def main():
     # [기능 1] 게시글 생성/업데이트 (Ready -> Published)
     # ---------------------------------------------------------
     ready_pages = get_pages_by_status("Ready")
+    print(f"발견된 Ready 페이지 수: {len(ready_pages)}") # 디버깅용 로그 추가
+
     for page in ready_pages:
         try:
             category = page["properties"]["Category"]["select"]["name"]
         except (KeyError, TypeError):
+            print(f"[Skip] 카테고리 없음: {page['id']}")
             continue
             
-        if category not in DATA_FILES: continue
+        if category not in DATA_FILES: 
+            print(f"[Skip] 알 수 없는 카테고리: {category}")
+            continue
         target_conf = DATA_FILES[category]
         
         props = page["properties"]
-        title = props["이름"]["title"][0]["plain_text"]
-        date_str = props["Date"]["date"]["start"]
+        try:
+            title = props["이름"]["title"][0]["plain_text"]
+            date_str = props["Date"]["date"]["start"]
+        except:
+            print("[Skip] 제목이나 날짜가 없음")
+            continue
+
         page_id = page["id"]
         
         safe_title = title.replace(" ", "-").replace("/", "-")
@@ -157,12 +167,15 @@ def main():
         yaml_data[category]['issue'].append(new_entry)
 
         update_notion_status(page_id, "Published")
+        print(f"[상태변경] {title} -> Published")
 
     # ---------------------------------------------------------
     # [기능 2] 게시글 삭제 (Delete -> Deleted)
     # ---------------------------------------------------------
+    # 노션 상태값: Unpublish (삭제 대기)
     unpublish_pages = get_pages_by_status("Unpublish") 
-    
+    print(f"발견된 Unpublish 페이지 수: {len(unpublish_pages)}")
+
     for page in unpublish_pages:
         try:
             category = page["properties"]["Category"]["select"]["name"]
@@ -171,7 +184,10 @@ def main():
         if category not in DATA_FILES: continue
         target_conf = DATA_FILES[category]
         
-        title = page["properties"]["이름"]["title"][0]["plain_text"]
+        try:
+            title = page["properties"]["이름"]["title"][0]["plain_text"]
+        except: title = "Untitled"
+
         safe_title = title.replace(" ", "-").replace("/", "-")
         filename = f"{safe_title}.md"
         filepath = os.path.join(target_conf["folder"], filename)
@@ -190,15 +206,15 @@ def main():
         
         print(f"[목록제거] 리스트에서 숨김 처리됨: {title}")
 
-        # 3. 노션 상태 변경 (Unpublished) -> 데이터는 노션에 안전하게 남음
+        # 3. 노션 상태 변경 (Unpublished)
         update_notion_status(page["id"], "Unpublished")
+        print(f"[상태변경] {title} -> Unpublished")
 
     # ---------------------------------------------------------
     # [기능 3] 날짜순 정렬 및 저장
     # ---------------------------------------------------------
     for cat, data in yaml_data.items():
         # 날짜 오름차순 정렬 (옛날 -> 최신)
-        # 이유: Jekyll에서 'reversed'를 쓰기 때문에, 파일에는 옛날게 위에 있어야 함
         data['issue'].sort(key=lambda x: x['date'])
         
         path = DATA_FILES[cat]["yaml"]
