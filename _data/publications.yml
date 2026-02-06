@@ -194,6 +194,11 @@
       VANETs. Ad Hoc Networks 107, 102260, 2020, 2020 (2020)
     authors: Y Shin, H Choi, Y Nam, E Lee
     page_id: 2ffd280f-69a3-81ea-bd70-e34bcfb61604
+  - title: Proactive Caching Strategy Based on Optimal Content Distribution in Content
+      Centric Vehicular Networks. KIPS Transactions on Computer and Communication
+      Systems 9 (6), 131-136, 2020, 2020 (2020)
+    authors: S Park, E Lee
+    page_id: 2ffd280f-69a3-81fd-b1a6-f32affb829eb
   conference:
   - title: Cooperative content downloading protocol based on the mobility information
       of vehicles in intermittently connected vehicular networks. 2020 International
@@ -319,6 +324,11 @@
       Systems 5 (12), 455-462, 2016, 2016 (2016)
     authors: H Kim, E Lee
     page_id: 2ffd280f-69a3-81f7-bd78-e87271e28355
+  - title: Input System Implementation for Virtual Reality Headset Using Electro-oculogram
+      (EOG). The Journal of the Korea Contents Association 16 (9), 739-750, 2016,
+      2016 (2016)
+    authors: Y Nam, K Kwon, B Kim, E Lee, N Kim
+    page_id: 2ffd280f-69a3-81fe-aa5f-d949264533b2
   conference:
   - title: Farthest destination selection and shortest path connection strategy for
       efficient multicasting in vehicular ad hoc networks. 2016 13th IEEE Annual Consumer
@@ -575,6 +585,10 @@
       (2010)
     authors: E Lee, S Park, F Yu, SH Kim
     page_id: 2ffd280f-69a3-81f6-9bf2-dc8a0c3f4c2e
+  - title: 'Elastic routing: a novel geographic routing for mobile sinks in wireless
+      sensor networks. IET communications 4 (6), 716-727, 2010, 2010 (2010)'
+    authors: F Yu, S Park, E Lee, SH Kim
+    page_id: 2ffd280f-69a3-81fd-b02b-c253a5a5239a
   conference:
   - title: Communication scheme to support sink mobility in multi-hop clustered wireless
       sensor networks. 2010 24th IEEE International Conference on Advanced Information
@@ -851,7 +865,11 @@
     authors: Y Choi, S Park, E Lee, F Yu, SH Kim
     page_id: 2ffd280f-69a3-81f8-8a26-f27ea85a70f5
 2007:
-  journal: []
+  journal:
+  - title: Efficient Overlay Multicast Protocol using Unicast Routing Information
+      in Mobile Ad Hoc Networks. 한국정보과학회 학술발표논문집 34 (1A), 134-135, 2007, 2007 (2007)
+    authors: 우부재， 최영환， 박수창， 이의신， 전야， 박호성， 김상하
+    page_id: 2ffd280f-69a3-81fa-9368-dbdf7a0cb4e3
   conference:
   - title: Data Dissemination Protocol Supporting the Mobility for Tightly Coupled
       Sink Groups in Wireless Sensor Networks. Proceedings of the Korean Information
