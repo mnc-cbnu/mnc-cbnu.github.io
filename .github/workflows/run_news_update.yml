@@ -2,9 +2,11 @@ name: Update News from Notion
 
 # 언제 실행할 것인가?
 on:
-  workflow_dispatch: # 1. 수동으로 버튼 눌렀을 때 (교수님용)
+  push:
+    branches: ["main"]
+  workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *" # 2. 매일 자정(UTC)에 자동 실행 (선택사항)
+    - cron: "0 15 * * *"
 
 permissions:
   contents: write # 깃허브에 파일을 쓸 수 있는 권한 부여

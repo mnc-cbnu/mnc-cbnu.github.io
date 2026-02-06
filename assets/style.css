@@ -500,53 +500,54 @@ details[open] summary::after {
   .box {
     padding: 20px;
   }
+}
 
-  .paper-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+.paper-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .paper-item {
-    border-bottom: 1px solid #eee;
-    padding: 15px 0;
-  }
+.paper-item {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
 
-  .paper-item:last-child {
-    border-bottom: none;
-  }
+.paper-item:last-child {
+  border-bottom: none;
+}
 
-  .paper-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 4px;
-    line-height: 1.4;
-  }
+.paper-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
 
-  .paper-meta {
-    font-size: 0.9em;
-    color: #0056b3;
-    /* 학회명 강조색 (파란 계열) */
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
+.paper-meta {
+  font-size: 0.9em;
+  color: #0056b3;
+  /* 학회명 강조색 (파란 계열) */
+  font-weight: 500;
+  margin-bottom: 4px;
+}
 
-  .paper-authors {
-    font-size: 0.85em;
-    color: #666;
-  }
+.paper-authors {
+  font-size: 0.85em;
+  color: #666;
+}
 
-  .more-link {
-    display: inline-block;
-    margin-top: 15px;
-    font-size: 0.9em;
-    color: #888;
-    text-decoration: none;
-    border-bottom: 1px dashed #ccc;
-  }
+.more-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #888;
+  text-decoration: none;
+  border-bottom: 1px dashed #ccc;
+}
 
-  .more-link:hover {
-    color: #333;
-    border-bottom: 1px solid #333;
-  }
+.more-link:hover {
+  color: #333;
+  border-bottom: 1px solid #333;
+}
