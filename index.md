@@ -10,18 +10,38 @@ title: Home
     <h2>👋 연구실 소개</h2>
     <p>
       충북대학교 모바일 네트워크 컴퓨팅 연구실(MNC Lab)입니다.<br>
-      테두리가 제거되어 훨씬 깔끔하고 현대적인 느낌을 줍니다.
-      내용에 집중할 수 있는 디자인입니다.
     </p>
   </div>
 
   <div class="box area-papers">
-    <h2>📝 주요 연구 및 논문</h2>
-    <p>최신 연구 성과를 이곳에 작성합니다.</p>
-    <ul style="color: #555; padding-left: 20px; line-height: 1.6;">
-      <li>2024, IEEE Access, "Advanced Mobile Computing Architectures..."</li>
-      <li>2023, Sensors, "Efficient IoT Network Protocols..."</li>
-    </ul>
+    <h2>🏆 Selected Research</h2>
+    <p style="color:#666; margin-bottom: 20px;">
+      Recent selected publications from our lab.
+    </p>
+
+    {% if site.data.featured %}
+      <ul class="paper-list">
+        {% for paper in site.data.featured limit:5 %}
+          <li class="paper-item">
+            <div class="paper-title">{{ paper.title }}</div>
+
+            <div class="paper-meta">
+              {{ paper.venue }}, {{ paper.year }}
+            </div>
+            
+            <div class="paper-authors">{{ paper.authors }}</div>
+          </li>
+        {% endfor %}
+      </ul>
+      
+      <a href="/publications/" class="more-link">View all publications &rarr;</a>
+      
+    {% else %}
+      <p style="color: #999; padding: 20px 0;">
+        업데이트 된 주요 논문이 없습니다.<br>
+        (Notion에서 Selected 체크 후 업데이트 해주세요.)
+      </p>
+    {% endif %}
   </div>
 
   <div class="box area-notice">
