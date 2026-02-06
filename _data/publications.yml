@@ -1,5 +1,10 @@
 2025:
-  journal: []
+  journal:
+  - title: 'Energy Balancing and Lifetime Extension: A Random Quorum-Based Sink Location
+      Service Scheme for Wireless Sensor Networks. Sensors 25 (13), 4078, 2025, 2025
+      (2025)'
+    authors: Y Shin, J Lee, E Lee
+    page_id: 2ffd280f-69a3-81d6-829e-e7a37c106882
   conference:
   - title: Precaching Scheme based on Mobility and Caching Information of Vehicles
       in Intermittently Connected Vehicular Networks. 2025 8th International Conference
@@ -16,12 +21,34 @@
       IEEE Access, 2024, 2024 (2024)
     authors: Y Shin, HS Choi, Y Nam, E Lee
     page_id: 2ffd280f-69a3-8163-b0c2-e11630469b96
+  - title: Content Storage Management and Precaching Scheme in Content-Centric Networks-Based
+      Internet of Vehicle. IEEE Internet of Things Journal, 2024, 2024 (2024)
+    authors: Y Nam, H Choi, E Lee
+    page_id: 2ffd280f-69a3-817f-a02a-dd20b96de474
+  - title: Resource cluster-based resource search and allocation scheme for vehicular
+      clouds in vehicular ad hoc networks. Sensors 24 (7), 2175, 2024, 2024 (2024)
+    authors: H Choi, Y Lee, G Kim, E Lee, Y Nam
+    page_id: 2ffd280f-69a3-8184-8906-da7f4ec9828d
+  - title: Adaptive Mobility-Based IoT LoRa Clustering Communication Scheme. Electronics
+      13 (11), 2052, 2024, 2024 (2024)
+    authors: D Mugerwa, Y Nam, H Choi, Y Shin, E Lee
+    page_id: 2ffd280f-69a3-81aa-802e-cf83b6d6c7bc
   conference:
   - title: Relaying Vehicle Selection Algorithm at the Best Selection Region in Content-Centric
       Vehicular Networks. Proceedings of the 2024 12th International Conference on
       Computer and …, 2024, 2024 (2024)
     authors: G Kim, J Youn, Y Nam, E Lee
     page_id: 2ffd280f-69a3-8121-8131-d57284c8aa62
+  - title: Logical space composition of iot for a scalable and adaptable smart environment.
+      2024 International Conference on Information Networking (ICOIN), 614-618, 2024,
+      2024 (2024)
+    authors: H An, W Park, S Park, E Lee
+    page_id: 2ffd280f-69a3-818b-9538-da4b98c06787
+  - title: Locker-Scale Positioning and Dynamic Access Key Management for IoT-based
+      Smart Delivery Services. 2024 International Conference on Information Networking
+      (ICOIN), 521-525, 2024, 2024 (2024)
+    authors: W Park, H An, S Park, E Lee
+    page_id: 2ffd280f-69a3-81b1-85ba-dba10fbe6f87
 2023:
   journal:
   - title: Traffic optimized content precaching scheme based on tolerable delay time
@@ -33,12 +60,36 @@
       connected vehicular networks. Sensors 23 (13), 5800, 2023, 2023 (2023)
     authors: Y Nam, J Bang, H Choi, Y Shin, S Oh, E Lee
     page_id: 2ffd280f-69a3-815d-b2c0-c2986f7a3b79
+  - title: Implicit overhearing node-based multi-hop communication scheme in IoT LoRa
+      networks. Sensors 23 (8), 3874, 2023, 2023 (2023)
+    authors: D Mugerwa, Y Nam, H Choi, Y Shin, E Lee
+    page_id: 2ffd280f-69a3-81a1-bade-feb7481e78f5
   conference:
   - title: Set Ranking-Based Precaching Protocol in Vehicular Ad hoc Networks. 2023
       IEEE 20th Consumer Communications & Networking Conference (CCNC), 963-964, 2023,
       2023 (2023)
     authors: Y Nam, H Choi, J Bang, Y Shin, E Lee
     page_id: 2ffd280f-69a3-8118-afab-d717bb80d6e5
+  - title: Delay Tolerable Precaching Scheme in Content-Centric Vehicular Networks.
+      2023 IEEE 20th Consumer Communications & Networking Conference (CCNC), 849-854,
+      2023, 2023 (2023)
+    authors: Y Nam, H Choi, Y Shin, D Mugerwa, E Lee
+    page_id: 2ffd280f-69a3-8192-9999-cba7433d4f46
+  - title: Multi-hop Precaching scheme with Relaying in Intermittently Connected Vehicular
+      Networks. 2023 International Conference on Smart Applications, Communications
+      and …, 2023, 2023 (2023)
+    authors: G Kim, Y Nam, H Choi, E Lee
+    page_id: 2ffd280f-69a3-819a-8ae3-f9f2f0b8a65f
+  - title: Distributive V2V Multi-hop Pre-caching scheme based on bidirectional vehicle
+      mobility information in CCVNs. Annual Conference of KIPS, 113-114, 2023, 2023
+      (2023)
+    authors: MK Kim, TH Kim, GY Shim, GY Kim, ES Lee
+    page_id: 2ffd280f-69a3-81d5-bf10-eff11fb185ce
+  - title: Enhanced Hybrid Energy-Efficient Distributed Clustering Protocol for IoT-Based
+      WSNs with Multiple Sinks. 2023 IEEE Sensors Applications Symposium (SAS), 1-6,
+      2023, 2023 (2023)
+    authors: D Mugerwa, Y Nam, H Choi, Y Kwon, E Lee
+    page_id: 2ffd280f-69a3-81f2-bdbf-e8d47c181a8f
 2022:
   journal:
   - title: Cost-Efficient and Reliable Communication Scheme for Supporting a Mobile
@@ -69,7 +120,29 @@
       in Vehicular Clouds. Electronics 11 (13), 2085, 2022, 2022 (2022)
     authors: H Choi, Y Nam, Y Shin, K Jung, E Lee
     page_id: 2ffd280f-69a3-815b-b852-cae6623b8164
-  conference: []
+  - title: RSU-Aided Optimal Member Replacement Scheme with Improved Mobility Prediction
+      for Vehicular Clouds in VANETs. Electronics 11 (17), 2787, 2022, 2022 (2022)
+    authors: Y Nam, H Choi, Y Shin, D Mugerwa, E Lee
+    page_id: 2ffd280f-69a3-81ae-924c-cdd9e88324da
+  - title: Expected Area-Based Real-Time Routing Protocol for Supporting Mobile Sinks
+      in Wireless Sensor Networks. Electronics 11 (20), 3350, 2022, 2022 (2022)
+    authors: Y Nam, H Choi, Y Shin, S Park, E Lee
+    page_id: 2ffd280f-69a3-81d2-aa76-dc560303921e
+  - title: Particle swarm optimization video streaming service in vehicular ad-hoc
+      networks. IEEE Access 10, 102710-102723, 2022, 2022 (2022)
+    authors: Y Shin, HS Choi, Y Nam, H Cho, E Lee
+    page_id: 2ffd280f-69a3-81f7-8083-c2dd1bcc0c6d
+  conference:
+  - title: Implicit Multi-hop Communication Scheme based on Overhearing in IoT LoRa
+      Networks. 2022 Thirteenth International Conference on Ubiquitous and Future
+      Networks …, 2022, 2022 (2022)
+    authors: D Mugerwa, Y Nam, H Cho, H Choi, Y Shin, E Lee
+    page_id: 2ffd280f-69a3-8188-af28-de11a5685d45
+  - title: Cooperative Content Precaching and Relaying Scheme based on the Mobility
+      Information of Vehicles in Vehicular Networks. Annual Conference of KIPS, 84-87,
+      2022, 2022 (2022)
+    authors: JW Lee, YJ Ko, GY Kim, YJ Nam, ES Lee
+    page_id: 2ffd280f-69a3-818a-866a-dbc374e6d984
 2021:
   journal:
   - title: An implicit Multi-hop Communication scheme based on Overhearing in IoT
@@ -88,6 +161,23 @@
       Sensor Networks. Energies 14 (22), 7823, 2021, 2021 (2021)
     authors: H Cho, S Oh, Y Shin, E Lee
     page_id: 2ffd280f-69a3-8165-81aa-c732f08f6b2c
+  - title: 'Large-Scale Object Monitoring in Internet-Of-Things: Energy-Efficient
+      Perspectives. Electronics 10 (4), 461, 2021, 2021 (2021)'
+    authors: Y Yim, E Lee, S Oh
+    page_id: 2ffd280f-69a3-818a-890c-d0dee5363dfe
+  - title: Energy-efficient and reliable face-routing scheme in wireless networks.
+      Sensors 21 (8), 2746, 2021, 2021 (2021)
+    authors: H Cho, S Kim, S Oh, E Lee, SH Kim
+    page_id: 2ffd280f-69a3-81a0-8db8-e5f2dd341a88
+  - title: RSU-based Protocol for Content Search and Delivery in Content-Centric Vehicular
+      Network. The Journal of the Korea Contents Association 21 (8), 10-19, 2021,
+      2021 (2021)
+    authors: D Shin, H Choi, E Lee
+    page_id: 2ffd280f-69a3-81a3-b038-d8eb2051a7e3
+  - title: Video packet distribution scheme for multimedia streaming services in VANETs.
+      Sensors 21 (21), 7368, 2021, 2021 (2021)
+    authors: Y Shin, H Choi, Y Nam, E Lee
+    page_id: 2ffd280f-69a3-81bb-a3bd-e71d0f0a862b
   conference: []
 2020:
   journal:
@@ -100,6 +190,10 @@
       2020 (2020)
     authors: Y Lee, E Lee
     page_id: 2ffd280f-69a3-815e-9ef9-fa287fc1b020
+  - title: Data delivery protocol using the trajectory information on a road map in
+      VANETs. Ad Hoc Networks 107, 102260, 2020, 2020 (2020)
+    authors: Y Shin, H Choi, Y Nam, E Lee
+    page_id: 2ffd280f-69a3-81ea-bd70-e34bcfb61604
   conference:
   - title: Cooperative content downloading protocol based on the mobility information
       of vehicles in intermittently connected vehicular networks. 2020 International
@@ -123,6 +217,11 @@
       2019, 2019 (2019)
     authors: S Oh, H Cho, SH Kim, W Lee, E Lee
     page_id: 2ffd280f-69a3-815e-9f44-e43c343fec4b
+  - title: Multi-Hop Vehicular Cloud Construction and Resource Allocation in VANETs.
+      KIPS Transactions on Computer and Communication Systems 8 (11), 263-270, 2019,
+      2019 (2019)
+    authors: H Choi, Y Nam, E Lee
+    page_id: 2ffd280f-69a3-8184-b395-e8245468d3cf
   conference:
   - title: Mobility-aware distributed proactive caching in content-centric vehicular
       networks. 2019 12th IFIP Wireless and Mobile Networking Conference (WMNC), 175-180,
@@ -134,6 +233,11 @@
       2019 (2019)
     authors: Y Lee, H Choi, Y Nam, S Park, E Lee
     page_id: 2ffd280f-69a3-816b-a20f-e9382c7ee369
+  - title: Efficient multipath routing protocol against path failures in wireless
+      sensor networks. 2019 12th IFIP Wireless and Mobile Networking Conference (WMNC),
+      136-140, 2019, 2019 (2019)
+    authors: J Yim, J Bang, Y Nam, Y Shin, E Lee
+    page_id: 2ffd280f-69a3-81ce-8bcd-f58a4c822057
 2018:
   journal:
   - title: A Spatio-Temporal Geocasting Protocol Using Regional Caching in Vehicular
@@ -141,6 +245,15 @@
       137-144, 2018, 2018 (2018)
     authors: H Lee, Y Shin, H Choi, E Lee, S Park
     page_id: 2ffd280f-69a3-815a-8cb5-d4433f2825ac
+  - title: Passive and greedy beaconless geographic routing for real-time data dissemination
+      in wireless networks. International Journal of Sensor Networks 28 (2), 114-124,
+      2018, 2018 (2018)
+    authors: Y Yim, J Lee, E Lee, SH Kim
+    page_id: 2ffd280f-69a3-817d-8f8c-d58ded0e665c
+  - title: Active data dissemination for mobile sink groups in wireless sensor networks.
+      Ad Hoc Networks 72, 56-67, 2018, 2018 (2018)
+    authors: J Lee, S Oh, S Park, Y Yim, SH Kim, E Lee
+    page_id: 2ffd280f-69a3-81bd-9c6b-cb280f413d44
   conference:
   - title: Efficient Data Delivery Protocol Using Vehicle Mobility Information in
       VANETs. 2018 Tenth International Conference on Ubiquitous and Future Networks
@@ -152,6 +265,33 @@
       100-105, 2018, 2018 (2018)
     authors: H Choi, Y Nam, J Bang, E Lee
     page_id: 2ffd280f-69a3-813a-b227-df37ee1ba2bf
+  - title: Event-to-Sink Multipath Routing Protocol for Event Reliability in Wireless
+      Sensor Networks. 2018 24th Asia-Pacific Conference on Communications (APCC),
+      185-189, 2018, 2018 (2018)
+    authors: H Kim, Y Shin, Y Lee, D Shin, E Lee
+    page_id: 2ffd280f-69a3-8185-b746-feece35a8ace
+2017:
+  journal:
+  - title: Grid Structure-Based Mobility Support Scheme for Sink Groups in Wireless
+      Sensor Networks. KIPS Transactions on Computer and Communication Systems 6 (5),
+      239-246, 2017, 2017 (2017)
+    authors: Y Yim, E Lee, SH Kim
+    page_id: 2ffd280f-69a3-818a-ad06-f355fb337f1d
+  - title: Vehicle location service scheme based on road map in Vehicular Sensor Networks.
+      Computer Networks 127, 138-150, 2017, 2017 (2017)
+    authors: Y Yim, H Cho, SH Kim, E Lee, M Gerla
+    page_id: 2ffd280f-69a3-81b7-81f8-cab460e66435
+  - title: Energy-Efficient Division Protocol for Mobile Sink Groups in Wireless Sensor
+      Network. KIPS Transactions on Computer and Communication Systems 6 (1), 1-8,
+      2017, 2017 (2017)
+    authors: J Jang, E Lee
+    page_id: 2ffd280f-69a3-81ba-b8c0-e2bf4d6e8ba1
+  conference:
+  - title: Multipath construction and management protocol for mobile sinks in wireless
+      sensor networks. 2017 23rd Asia-Pacific Conference on Communications (APCC),
+      1-5, 2017, 2017 (2017)
+    authors: Y Shin, H Lee, H Choi, E Lee
+    page_id: 2ffd280f-69a3-819b-a57c-f5d19ae524b9
 2016:
   journal:
   - title: QoS Routing Protocol Based on Virtual Grids and MultiPaths for Mobile Sinks
@@ -164,6 +304,21 @@
       and Information Sciences …, 2016, 2016 (2016)
     authors: M Yoon, E Lee
     page_id: 2ffd280f-69a3-8179-b06d-cfc9799e0de6
+  - title: Energy and Delay-Efficient Multipath Routing Protocol for Supporting Mobile
+      Sink in Wireless Sensor Networks. KIPS Transactions on Computer and Communication
+      Systems 5 (12), 447-454, 2016, 2016 (2016)
+    authors: HK Lee, E Lee
+    page_id: 2ffd280f-69a3-81ad-ac20-e4621b1d66cb
+  - title: 'Erratum to: Rendezvous-based data dissemination for supporting mobile
+      sinks in multi-hop clustered wireless sensor networks.. Wirel. Networks 22 (4),
+      1425, 2016, 2016 (2016)'
+    authors: E Lee, S Park, S Oh, SH Kim
+    page_id: 2ffd280f-69a3-81b4-8d45-d39e55699435
+  - title: Energy-Efficient Multipath Routing Protocol for Supporting Mobile Events
+      in Wireless Sensor Networks. KIPS Transactions on Computer and Communication
+      Systems 5 (12), 455-462, 2016, 2016 (2016)
+    authors: H Kim, E Lee
+    page_id: 2ffd280f-69a3-81f7-bd78-e87271e28355
   conference:
   - title: Farthest destination selection and shortest path connection strategy for
       efficient multicasting in vehicular ad hoc networks. 2016 13th IEEE Annual Consumer
@@ -184,6 +339,32 @@
       Annual Consumer Communications & Networking Conference (CCNC …, 2016, 2016 (2016)
     authors: Y Yim, J Yim, E Lee, S Park, SH Kim, M Gerla
     page_id: 2ffd280f-69a3-815e-b6e0-ec39ed529e65
+  - title: Efficient sink location service for prolonging the network lifetime in
+      wireless sensor networks. 2016 13th IEEE Annual Consumer Communications & Networking
+      Conference (CCNC …, 2016, 2016 (2016)
+    authors: J Lee, JY Jang, E Lee, SH Kim, M Gerla
+    page_id: 2ffd280f-69a3-8183-83b7-e8aa98f54bfe
+  - title: Enhanced real-time transmission using time gain in wireless sensor networks.
+      2016 15th ACM/IEEE International Conference on Information Processing in …,
+      2016, 2016 (2016)
+    authors: T Yang, C Kim, S Kim, E Lee, SH Kim
+    page_id: 2ffd280f-69a3-8188-8a73-e127986af866
+  - title: Energy-Efficient Data Dissemination based on Hybrid Mobility Information
+      Update in Wireless Sensor Networks. Annual Conference of KIPS, 104-105, 2016,
+      2016 (2016)
+    authors: M Yoon, J Jang, Y Shin, E Lee
+    page_id: 2ffd280f-69a3-818d-ad0c-e9a2552ac947
+  - title: Energy-Efficient Routing Protocol for Supporting Mobile Sink Group in Wireless
+      Sensor Networks. Annual Conference of KIPS, 116-119, 2016, 2016 (2016)
+    authors: Y Shin, M Yoon, J Jang, E Lee
+    page_id: 2ffd280f-69a3-81d7-8799-c975f6b612f8
+2015:
+  journal:
+  - title: Large-scale mobile phenomena monitoring with energy-efficiency in wireless
+      sensor networks. Computer Networks 81, 116-135, 2015, 2015 (2015)
+    authors: S Park, SW Hong, E Lee, SH Kim, N Crespi
+    page_id: 2ffd280f-69a3-81be-9f61-f99f2b231f55
+  conference: []
 2014:
   journal:
   - title: Rendezvous-based data dissemination for supporting mobile sinks in multi-hop
@@ -195,14 +376,40 @@
       in wireless sensor networks. Wireless networks 20 (3), 493-509, 2014, 2014 (2014)
     authors: E Lee, F Yu, S Park, SH Kim, Y Noh, EK Lee
     page_id: 2ffd280f-69a3-8121-873d-c26f9a623ceb
-  conference: []
+  - title: 'Vehicular cloud networking: architecture and design principles. IEEE Communications
+      Magazine 52 (2), 148-155, 2014, 2014 (2014)'
+    authors: E Lee, EK Lee, M Gerla, SY Oh
+    page_id: 2ffd280f-69a3-81b0-af1b-d5fd4c949717
+  conference:
+  - title: Recent advances and challenges in human-centric multimedia mobile cloud
+      computing. 2014 International Conference on Computing, Networking and Communications
+      …, 2014, 2014 (2014)
+    authors: E Cerqueira, E Lee, JT Weng, JH Lim, J Joy, M Gerla
+    page_id: 2ffd280f-69a3-81c2-8a48-f807b639e239
 2013:
   journal:
   - title: Quorum-based location service in Vehicular Sensor Networks. 2013 9th International
       Wireless Communications and Mobile Computing …, 2013, 2013 (2013)
     authors: E Lee, H Choe, P Thirumurthi, M Gerla, SH Kim
     page_id: 2ffd280f-69a3-8168-9b10-e9bda9d34d76
-  conference: []
+  - title: Independent grid structure-based routing protocol in wireless sensor networks.
+      IEICE transactions on communications 96 (1), 309-312, 2013, 2013 (2013)
+    authors: E Lee, S Park, H Park, SH Kim
+    page_id: 2ffd280f-69a3-81a9-b76f-d4946700425f
+  - title: Virtual line-based data dissemination for mobile sink groups in wireless
+      sensor networks. IEEE Communications Letters 17 (9), 1864-1867, 2013, 2013 (2013)
+    authors: HS Mo, E Lee, S Park, SH Kim
+    page_id: 2ffd280f-69a3-81ac-887b-fce2fb28b3ff
+  - title: Band-based geocasting for mobile sink groups in wireless sensor networks.
+      Wireless networks 19 (6), 1285-1298, 2013, 2013 (2013)
+    authors: S Park, S Oh, J Kim, E Lee, SH Kim
+    page_id: 2ffd280f-69a3-81e7-b0cc-d4afafbb5578
+  conference:
+  - title: Localized disjoint multipath routing protocol in irregular wireless sensor
+      networks. 2013 IEEE 24th Annual International Symposium on Personal, Indoor,
+      and …, 2013, 2013 (2013)
+    authors: K Jung, E Lee, S Oh, Y Yim, SH Kim
+    page_id: 2ffd280f-69a3-81b5-829f-f94933d79955
 2012:
   journal:
   - title: Communication Reliability Support with the Minimum Number of Totally Transmitted
@@ -219,12 +426,39 @@
       Computer Communications 35 (12), 1422-1432, 2012, 2012 (2012)
     authors: F Yu, G Hu, S Park, E Lee, SH Kim
     page_id: 2ffd280f-69a3-8164-8578-c2f5da7733a5
+  - title: Energy-efficient boundary monitoring for large-scale continuous objects.
+      IEICE transactions on communications 95 (7), 2451-2454, 2012, 2012 (2012)
+    authors: SW Hong, E Lee, HY Ryu, SH Kim
+    page_id: 2ffd280f-69a3-817b-b52a-c558b0d85f02
+  - title: Selection Mechanism of Energy-efficient Data Aggregation Node in Wireless
+      Sensor Networks.. PECCS, 391-395, 2012, 2012 (2012)
+    authors: Y Yim, E Lee, S Oh, SH Kim
+    page_id: 2ffd280f-69a3-8193-85d5-e148f4f8368b
+  - title: Local Location Search Based Progressive Geographic Multicast Protocol in
+      Wireless Sensor Networks. IEICE transactions on communications 95 (4), 1419-1422,
+      2012, 2012 (2012)
+    authors: E Lee, S Park, J Lee, SH Kim
+    page_id: 2ffd280f-69a3-81ef-953e-e3657b9a610b
+  - title: Reliable and flexible detection of large-scale phenomena on wireless sensor
+      networks. IEEE Communications Letters 16 (6), 933-936, 2012, 2012 (2012)
+    authors: S Park, H Park, E Lee, SH Kim
+    page_id: 2ffd280f-69a3-81f9-9936-cb497c79c137
   conference:
   - title: Reliable and energy-efficient routing protocol for mobile sink groups in
       wireless sensor networks. 2012 IEEE 23rd International Symposium on Personal,
       Indoor and Mobile Radio …, 2012, 2012 (2012)
     authors: Y Yim, E Lee, J Lee, S Park, SH Kim
     page_id: 2ffd280f-69a3-8113-b90a-ff479e2c82de
+  - title: 'B-Geocasting: Effective data dissemination protocol to support group mobility
+      of sinks. 2012 IEEE 23rd International Symposium on Personal, Indoor and Mobile
+      Radio …, 2012, 2012 (2012)'
+    authors: S Park, S Oh, J Lee, E Lee, Y Yim, SH Kim
+    page_id: 2ffd280f-69a3-81a3-9e73-d9654385dd55
+  - title: Selective wakeup discipline for continuous object tracking in grid-based
+      wireless sensor networks. 2012 IEEE Wireless Communications and Networking Conference
+      (WCNC), 2179-2184, 2012, 2012 (2012)
+    authors: H Park, S Oh, E Lee, S Park, SH Kim, W Lee
+    page_id: 2ffd280f-69a3-81e3-bce5-c72c5fd881ae
 2011:
   journal:
   - title: Cluster-Based Communication for Mobile Sink Groups in Large-Scale Wireless
@@ -237,6 +471,14 @@
       2011, 2011 (2011)
     authors: E Lee, S Park, J Lee, S Oh, SH Kim
     page_id: 2ffd280f-69a3-813e-b93e-c9a5f1b1a4b2
+  - title: Real-time routing based on on-demand multi-hop lookahead in wireless sensor
+      networks. IEICE transactions on communications 94 (2), 569-572, 2011, 2011 (2011)
+    authors: S Park, E Lee, J Jung, SH Kim
+    page_id: 2ffd280f-69a3-8186-97a3-c2f91a0e3f1a
+  - title: Geographic Multicast Protocol for Mobile Sinks in Wireless Sensor Networks.
+      Communications Letters, IEEE, 1-3, 2011, 2011 (2011)
+    authors: E Lee, S Park, J Lee, S Kim
+    page_id: 2ffd280f-69a3-81e1-a581-fbe3e69cd0a7
   conference:
   - title: Communication strategy to reflect group mobility issue of mobile sinks
       in wireless sensor networks. 2011 IEEE 73rd Vehicular Technology Conference
@@ -248,6 +490,31 @@
       Radio …, 2011, 2011 (2011)'
     authors: S Park, E Lee, Y Yim, F Yu, SH Kim
     page_id: 2ffd280f-69a3-812f-bac2-e26538c00bf4
+  - title: Quality-based event reliability protocol in wireless sensor networks. 2011
+      IEEE Consumer Communications and Networking Conference (CCNC), 730-734, 2011,
+      2011 (2011)
+    authors: H Park, J Lee, S Oh, Y Yim, SH Kim, KD Nam
+    page_id: 2ffd280f-69a3-8188-a590-c4cfe18fff55
+  - title: Data dissemination protocol based on independent grid structure in wireless
+      sensor networks. 2011 IEEE 22nd International Symposium on Personal, Indoor
+      and Mobile Radio …, 2011, 2011 (2011)
+    authors: E Lee, S Park, H Park, Y Yim, SH Kim
+    page_id: 2ffd280f-69a3-8196-b913-d3ac36cf726b
+  - title: Group mobility support protocol for mobile sinks based on grid clusters
+      in wireless sensor networks. 2011 IEEE International Conference on Advanced
+      Information Networking and …, 2011, 2011 (2011)
+    authors: S Park, E Lee, H Park, J Lee, SH Kim
+    page_id: 2ffd280f-69a3-81bb-860b-e9e2009304db
+  - title: Real-time routing protocol based on expect grids for mobile sinks in wireless
+      sensor networks. 2011 IEEE Vehicular Technology Conference (VTC Fall), 1-5,
+      2011, 2011 (2011)
+    authors: E Lee, S Park, S Oh, SH Kim, KD Nam
+    page_id: 2ffd280f-69a3-81c6-8592-c17386d59982
+  - title: Reliability Support Protocol for Continuous Object Detection in Large-Scale
+      Wireless Sensor Networks. 2011 IEEE International Conference on Advanced Information
+      Networking and …, 2011, 2011 (2011)
+    authors: E Lee, S Park, SH Kim, K Nam, S Noh
+    page_id: 2ffd280f-69a3-81cf-b909-c1dfddd7832b
 2010:
   journal:
   - title: Mobile geocasting to support mobile sink groups in wireless sensor networks.
@@ -286,6 +553,28 @@
       sensor networks. IEEE Communications Letters 14 (3), 202-204, 2010, 2010 (2010)
     authors: S Park, E Lee, MS Jin, SH Kim
     page_id: 2ffd280f-69a3-8173-8331-cbbc3ab49521
+  - title: Sink location service based on circle and line paths in wireless sensor
+      networks. IEEE Communications Letters 14 (8), 710-712, 2010, 2010 (2010)
+    authors: E Lee, F Yu, S Park, SH Kim
+    page_id: 2ffd280f-69a3-81a4-954d-fb610b9e2aa3
+  - title: Location Update Scheme for Mobile Sink in Wireless Sensor Networks. IEEE
+      Communications Society, ICC, 2010 (2010)
+    authors: F Yu, E Lee, S Park, J Lee, MS Jin, SH Kim
+    page_id: 2ffd280f-69a3-81a5-a145-fa98385e6c2a
+  - title: Scalable and robust data dissemination for large-scale wireless sensor
+      networks. IEEE Transactions on Consumer Electronics 56 (3), 1616-1624, 2010,
+      2010 (2010)
+    authors: S Park, E Lee, F Yu, SH Kim
+    page_id: 2ffd280f-69a3-81b4-9609-ee7bae33c6fd
+  - title: Selection Scheme of Energy-Efficient Data Aggregation Node in Wireless
+      Sensor Networks. 한국통신학회 학술대회논문집, 1644-1645, 2010, 2010 (2010)
+    authors: E Lee, S Park, S Oh, Y Yim, SH Kim
+    page_id: 2ffd280f-69a3-81bd-9932-dcc952e8cdab
+  - title: On selection of energy-efficient data aggregation node in wireless sensor
+      networks. IEICE transactions on communications 93 (9), 2436-2439, 2010, 2010
+      (2010)
+    authors: E Lee, S Park, F Yu, SH Kim
+    page_id: 2ffd280f-69a3-81f6-9bf2-dc8a0c3f4c2e
   conference:
   - title: Communication scheme to support sink mobility in multi-hop clustered wireless
       sensor networks. 2010 24th IEEE International Conference on Advanced Information
@@ -332,6 +621,44 @@
       2010 (2010)
     authors: J Lee, E Lee, S Park, H Park, SH Kim
     page_id: 2ffd280f-69a3-816d-8ffb-dbaae4e30859
+  - title: Large-scale phenomena monitoring scheme in wireless sensor networks. 2010
+      IEEE 71st Vehicular Technology Conference, 1-5, 2010, 2010 (2010)
+    authors: B Park, S Park, E Lee, S Noh, SH Kim
+    page_id: 2ffd280f-69a3-8183-861c-c47602d04023
+  - title: Inter-domain roaming mechanism transparent to IPv6-node among PMIPv6 networks.
+      2010 IEEE 71st Vehicular Technology Conference, 1-5, 2010, 2010 (2010)
+    authors: S Park, E Lee, F Yu, S Noh, SH Kim
+    page_id: 2ffd280f-69a3-819c-8aee-d99b1bc89d52
+  - title: Strategy for real-time data dissemination to mobile sinks in wireless sensor
+      networks. 21st Annual IEEE International Symposium on Personal, Indoor and Mobile
+      …, 2010, 2010 (2010)
+    authors: S Park, E Lee, H Park, J Jung, SH Kim
+    page_id: 2ffd280f-69a3-81a1-ae78-e201f8474a06
+  - title: An explicit disjoint multipath algorithm for cost efficiency in wireless
+      sensor networks. 21st Annual IEEE International Symposium on Personal, Indoor
+      and Mobile …, 2010, 2010 (2010)
+    authors: HW Oh, JH Jang, KD Moon, S Park, E Lee, SH Kim
+    page_id: 2ffd280f-69a3-81c4-a84d-c37aa2b7a453
+  - title: 'OMLRP: Multi-hop information based real-time routing protocol in wireless
+      sensor networks. 2010 IEEE Wireless Communication and Networking Conference,
+      1-6, 2010, 2010 (2010)'
+    authors: J Jung, S Park, E Lee, S Oh, SH Kim
+    page_id: 2ffd280f-69a3-81c5-b27a-fe0741163315
+  - title: Consecutive geographic multicasting protocol in large-scale wireless sensor
+      networks. 21st Annual IEEE International Symposium on Personal, Indoor and Mobile
+      …, 2010, 2010 (2010)
+    authors: J Lee, E Lee, S Park, S Oh, SH Kim
+    page_id: 2ffd280f-69a3-81d1-a264-d64ceacca927
+  - title: Real-time data dissemination based on reactive and restricted zone search
+      in sensor networks. 2010 24th IEEE International Conference on Advanced Information
+      Networking …, 2010, 2010 (2010)
+    authors: J Jung, S Park, E Lee, S Oh, SH Kim
+    page_id: 2ffd280f-69a3-81df-8201-e16d9aba8117
+  - title: Sink-initiated geographic multicasting protocol in wireless sensor networks.
+      2010 24th IEEE International Conference on Advanced Information Networking …,
+      2010, 2010 (2010)
+    authors: J Lee, E Lee, S Park, H Park, SH Kim
+    page_id: 2ffd280f-69a3-81eb-ad6f-e96426d253f3
 2009:
   journal:
   - title: 'Dynamic Rectangle Zone-based Collaboration Mechanism for Continuous Object
@@ -367,6 +694,20 @@
       92 (12), 3935-3938, 2009, 2009 (2009)'
     authors: F Yu, S Park, E Lee, Y Choi, SH Kim
     page_id: 2ffd280f-69a3-8177-9421-e951737de555
+  - title: Scalable and robust data dissemination scheme for large-scale wireless
+      sensor networks. The Journal of Korean Institute of Communications and Information
+      Sciences …, 2009, 2009 (2009)
+    authors: SC Park, ES Lee, HS Park, JC Lee, SM Oh, JH Jung, SH Kim
+    page_id: 2ffd280f-69a3-818f-975b-f714d77e2f26
+  - title: Exploiting mobility for efficient data dissemination in wireless sensor
+      networks. Journal of communications and networks 11 (4), 337-349, 2009, 2009
+      (2009)
+    authors: E Lee, S Park, F Yu, SH Kim
+    page_id: 2ffd280f-69a3-819f-951c-d026f573545e
+  - title: 대규모 무선 센서 네트워크를 위한 확장성과 강건성이 있는 데이터 전송 방안. 한국통신학회논문지 34 (12), 1359-1370,
+      2009, 2009 (2009)
+    authors: 박수창， 이의신， 박호성， 이정철， 오승민， 정주현， 김상하
+    page_id: 2ffd280f-69a3-81f6-a952-c681d0278604
   conference:
   - title: Communication scheme independent of publishers and subscribers for large-scale
       sensor applications. 2009 IEEE Wireless Communications and Networking Conference,
@@ -392,6 +733,36 @@
       decentralized systems, 1-7, 2009, 2009 (2009)
     authors: E Lee, S Park, H Park, J Lee, SH Kim
     page_id: 2ffd280f-69a3-8172-9c7e-ea09b0f2fc97
+  - title: Circle path based sink location service for geographic routing scheme.
+      2009 IEEE Wireless Communications and Networking Conference, 1-6, 2009, 2009
+      (2009)
+    authors: F Yu, E Lee, T Kim, J Lee, SH Kim
+    page_id: 2ffd280f-69a3-817c-8008-e78757ea566e
+  - title: A data dissemination model base on content-based publish/subscribe paradigm
+      in large-scale wireless sensor networks. 2009 IEEE Wireless Communications and
+      Networking Conference, 1-6, 2009, 2009 (2009)
+    authors: MS Jin, H Park, E Lee, S Park, SH Kim
+    page_id: 2ffd280f-69a3-8180-bb6c-e480afe4ab67
+  - title: Information Communication Mechanism for Loosely Coupled Mobile User Groups
+      in Wireless Sensor Fields. 2009 International Conference on Advanced Information
+      Networking and …, 2009, 2009 (2009)
+    authors: S Park, E Lee, F Yu, MS Jin, SH Kim
+    page_id: 2ffd280f-69a3-818d-b419-f80bc3610375
+  - title: CORRELATED DATA COLLECTION THROUGH USING LOCAL SINK IN GEOGRAPHIC ROUTING
+      FOR WIRELESS SENSOR NETWORKS. Proceedings of the IASTED International Conference
+      641, 061, 0, 2009 (2009)
+    authors: E Lee, S Park, MS Jin, T Kim, H Park, SH Kim
+    page_id: 2ffd280f-69a3-81c3-9c2a-d1e81bf3249f
+  - title: Information communication scheme for loosely coupled mobile users in wireless
+      sensor fields with multiple sources. 2009 International Symposium on Autonomous
+      Decentralized Systems, 1-6, 2009, 2009 (2009)
+    authors: S Park, E Lee, F Yu, MS Jin, SH Kim
+    page_id: 2ffd280f-69a3-81d4-ba21-ff570acbaf41
+  - title: Communication scheme for loosely coupled mobile user groups in wireless
+      sensor fields. 2009 IEEE Wireless Communications and Networking Conference,
+      1-6, 2009, 2009 (2009)
+    authors: E Lee, S Park, F Yu, MS Jin, SH Kim
+    page_id: 2ffd280f-69a3-81da-9940-f2e68c86bea8
 2008:
   journal:
   - title: 'Energy-efficient Data Dissemination Protocol for Detouring Routing Holes
@@ -409,6 +780,10 @@
       14 (3), 276-280, 2008, 2008 (2008)'
     authors: SC Park, ES Lee, MS Jin, YH Choi, SH Kim
     page_id: 2ffd280f-69a3-8168-9092-d0fada632298
+  - title: 광범위한 센서 망에서 Publish/Subscribe 패러다임을 만족하는 데이터 전달 모델. 한국정보과학회 학술발표논문집 35
+      (2D), 279-283, 2008, 2008 (2008)
+    authors: 진민숙， 박호성， 이의신， 김태희， 이정철， 김상하
+    page_id: 2ffd280f-69a3-81c9-a5bd-e1747b4a2bc6
   conference:
   - title: Virtual Circle Based Geometric Modeling of Holes for Geographic Routing.
       2008 IEEE Wireless Communications and Networking Conference, 2426-2431, 2008,
@@ -445,6 +820,36 @@
       2893-2898, 2008, 2008 (2008)
     authors: S Park, E Lee, Y Choi, F Yu, SH Kim
     page_id: 2ffd280f-69a3-8174-ab18-c25c9058dcda
+  - title: A Data Dissemination Protocol Based on Multiple Virtual Grids in Wireless
+      Sensor Network. 2008 5th IEEE Consumer Communications and Networking Conference,
+      175-178, 2008, 2008 (2008)
+    authors: MS Jin, Y Choi, F Yu, E Lee, S Park, SH Kim
+    page_id: 2ffd280f-69a3-8184-bb60-dc7b2e252795
+  - title: Data dissemination via local sink in geographic routing for wireless sensor
+      networks. 2008 4th International Conference on Wireless Communications, Networking
+      and …, 2008, 2008 (2008)
+    authors: E Lee, S Park, MS Jin, F Yu, T Kim, SH Kim
+    page_id: 2ffd280f-69a3-8196-97a1-eb84494a488b
+  - title: Energy-efficient data dissemination protocol for detouring routing holes
+      in wireless sensor networks. 2008 IEEE International Conference on Communications,
+      2322-2326, 2008, 2008 (2008)
+    authors: Y Tian, F Yu, Y Choi, S Park, E Lee, M Jin, SH Kim
+    page_id: 2ffd280f-69a3-81b9-98e2-d7d877825d26
+  - title: Dynamic rectangle zone-based collaboration mechanism for tracking continuous
+      objects in wireless sensor networks. 2008 4th International Conference on Wireless
+      Communications, Networking and …, 2008, 2008 (2008)
+    authors: E Lee, S Park, F Yu, MS Jin, H Park, SH Kim
+    page_id: 2ffd280f-69a3-81be-8000-fc96e2bd09c2
+  - title: Sink location service for geographic routing in wireless sensor networks.
+      2008 IEEE Wireless Communications and Networking Conference, 2111-2116, 2008,
+      2008 (2008)
+    authors: F Yu, Y Choi, S Park, E Lee, MS Jin, SH Kim
+    page_id: 2ffd280f-69a3-81e2-8e4c-c10d660b4262
+  - title: Passive data dissemination scheme for supporting inquirer mobility in wireless
+      sensor networks. 2008 5th IEEE Consumer Communications and Networking Conference,
+      333-337, 2008, 2008 (2008)
+    authors: Y Choi, S Park, E Lee, F Yu, SH Kim
+    page_id: 2ffd280f-69a3-81f8-8a26-f27ea85a70f5
 2007:
   journal: []
   conference:
@@ -523,3 +928,75 @@
       2007 (2007)
     authors: F Yu, Y Choi, S Park, D Lee, E Lee, Y Tian, SH Kim
     page_id: 2ffd280f-69a3-8179-9e85-f5cbd6acbd97
+  - title: A novel mechanism to support mobility of users in wireless sensor networks
+      based on multiple static sinks. 2007 4th IEEE Consumer Communications and Networking
+      Conference, 385-389, 2007, 2007 (2007)
+    authors: E Lee, Y Choi, S Park, D Lee, SS Kim, SH Kim
+    page_id: 2ffd280f-69a3-817c-b9b4-fcd1aa04913e
+  - title: An Implicit Cluster-Based Overlay Multicast Protocol for Mobile Ad Hoc
+      Networks. 2007 IEEE Wireless Communications and Networking Conference, 0, 2007
+      (2007)
+    authors: S Park, D Lee, E Lee, F Yu, Y Choi, SH Kim
+    page_id: 2ffd280f-69a3-817d-987d-c377a5d3c341
+  - title: A Energy efficient data-dissemination protocol with multiple virtual grid
+      in wireless sensor network. 2007 Asia-Pacific Conference on Communications,
+      377-380, 2007, 2007 (2007)
+    authors: MS Jin, Y Choi, F Yu, E Lee, S Park, S Kim
+    page_id: 2ffd280f-69a3-8183-bb1c-d365deb67e8f
+  - title: A communication architecture to reflect user mobility issue in wireless
+      sensor fields. 2007 IEEE Wireless Communications and Networking Conference,
+      3376-3381, 2007, 2007 (2007)
+    authors: S Park, D Lee, E Lee, F Yu, Y Choi, SH Kim
+    page_id: 2ffd280f-69a3-819a-945a-c3e868bfb184
+  - title: An Implicit Cluster-based Overlay Multicast Protocol for Mobile Ad hoc
+      Networks. 2007 IEEE Wireless Communications and Networking Conference, 3507-3512,
+      2007, 2007 (2007)
+    authors: Y Choi, E Lee, D Lee, S Park, F Yu, SH Kim
+    page_id: 2ffd280f-69a3-81a0-a954-ddd0598574c7
+  - title: Query Flooding of Multiple Static Sinks for Wireless Sensor Networks. Proceedings
+      of the Korean Information Science Society Conference, 273-276, 2007, 2007 (2007)
+    authors: MS Jin, YH Choi, ES Lee, SC Park, FC Yu, SH Kim
+    page_id: 2ffd280f-69a3-81a1-be67-c6265560eb1b
+  - title: Performance Evaluation and Analysis of the Implicit Cluster based Multicast
+      Scheme in Mobile Ad hoc Networks. Proceedings of the Korean Information Science
+      Society Conference, 163-164, 2007, 2007 (2007)
+    authors: YH Choi, SC Park, ES Lee, Y Tian, SH Kim
+    page_id: 2ffd280f-69a3-81aa-a820-f98447c89149
+  - title: A Stability-Oriented Overlay Multicast for Mobile Ad Hoc Networks. 2007
+      International Conference on Wireless Communications, Networking and …, 2007,
+      2007 (2007)
+    authors: F Yu, Y Choi, S Park, D Lee, E Lee, Y Tian, SH Kim
+    page_id: 2ffd280f-69a3-81ac-a3b2-e29e6cecdaae
+  - title: A predictable mobility-based communication paradigm for wireless sensor
+      networks. 2007 Asia-Pacific Conference on Communications, 373-376, 2007, 2007
+      (2007)
+    authors: E Lee, S Park, D Lee, Y Choi, F Yu, SH Kim
+    page_id: 2ffd280f-69a3-81b1-ac84-c1bf103f9d73
+  - title: 'SLAOM: Scalable Location-Aware Overlay Multicast for Ad hoc Networks.
+      Proceedings of the Korean Information Science Society Conference, 235-239, 2007,
+      2007 (2007)'
+    authors: FC Yu, YH Choi, SC Park, ES Lee, Y Tian, HS Park, SH Kim
+    page_id: 2ffd280f-69a3-81b3-a98a-cf29817dd857
+  - title: Continuous data dissemination protocol supporting mobile sinks with a sink
+      location manager. 2007 Asia-Pacific Conference on Communications, 299-302, 2007,
+      2007 (2007)
+    authors: D Lee, S Park, E Lee, Y Choi, SH Kim
+    page_id: 2ffd280f-69a3-81e5-85d0-e7c4b32a3ee8
+  - title: Energy-efficient Data Dissemination Scheme via Sink Location Service in
+      Wireless Sensor Networks. Proceedings of the Korean Information Science Society
+      Conference, 240-243, 2007, 2007 (2007)
+    authors: FC Yu, YH Choi, SC Park, ES Lee, Y Tian, HS Park, SH Kim
+    page_id: 2ffd280f-69a3-81eb-b702-c6e039201bdf
+  - title: A Communication Architecture for Supporting Mobile User in Wireless Sensor
+      Networks. The 9th International Conference on Advanced Communication Technology
+      1, 450-455, 2007, 2007 (2007)
+    authors: S Park, D Lee, E Lee, M Jin, Y Choi, SH Kim
+    page_id: 2ffd280f-69a3-81ec-8ae7-d4e8d2069f1d
+2006:
+  journal: []
+  conference:
+  - title: 'Object tracking using moving color and active contour information. ITC-CSCC:
+      International Technical Conference on Circuits Systems, Computers …, 2006, 2006
+      (2006)'
+    authors: S Kim, C Lee, E Kim, E Lee, Y Yu
+    page_id: 2ffd280f-69a3-81a7-a12e-e1edb2912e79
