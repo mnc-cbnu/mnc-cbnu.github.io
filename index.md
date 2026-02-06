@@ -14,53 +14,57 @@ title: Home
   </div>
 
   <style>
-  /* 1. 헤더 영역 (제목 + 전체보기 링크) */
+  /* 1. 헤더 영역 */
   .section-header {
     display: flex;
-    justify-content: space-between; /* 양 끝 정렬 */
-    align-items: flex-end; /* 글자 바닥 라인 맞춤 */
+    justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 20px;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
   }
-  .section-header h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #333;
-  }
+  .section-header h2 { margin: 0; font-size: 1.5rem; color: #333; }
   .view-all-link {
-    font-size: 0.9rem;
-    color: #666;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+    font-size: 0.9rem; color: #666; text-decoration: none; font-weight: 500;
   }
-  .view-all-link:hover {
-    color: #0056b3;
-    text-decoration: underline;
-  }
+  .view-all-link:hover { color: #0056b3; text-decoration: underline; }
 
-  /* 2. 슬라이더 컨테이너 (창문 역할) */
+  /* 2. 슬라이더 컨테이너 (창문) */
   .slider-viewport {
     width: 100%;
     overflow: hidden; /* 넘치는 것 숨김 */
     position: relative;
-    padding: 10px 5px; /* 그림자 잘림 방지 여백 */
+    padding: 10px 0;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); /* 양끝을 흐릿하게 */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
   }
 
-  /* 3. 슬라이더 트랙 (기차 역할) */
+  /* 3. 슬라이더 트랙 (움직이는 기차) */
   .slider-track {
     display: flex;
-    gap: 20px; /* 카드 사이 간격 */
-    transition: transform 0.5s ease-in-out; /* 부드러운 움직임 */
-    width: max-content; /* 내용물만큼 길어짐 */
+    gap: 20px;
+    width: max-content; /* 내용물 길이만큼 늘어남 */
+    /* 애니메이션 설정: 이름, 시간(속도), 가속도(일정하게), 반복 */
+    animation: scroll-left 40s linear infinite;
   }
 
-  /* 4. 개별 카드 디자인 */
+  /* 마우스 올리면 멈춤 */
+  .slider-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* 4. 애니메이션 정의 (0%에서 -50%까지 이동) */
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+    /* 중요: JS로 내용을 2배로 불렸기 때문에 -50%가 되면 처음과 똑같은 위치가 됩니다. */
+  }
+
+  /* 5. 카드 디자인 */
   .paper-card {
     background: white;
-    width: 320px; /* 카드 고정 너비 (조절 가능) */
-    flex-shrink: 0; /* 찌그러짐 방지 */
+    width: 320px;
+    flex-shrink: 0;
     border: 1px solid #eee;
     border-radius: 12px;
     padding: 20px;
@@ -68,51 +72,23 @@ title: Home
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 220px; /* 카드 고정 높이 */
-    white-space: normal; /* 텍스트 줄바꿈 허용 */
+    height: 220px;
+    white-space: normal;
   }
-
   .paper-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
   }
 
-  /* 카드 내부 텍스트 */
+  /* 텍스트 스타일 */
   .pc-title {
-    font-size: 1.05rem;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 10px;
-
-    /* 긴 제목 3줄까지만 보이고 ... 처리 */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    line-height: 1.4;
+    font-size: 1.05rem; font-weight: bold; color: #222; margin-bottom: 10px;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.4;
   }
-  
-  .pc-meta {
-    margin-top: auto; /* 하단 고정 */
-  }
-  
-  .pc-venue {
-    color: #0056b3;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-  }
-  
-  .pc-authors {
-    font-size: 0.85rem;
-    color: #777;
-
-    /* 저자 1줄만 보이고 ... 처리 */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  .pc-meta { margin-top: auto; }
+  .pc-venue { color: #0056b3; font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .pc-authors { font-size: 0.85rem; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 </style>
 
 <div class="box area-papers">
@@ -123,10 +99,9 @@ title: Home
   </div>
 
   {% if site.data.featured %}
-  <div class="slider-viewport" id="paperSlider">
+  <div class="slider-viewport">
     <div class="slider-track" id="sliderTrack">
-
-      {% for paper in site.data.featured limit:8 %}
+      {% for paper in site.data.featured limit:10 %}
       <div class="paper-card">
         <div class="pc-title">{{ paper.title }}</div>
         <div class="pc-meta">
@@ -135,18 +110,7 @@ title: Home
         </div>
       </div>
       {% endfor %}
-
-      {% for paper in site.data.featured limit:3 %}
-      <div class="paper-card clone" aria-hidden="true">
-        <div class="pc-title">{{ paper.title }}</div>
-        <div class="pc-meta">
-          <div class="pc-venue">{{ paper.venue }}, {{ paper.year }}</div>
-          <div class="pc-authors">{{ paper.authors }}</div>
-        </div>
       </div>
-      {% endfor %}
-
-    </div>
   </div>
   {% else %}
     <p style="color:#999; padding:20px;">업데이트된 논문이 없습니다.</p>
@@ -157,37 +121,11 @@ title: Home
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const track = document.getElementById('sliderTrack');
-  if (!track) return;
-
-  const cardWidth = 340; // 카드너비(320) + 간격(20)
-  const intervalTime = 3000; // 3초마다 이동
-  let currentIndex = 0;
-  
-  // 실제 카드 개수 (복제된 것 제외)
-  const totalSlides = track.querySelectorAll('.paper-card:not(.clone)').length;
-
-  function moveSlider() {
-    currentIndex++;
-    track.style.transition = 'transform 0.5s ease-in-out';
-    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-
-    // 마지막에 도달하면 순식간에 처음으로 리셋 (무한 스크롤 효과)
-    if (currentIndex >= totalSlides) {
-      setTimeout(() => {
-        track.style.transition = 'none'; // 애니메이션 끄고
-        currentIndex = 0; // 0번으로 이동
-        track.style.transform = `translateX(0px)`;
-      }, 500); // 0.5s 애니메이션이 끝난 직후 실행
-    }
+  if (track) {
+    // 트랙 안의 내용을 그대로 한 번 더 복사해서 뒤에 붙임 (무한 루프 구현용)
+    const originalContent = track.innerHTML;
+    track.innerHTML += originalContent;
   }
-
-  // 자동 실행 시작
-  let sliderInterval = setInterval(moveSlider, intervalTime);
-
-  // 마우스 올리면 멈춤 / 떼면 다시 시작
-  const sliderArea = document.getElementById('paperSlider');
-  sliderArea.addEventListener('mouseenter', () => clearInterval(sliderInterval));
-  sliderArea.addEventListener('mouseleave', () => sliderInterval = setInterval(moveSlider, intervalTime));
 });
 </script>
 
