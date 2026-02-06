@@ -10,7 +10,7 @@ permalink: /professor/
     <h1>Prof. Euisin Lee</h1>
     <p class="subtitle">Professor, Department of Information and Communication Engineering</p>
     <p> Wireless Networking and Mobile Computing</p>
-    <p>📧 eslee@cchungbuk.ac.kr</p>
+    <p>📧 eslee@chungbuk.ac.kr</p>
     <p>📍 E10-614, Chungbuk National University, Cheongju 28644, South Korea</p>
   </div>
 </div>

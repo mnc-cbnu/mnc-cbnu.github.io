@@ -26,15 +26,6 @@ We aim to design scalable, intelligent, and efficient communication systems.
 
 <h2>Facilities</h2>
 <ul>
-  <!-- <li>High-performance GPU servers</li> -->
   <li>Vehicular mobility simulation testbed</li>
   <li>Network protocol emulation platform</li>
 </ul>
-
-<!-- <hr> -->
-
-<!-- <h2>Join Us</h2>
-<p>
-We are looking for motivated undergraduate, master’s, and Ph.D. students.
-Please contact <strong>eslee@cbnu.ac.kr</strong> if interested.
-</p> -->
