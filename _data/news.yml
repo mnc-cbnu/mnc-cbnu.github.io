@@ -1,9 +1,5 @@
 issue:
-- text: test
-  date: 2026/03/03
-  url: /news/test/
-  page_id: 318d280f-69a3-800d-969f-ca39e4727c37
-- text: 남영주 교수의 논문이 AIMS Mathematics에 publication
-  date: 2026/02/04
-  url: /news/남영주-교수의-논문이-AIMS-Mathematics에-publication/
-  page_id: 2fed280f-69a3-8097-809c-c85cb2651446
+  - text: 남영주 교수의 논문이 AIMS Mathematics에 publication
+    date: 2026/02/04
+    url: /news/남영주-교수의-논문이-AIMS-Mathematics에-publication/
+    page_id: 2fed280f-69a3-8097-809c-c85cb2651446
