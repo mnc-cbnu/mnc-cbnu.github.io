@@ -401,8 +401,8 @@ details[open] summary::after {
   width: 100%;
   grid-template-areas:
     "area-intro area-intro"
-    "area-papers area-papers"
-    "area-notice area-news";
+    "area-notice area-news"
+    "area-papers area-papers";
 
   grid-template-columns: 1fr 1fr;
   gap: 24px;

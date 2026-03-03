@@ -11,7 +11,37 @@ title: Home
       충북대학교 모바일 네트워크 컴퓨팅 연구실(MNC Lab)입니다.<br>
     </p>
   </div>
+  <div class="box area-notice">
+    <h3>📢 공지사항</h3>
+    <div class="content-body">
+      {% if site.data.notice.issue %}
+        {% for notice in site.data.notice.issue reversed limit:5 %}
+          <a href="{{ notice.url | default: '#' | relative_url }}" class="list-item">
+            <span>{{ notice.text }}</span>
+            <span class="date">{{ notice.date }}</span>
+          </a>
+        {% endfor %}
+      {% else %}
+        <p style="padding: 10px 0; color: #888;">등록된 공지사항이 없습니다.</p>
+      {% endif %}
+    </div>
+  </div>
 
+  <div class="box area-news">
+    <h3>📰 NEWS</h3>
+    <div class="content-body">
+      {% if site.data.news.issue %}
+        {% for new in site.data.news.issue reversed limit:5 %}
+          <a href="{{ new.url | default: '#' | relative_url }}" class="list-item">
+            <span>{{ new.text }}</span>
+            <span class="date">{{ new.date }}</span>
+          </a>
+        {% endfor %}
+      {% else %}
+        <p style="padding: 10px 0; color: #888;">등록된 뉴스가 없습니다.</p>
+      {% endif %}
+    </div>
+  </div>
   <div class="box area-papers">
     <div class="section-header">
       <h2>🏆 Selected Research</h2>
@@ -47,37 +77,5 @@ title: Home
     }
   });
   </script>
-
-  <div class="box area-notice">
-    <h3>📢 공지사항</h3>
-    <div class="content-body">
-      {% if site.data.notice.issue %}
-        {% for notice in site.data.notice.issue reversed limit:5 %}
-          <a href="{{ notice.url | default: '#' | relative_url }}" class="list-item">
-            <span>{{ notice.text }}</span>
-            <span class="date">{{ notice.date }}</span>
-          </a>
-        {% endfor %}
-      {% else %}
-        <p style="padding: 10px 0; color: #888;">등록된 공지사항이 없습니다.</p>
-      {% endif %}
-    </div>
-  </div>
-
-  <div class="box area-news">
-    <h3>📰 NEWS</h3>
-    <div class="content-body">
-      {% if site.data.news.issue %}
-        {% for new in site.data.news.issue reversed limit:5 %}
-          <a href="{{ new.url | default: '#' | relative_url }}" class="list-item">
-            <span>{{ new.text }}</span>
-            <span class="date">{{ new.date }}</span>
-          </a>
-        {% endfor %}
-      {% else %}
-        <p style="padding: 10px 0; color: #888;">등록된 뉴스가 없습니다.</p>
-      {% endif %}
-    </div>
-  </div>
 
 </div>
