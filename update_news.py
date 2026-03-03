@@ -77,7 +77,9 @@ def blocks_to_markdown(blocks, save_dir, prefix):
     """Notion 블록을 마크다운으로 변환 (이미지 블록 포함)"""
     text = ""
     img_count = 1
+    
     for b in blocks:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         try:
             b_type = b["type"]
             
@@ -95,7 +97,7 @@ def blocks_to_markdown(blocks, save_dir, prefix):
             elif b_type == "image":
                 img_url = b["image"].get("file", {}).get("url") or b["image"].get("external", {}).get("url")
                 if img_url:
-                    img_filename = f"{prefix}_img{img_count}"
+                    img_filename = f"{prefix}_{timestamp}_img{img_count}"
                     local_img_path = download_image(img_url, save_dir, img_filename)
                     if local_img_path:
                         text += f"![image]({local_img_path})\n\n" # 마크다운 이미지 문법
@@ -154,7 +156,7 @@ def main():
             content = blocks_to_markdown(blocks, img_filepath, safe_title)
             
             with open(filepath, "w", encoding="utf-8") as f:
-                f.write(f"---\nlayout: pretty_post\ntitle: \"{title}\"\ndate: {date}\n---\n\n{content}")
+                f.write(f"---\nlayout: pretty_post\ntitle: \"{title}\"\ndate: {date}\npermalink: /{conf['folder']}/{safe_title}/\n---\n\n{content}")
             
             entry = {"text": title, "date": date.replace("-", "/"), "url": f"/{conf['folder']}/{safe_title}/", "page_id": p_id}
             yaml_data[cat]['issue'] = [i for i in yaml_data[cat]['issue'] if i.get('page_id') != p_id]
