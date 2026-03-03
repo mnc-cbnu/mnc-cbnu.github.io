@@ -4,7 +4,9 @@
 
   <div class="member-info">
     <div class="member-name">{{ member.name }}</div>
-    <div class="member-affiliation">{{ member.role }}</div>
+    <div class="member-affiliation">
+      {{ member.role }} {% if member.year %}({{ member.year }}){% endif %}
+    </div>
     {% if member.topic %}
     <div class="member-affiliation">{{ member.topic }}</div>
     {% endif %}

@@ -16,13 +16,16 @@ alumni:
   - name: Yongje Shin
     role: Ph.D. Student
     workplace: School of Smart IT, Semyung University
+    year: 2022
     image: test
   - name: Hyunseok Choi
     role: Ph.D. Student
     workplace: Department of Computer Engineering, Seowon University
+    year: 2023
     image: test
   - name: Youngju Nam
     role: Ph.D. Student
+    year: 2023
     workplace: Department of Software, Kunsan National University
     image: test
   - name: Mugerwa Dickson

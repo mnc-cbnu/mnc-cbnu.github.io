@@ -149,7 +149,9 @@ def main():
             
             # [✨추가됨] 본문을 읽어오면서 이미지도 다운로드하여 Markdown 생성
             blocks = get_block_children(p_id)
-            content = blocks_to_markdown(blocks, IMG_DIR+f'conf["folder"]', safe_title)
+            img_filepath = os.path.join(IMG_DIR,conf["folder"])
+            os.makedirs(img_filepath, exist_ok=True)
+            content = blocks_to_markdown(blocks, img_filepath, safe_title)
             
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(f"---\nlayout: pretty_post\ntitle: \"{title}\"\ndate: {date}\n---\n\n{content}")
