@@ -30,11 +30,10 @@ PUBS_YAML_PATH = "_data/publications.yml"
 FEATURED_YAML_PATH = "_data/featured.yml"
 
 # 다운로드된 이미지가 저장될 로컬 경로
-IMG_DIR = "assets/img/" 
+IMG_DIR_NEWS = "assets/img/news" 
 
 # ================= 공통 함수 =================
 def get_pages(db_id, status="Ready"):
-    """한 번에 100개 이상의 페이지도 전부 긁어오는 함수"""
     all_results = []
     url = f"https://api.notion.com/v1/databases/{db_id}/query"
     payload = {"filter": {"property": "Status", "status": {"equals": status}}}
@@ -56,7 +55,6 @@ def update_status(page_id, new_status="Published"):
     requests.patch(url, json=payload, headers=HEADERS)
 
 def download_image(url, save_dir, filename):
-    """이미지 URL을 로컬에 다운로드하고 웹에서 쓸 수 있는 경로를 반환"""
     if not os.path.exists(save_dir):
         os.makedirs(save_dir, exist_ok=True)
     
@@ -64,7 +62,7 @@ def download_image(url, save_dir, filename):
     save_path = f"{save_dir}/{filename}.{ext}"
     try:
         urllib.request.urlretrieve(url, save_path)
-        return f"/{save_path}" # 브라우저에서 읽을 수 있는 절대 경로
+        return f"/{save_path}" 
     except Exception as e:
         print(f"   ⚠️ 이미지 다운로드 실패: {e}")
         return None
@@ -74,16 +72,13 @@ def get_block_children(block_id):
     return requests.get(url, headers=HEADERS).json().get("results", [])
 
 def blocks_to_markdown(blocks, save_dir, prefix):
-    """Notion 블록을 마크다운으로 변환 (이미지 블록 포함)"""
     text = ""
     img_count = 1
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
     for b in blocks:
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         try:
             b_type = b["type"]
-            
-            # 1. 일반 텍스트 블록 처리
             if "rich_text" in b.get(b_type, {}):
                 content = "".join([t["plain_text"] for t in b[b_type]["rich_text"]])
                 if b_type == "heading_1": text += f"# {content}\n\n"
@@ -93,14 +88,13 @@ def blocks_to_markdown(blocks, save_dir, prefix):
                 elif b_type == "numbered_list_item": text += f"1. {content}\n"
                 else: text += f"{content}\n\n"
                 
-            # 2. 이미지 블록 처리 (다운로드 로직 포함)
             elif b_type == "image":
                 img_url = b["image"].get("file", {}).get("url") or b["image"].get("external", {}).get("url")
                 if img_url:
                     img_filename = f"{prefix}_{timestamp}_img{img_count}"
                     local_img_path = download_image(img_url, save_dir, img_filename)
                     if local_img_path:
-                        text += f"![image]({local_img_path})\n\n" # 마크다운 이미지 문법
+                        text += f"![image]({local_img_path})\n\n" 
                     img_count += 1
         except:
             pass
@@ -111,7 +105,7 @@ def main():
     print("=== 🔄 홈페이지 업데이트 시작 ===")
 
     # ---------------------------------------------------------
-    # [1] News & Notice 처리 (이미지 다운로드 및 날짜 자동입력)
+    # [1] News & Notice 처리
     # ---------------------------------------------------------
     if DATABASE_ID_NEWS:
         print("\n[1] News/Notice 처리 중...")
@@ -123,6 +117,32 @@ def main():
             else:
                 yaml_data[cat] = {'issue': []}
 
+        # --- [추가] 1-A. Unpublish 처리 ---
+        unpublish_pages = get_pages(DATABASE_ID_NEWS, "Unpublish")
+        for p in unpublish_pages:
+            try:
+                p_id = p["id"]
+                props = p["properties"]
+                cat = props["Category"]["select"]["name"]
+                title = props["이름"]["title"][0]["plain_text"]
+                safe_title = re.sub(r'[\\/*?:"<>|]', "", title).replace(" ", "-")
+
+                # YAML 명단에서 제거
+                if cat in yaml_data:
+                    yaml_data[cat]['issue'] = [i for i in yaml_data[cat]['issue'] if i.get('page_id') != p_id]
+                
+                # 마크다운 파일 삭제
+                if cat in DATA_FILES:
+                    filepath = os.path.join(DATA_FILES[cat]["folder"], f"{safe_title}.md")
+                    if os.path.exists(filepath):
+                        os.remove(filepath)
+
+                update_status(p_id, "Draft") # 다시 올릴 수 있도록 Draft로 변경
+                print(f"   🗑️ [{cat}] 숨김 처리 완료: {title}")
+            except Exception as e:
+                continue
+
+        # --- 1-B. 신규 글 발행 (Ready -> Published) ---
         pages = get_pages(DATABASE_ID_NEWS, "Ready")
         for p in pages:
             try:
@@ -131,8 +151,6 @@ def main():
                 if cat not in DATA_FILES: continue
                 
                 title = props["이름"]["title"][0]["plain_text"]
-                
-                # [✨추가됨] Date가 비어있으면 오늘 날짜 자동 입력
                 if props.get("Date") and props["Date"].get("date"):
                     date = props["Date"]["date"]["start"]
                 else:
@@ -140,20 +158,15 @@ def main():
                     
                 p_id = p["id"]
             except Exception as e: 
-                print(f"   ⚠️ 건너뜀 (필수 정보 누락): {p.get('id')}")
                 continue
 
-            # 파일명으로 쓸 수 없는 특수문자 제거
             safe_title = re.sub(r'[\\/*?:"<>|]', "", title).replace(" ", "-")
             conf = DATA_FILES[cat]
             filepath = os.path.join(conf["folder"], f"{safe_title}.md")
             os.makedirs(conf["folder"], exist_ok=True)
             
-            # [✨추가됨] 본문을 읽어오면서 이미지도 다운로드하여 Markdown 생성
             blocks = get_block_children(p_id)
-            img_filepath = os.path.join(IMG_DIR,conf["folder"])
-            os.makedirs(img_filepath, exist_ok=True)
-            content = blocks_to_markdown(blocks, img_filepath, safe_title)
+            content = blocks_to_markdown(blocks, IMG_DIR_NEWS, safe_title)
             
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(f"---\nlayout: pretty_post\ntitle: \"{title}\"\ndate: {date}\npermalink: /{conf['folder']}/{safe_title}/\n---\n\n{content}")
@@ -163,7 +176,7 @@ def main():
             yaml_data[cat]['issue'].append(entry)
             
             update_status(p_id, "Published")
-            print(f"   ✅ [{cat}] {title}")
+            print(f"   ✅ [{cat}] 발행 완료: {title}")
 
         for cat, data in yaml_data.items():
             data['issue'].sort(key=lambda x: x['date'], reverse=True)
@@ -171,7 +184,7 @@ def main():
                 yaml.dump(data, f, allow_unicode=True, sort_keys=False)
 
     # ---------------------------------------------------------
-    # [2] Publications 처리 (기존 구조 유지)
+    # [2] Publications 처리
     # ---------------------------------------------------------
     if DATABASE_ID_PUBS:
         print("\n[2] Publications 처리 중...")
@@ -181,7 +194,33 @@ def main():
         if os.path.exists(PUBS_YAML_PATH):
             with open(PUBS_YAML_PATH, 'r', encoding='utf-8') as f:
                 nested_pubs = yaml.safe_load(f) or {}
+        if os.path.exists(FEATURED_YAML_PATH):
+            with open(FEATURED_YAML_PATH, 'r', encoding='utf-8') as f:
+                featured_list = yaml.safe_load(f) or []
 
+        # --- [추가] 2-A. Unpublish 처리 ---
+        unpublish_pubs = get_pages(DATABASE_ID_PUBS, "Unpublish")
+        for p in unpublish_pubs:
+            try:
+                p_id = p["id"]
+                # 1. 전체 Publications 목록에서 제거
+                for year in list(nested_pubs.keys()):
+                    for cat_key in ["journal", "conference"]:
+                        if cat_key in nested_pubs[year] and nested_pubs[year][cat_key]:
+                            nested_pubs[year][cat_key] = [x for x in nested_pubs[year][cat_key] if x.get('page_id') != p_id]
+                    # 해당 연도에 논문이 하나도 안 남았으면 연도 삭제
+                    if not nested_pubs[year].get("journal") and not nested_pubs[year].get("conference"):
+                        del nested_pubs[year]
+                
+                # 2. Featured (선택된 연구) 목록에서 제거
+                featured_list = [x for x in featured_list if x.get('page_id') != p_id]
+
+                update_status(p_id, "Draft")
+                print(f"   🗑️ 논문 숨김 처리 완료: {p_id}")
+            except Exception as e:
+                continue
+
+        # --- 2-B. 신규 논문 발행 (Ready -> Published) ---
         pubs = get_pages(DATABASE_ID_PUBS, "Ready")
         count = 0
         for p in pubs:
@@ -210,35 +249,28 @@ def main():
                 count += 1
             
             if selected:
-                featured_list.append({
-                    "title": title_text,
-                    "authors": authors,
-                    "venue": venue,
-                    "year": year,
-                    "page_id": p_id
-                })
+                old_ids = {x['page_id'] for x in featured_list}
+                if p_id not in old_ids:
+                    featured_list.insert(0, {
+                        "title": title_text,
+                        "authors": authors,
+                        "venue": venue,
+                        "year": year,
+                        "page_id": p_id
+                    })
 
             update_status(p_id, "Published")
 
-        if count > 0:
-            sorted_pubs = dict(sorted(nested_pubs.items(), key=lambda item: item[0], reverse=True))
-            with open(PUBS_YAML_PATH, 'w', encoding='utf-8') as f:
-                yaml.dump(sorted_pubs, f, allow_unicode=True, sort_keys=False)
+        # 파일 저장
+        sorted_pubs = dict(sorted(nested_pubs.items(), key=lambda item: item[0], reverse=True))
+        with open(PUBS_YAML_PATH, 'w', encoding='utf-8') as f:
+            yaml.dump(sorted_pubs, f, allow_unicode=True, sort_keys=False)
             
-        if featured_list:
-            if os.path.exists(FEATURED_YAML_PATH):
-                with open(FEATURED_YAML_PATH, 'r', encoding='utf-8') as f:
-                    old_featured = yaml.safe_load(f) or []
-                old_ids = {x['page_id'] for x in old_featured}
-                for f_item in featured_list:
-                    if f_item['page_id'] not in old_ids:
-                        old_featured.insert(0, f_item)
-                featured_list = old_featured
-            
-            with open(FEATURED_YAML_PATH, 'w', encoding='utf-8') as f:
-                yaml.dump(featured_list, f, allow_unicode=True, sort_keys=False)
+        with open(FEATURED_YAML_PATH, 'w', encoding='utf-8') as f:
+            yaml.dump(featured_list, f, allow_unicode=True, sort_keys=False)
                 
-        print(f"   ✅ 총 {count}건의 논문 업데이트 완료")
+        if count > 0 or unpublish_pubs:
+            print(f"   ✅ 신규 {count}건 업데이트, 숨김 {len(unpublish_pubs)}건 처리 완료")
 
     print("\n=== ✨ 모든 업데이트 완료 ===")
 
