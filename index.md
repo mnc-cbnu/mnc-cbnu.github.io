@@ -11,6 +11,7 @@ title: Home
       충북대학교 모바일 네트워크 컴퓨팅 연구실(MNC Lab)입니다.<br>
     </p>
   </div>
+
   <div class="box area-notice">
     <h3>📢 공지사항</h3>
     <div class="content-body">
@@ -42,6 +43,7 @@ title: Home
       {% endif %}
     </div>
   </div>
+  
   <div class="box area-papers">
     <div class="section-header">
       <h2>🏆 Selected Research</h2>

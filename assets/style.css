@@ -492,9 +492,9 @@ details[open] summary::after {
     gap: 15px;
     grid-template-areas:
       "area-intro"
-      "area-papers"
       "area-notice"
-      "area-news";
+      "area-news"
+      "area-papers";
   }
 
   .box {
