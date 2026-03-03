@@ -137,7 +137,7 @@ def main():
                     if os.path.exists(filepath):
                         os.remove(filepath)
 
-                update_status(p_id, "Draft") # 다시 올릴 수 있도록 Draft로 변경
+                update_status(p_id, "Unpublished") # 다시 올릴 수 있도록 Unpublished로 변경
                 print(f"   🗑️ [{cat}] 숨김 처리 완료: {title}")
             except Exception as e:
                 continue
@@ -215,7 +215,7 @@ def main():
                 # 2. Featured (선택된 연구) 목록에서 제거
                 featured_list = [x for x in featured_list if x.get('page_id') != p_id]
 
-                update_status(p_id, "Draft")
+                update_status(p_id, "Unpublished")
                 print(f"   🗑️ 논문 숨김 처리 완료: {p_id}")
             except Exception as e:
                 continue
