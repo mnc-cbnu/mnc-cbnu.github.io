@@ -235,7 +235,10 @@ def main():
                 p_id = p["id"]
                 
                 cat_key = "conference" if "Conference" in category_raw else "journal"
-                formatted_title = f"{title_text}. {venue}, ({year})"
+
+                venue_clean = re.sub(rf'[,\s]+{year}$', '', venue)
+
+                formatted_title = f"{title_text}. {venue_clean}, {year}"
             except Exception as e:
                 continue
 
