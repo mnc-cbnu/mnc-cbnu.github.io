@@ -71,6 +71,42 @@ def get_block_children(block_id):
     url = f"https://api.notion.com/v1/blocks/{block_id}/children"
     return requests.get(url, headers=HEADERS).json().get("results", [])
 
+def parse_rich_text(rich_text_array):
+    """Notion의 글자 꾸밈 효과(색상, 굵기 등)를 HTML/마크다운으로 변환"""
+    parsed_text = ""
+    for t in rich_text_array:
+        text = t.get("plain_text", "")
+        if not text:
+            continue
+            
+        annotations = t.get("annotations", {})
+        color = annotations.get("color", "default")
+        
+        # 1. 글자색 및 배경색 처리
+        if color != "default":
+            if "_background" in color:
+                bg_color = color.replace("_background", "")
+                # 회색 배경은 너무 진할 수 있어 연한 회색으로 보정
+                if bg_color == "gray": bg_color = "lightgray" 
+                text = f'<span style="background-color: {bg_color};">{text}</span>'
+            else:
+                text = f'<span style="color: {color};">{text}</span>'
+                
+        # 2. 굵게, 기울임, 밑줄, 취소선, 인라인 코드 처리
+        if annotations.get("code"):
+            text = f"`{text}`"
+        if annotations.get("bold"):
+            text = f"**{text}**"
+        if annotations.get("italic"):
+            text = f"*{text}*"
+        if annotations.get("strikethrough"):
+            text = f"~~{text}~~"
+        if annotations.get("underline"):
+            text = f"<u>{text}</u>"
+            
+        parsed_text += text
+    return parsed_text
+
 def blocks_to_markdown(blocks, save_dir, prefix):
     text = ""
     img_count = 1
@@ -80,7 +116,7 @@ def blocks_to_markdown(blocks, save_dir, prefix):
         try:
             b_type = b["type"]
             if "rich_text" in b.get(b_type, {}):
-                content = "".join([t["plain_text"] for t in b[b_type]["rich_text"]])
+                content = parse_rich_text(b[b_type]["rich_text"])
                 if b_type == "heading_1": text += f"# {content}\n\n"
                 elif b_type == "heading_2": text += f"## {content}\n\n"
                 elif b_type == "heading_3": text += f"### {content}\n\n"
@@ -150,7 +186,10 @@ def main():
                 cat = props["Category"]["select"]["name"]
                 if cat not in DATA_FILES: continue
                 
-                title = props["이름"]["title"][0]["plain_text"]
+                title = parse_rich_text(props["이름"]["title"])
+                authors = parse_rich_text(props["Authors"]["rich_text"])
+                
+                # title = props["이름"]["title"][0]["plain_text"]
                 if props.get("Date") and props["Date"].get("date"):
                     date = props["Date"]["date"]["start"]
                 else:
@@ -225,18 +264,28 @@ def main():
         count = 0
         for p in pubs:
             try:
+                import copy
                 props = p["properties"]
-                title_text = props["이름"]["title"][0]["plain_text"]
-                authors = props["Authors"]["rich_text"][0]["plain_text"]
-                venue = props["Venue"]["rich_text"][0]["plain_text"]
+                # title_text = props["이름"]["title"][0]["plain_text"]
+                # authors = props["Authors"]["rich_text"][0]["plain_text"]
+                # venue = props["Venue"]["rich_text"][0]["plain_text"]
+                title_text = parse_rich_text(props["이름"]["title"])
+                authors = parse_rich_text(props["Authors"]["rich_text"])
                 year = props["Year"]["number"]
+
+                
+                venue_data = copy.deepcopy(props["Venue"]["rich_text"])
+                if venue_data:
+                    # 가장 마지막 텍스트 덩어리에서 ', 2025' 같은 연도를 잘라냅니다 (실수로 뒤에 띄어쓰기가 있어도 커버함)
+                    last_text = venue_data[-1]["plain_text"]
+                    venue_data[-1]["plain_text"] = re.sub(rf'[,\s]+{year}\s*$', '', last_text)
+                venue_clean = parse_rich_text(venue_data).strip()
+
                 category_raw = props["Category"]["select"]["name"]
                 selected = props["Selected"]["checkbox"]
                 p_id = p["id"]
                 
                 cat_key = "conference" if "Conference" in category_raw else "journal"
-
-                venue_clean = re.sub(rf'[,\s]+{year}$', '', venue)
 
                 formatted_title = f"{title_text}. {venue_clean}, {year}"
             except Exception as e:
