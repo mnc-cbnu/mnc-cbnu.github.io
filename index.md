@@ -13,7 +13,10 @@ title: Home
   </div>
 
   <div class="box area-notice">
-    <h3>📢 공지사항</h3>
+    <div class="section-header" style="border-bottom: none; margin-bottom: 10px; padding-bottom: 0;">
+      <h3 style="margin: 0;">📢 공지사항</h3>
+      <a href="/notice/" class="view-all-link">View all &rarr;</a>
+    </div>
     <div class="content-body">
       {% if site.data.notice.issue %}
         {% for notice in site.data.notice.issue limit:5 %}
@@ -29,7 +32,10 @@ title: Home
   </div>
 
   <div class="box area-news">
-    <h3>📰 NEWS</h3>
+    <div class="section-header" style="border-bottom: none; margin-bottom: 10px; padding-bottom: 0;">
+      <h3>📰 NEWS</h3>
+      <a href="/news/" class="view-all-link">View all &rarr;</a>
+    </div>
     <div class="content-body">
       {% if site.data.news.issue %}
         {% for new in site.data.news.issue limit:5 %}
