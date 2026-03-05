@@ -306,7 +306,7 @@ def main():
                     featured_list.insert(0, {
                         "title": title_text,
                         "authors": authors,
-                        "venue": venue,
+                        "venue": venue_clean,
                         "year": year,
                         "page_id": p_id
                     })
