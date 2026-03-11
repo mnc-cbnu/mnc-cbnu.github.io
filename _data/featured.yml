@@ -1,14 +1,11 @@
-- title:
-    Delay Tolerant Precaching Scheme based on Proximal Policy Optimization in
+- title: Delay Tolerant Precaching Scheme based on Proximal Policy Optimization in
     Content-Centric Vehicular Networks
   authors: Jeongtak Na, Jongpil Youn, Irina Em,  Euisin Lee, and Youngju Nam
-  venue:
-    International Conference on Artificial Intelligence in Information and Communication
+  venue: International Conference on Artificial Intelligence in Information and Communication
     (ICAIIC), <span style="color:red;">Excellent Paper Award</span>
   year: 2026
   page_id: 319d280f-69a3-80c3-b156-ed1a650e9a72
-- title:
-    Content Storage Management and Precaching Scheme in Content-Centric Networks-Based
+- title: Content Storage Management and Precaching Scheme in Content-Centric Networks-Based
     Internet of Vehicle
   authors: Y Nam, H Choi, E Lee
   venue: IEEE Internet of Things Journal
@@ -19,9 +16,8 @@
   venue: AIMS Mathematics, 11(2)
   year: 2026
   page_id: 319d280f-69a3-80a3-8027-f55421bc7d1a
-- title:
-    "Energy Balancing and Lifetime Extension: A Random Quorum-Based Sink Location
-    Service Scheme for Wireless Sensor Networks"
+- title: 'Energy Balancing and Lifetime Extension: A Random Quorum-Based Sink Location
+    Service Scheme for Wireless Sensor Networks'
   authors: Y Shin, J Lee, E Lee
   venue: Sensors 25 (13), 4078
   year: 2025
@@ -31,24 +27,22 @@
   venue: Electronics 13 (11), 2052
   year: 2024
   page_id: 2ffd280f-69a3-81aa-802e-cf83b6d6c7bc
-- title:
-    Resource cluster-based resource search and allocation scheme for vehicular
+- title: Resource cluster-based resource search and allocation scheme for vehicular
     clouds in vehicular ad hoc networks
   authors: H Choi, Y Lee, G Kim, E Lee, Y Nam
   venue: Sensors 24 (7), 2175
   year: 2024
   page_id: 2ffd280f-69a3-8184-8906-da7f4ec9828d
-- title:
-    Mobility-Based Multi-Hop Content Precaching Scheme in Content-Centric Vehicular
+- title: Mobility-Based Multi-Hop Content Precaching Scheme in Content-Centric Vehicular
     Networks
   authors: H Choi, Y Nam, G Kim, E Lee
   venue: Electronics 13 (22), 4367
   year: 2024
   page_id: 2ffd280f-69a3-8133-b561-e803609d2c58
-- title:
-    Precaching Scheme based on Mobility and Caching Information of Vehicles in
+- title: Precaching Scheme based on Mobility and Caching Information of Vehicles in
     Intermittently Connected Vehicular Networks
   authors: I Em, E Lee
-  venue: 2025 8th International Conference on Information Communication and Signal Processing
+  venue: 2025 8th International Conference on Information Communication and Signal
+    Processing
   year: 2025
   page_id: 2ffd280f-69a3-8179-88f7-ecfa8e804ec4
