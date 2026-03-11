@@ -402,6 +402,7 @@ def main():
 
         # 신규/수정 페이지 발행 (Ready -> Published)
         pages_to_update = get_pages(DATABASE_ID_PAGES, "Ready")
+        print(pages_to_update)
         for p in pages_to_update:
             try:
                 p_id = p["id"]
@@ -467,6 +468,7 @@ def main():
             
         # 신규/수정 페이지 (Ready -> Published)
         ready_members = get_pages(DATABASE_ID_MEMBERS, "Ready")
+        print(ready_members)
         for p in ready_members:
             try:
                 p_id = p["id"]
