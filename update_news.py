@@ -46,7 +46,7 @@ def get_pages(db_id, status="Ready"):
         if next_cursor: payload["start_cursor"] = next_cursor
         response = requests.post(url, json=payload, headers=HEADERS)
         if response.status_code != 200:
-            print(f"🚨 [에러 발생] DB({database_id})에서 데이터를 가져오지 못했습니다!")
+            print(f"🚨 [에러 발생] DB({db_id})에서 데이터를 가져오지 못했습니다!")
             print(f"원인: {res.text}")
         data = response.json()
         all_results.extend(data.get("results", []))
