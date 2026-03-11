@@ -487,7 +487,8 @@ def main():
                 year = props["Year"]["number"] if props.get("Year", {}).get("number") else None
                 
                 safe_name = re.sub(r'[\\/*?:"<>|]', "", name).replace(" ", "_")
-                
+                order_val = props.get("Order", {}).get("number")
+                order = order_val if order_val is not None else 999
                 # 프로필 이미지 다운로드
                 profile_img_path = "/assets/img/default-avatar.png"
                 files = props["Profile"]["files"]
@@ -508,7 +509,7 @@ def main():
 
                 member_data = {
                     "name": name, "role": role, "email": email, "affiliation": affiliation,
-                    "year": year, "image": profile_img_path, "company_logo": logo_img_path, "page_id": p_id
+                    "year": year, "image": profile_img_path, "company_logo": logo_img_path, "page_id": p_id,"order": order
                 }
 
                 # 중복 방지를 위해 기존 목록에서 일단 제거
@@ -520,13 +521,14 @@ def main():
                     existing_members["alumni"].append(member_data)
                 else:
                     existing_members["current"].append(member_data)
-                    
+                
                 update_status(p_id, "Published")
                 print(f"   ✅ 멤버 업데이트 완료: {name} (Role: {role})")
             except Exception as e:
                 print(f"   ⚠️ 멤버 업데이트 실패 ({name}): {e}")
                 continue
-
+        existing_members["alumni"].sort(key=lambda x: x.get("order", 999))
+        existing_members["current"].sort(key=lambda x: x.get("order", 999))
         with open(MEMBERS_YAML_PATH, 'w', encoding='utf-8') as f:
             yaml.dump(existing_members, f, allow_unicode=True, sort_keys=False)
     print("\n=== ✨ 모든 업데이트 완료 ===")
