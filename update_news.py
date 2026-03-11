@@ -400,7 +400,7 @@ def main():
                     if os.path.exists("professor/index.md"): os.remove("professor/index.md")
                 elif page_name == "Home":
                     if os.path.exists("_includes/home_intro.md"): os.remove("_includes/home_intro.md")
-                update_status(p["id"], "Draft")
+                update_status(p["id"], "Unpublished")
             except: pass
 
         # 신규/수정 페이지 발행 (Ready -> Published)
@@ -458,20 +458,23 @@ def main():
         os.makedirs(IMG_DIR_MEMBERS, exist_ok=True)
         
         # 기존 yml 데이터 읽기
-        existing_members = []
+        existing_members = {"current": [], "alumni": []}
         if os.path.exists(MEMBERS_YAML_PATH):
             with open(MEMBERS_YAML_PATH, 'r', encoding='utf-8') as f:
-                existing_members = yaml.safe_load(f) or []
+                loaded = yaml.safe_load(f)
+                if isinstance(loaded, dict):
+                    existing_members = loaded
 
         # Unpublish 처리
         unpublish_members = get_pages(DATABASE_ID_MEMBERS, "Unpublish")
         for p in unpublish_members:
-            existing_members = [m for m in existing_members if m.get("page_id") != p["id"]]
-            update_status(p["id"], "Draft")
+            p_id = p["id"]
+            existing_members["current"] = [m for m in existing_members["current"] if m.get("page_id") != p_id]
+            existing_members["alumni"] = [m for m in existing_members["alumni"] if m.get("page_id") != p_id]
+            update_status(p_id, "Unpublished")
             
         # 신규/수정 페이지 (Ready -> Published)
         ready_members = get_pages(DATABASE_ID_MEMBERS, "Ready")
-        print(ready_members)
         for p in ready_members:
             try:
                 p_id = p["id"]
@@ -486,33 +489,42 @@ def main():
                 safe_name = re.sub(r'[\\/*?:"<>|]', "", name).replace(" ", "_")
                 
                 # 프로필 이미지 다운로드
-                profile_img_path = "/assets/img/default-avatar.png" # 사진이 없을 때 기본 이미지
-                files = props["Profile"]["files"]
+                profile_img_path = "/assets/img/default-avatar.png"
+                files = props["Profile Image"]["files"]
                 if files:
                     f_url = files[0].get("file", {}).get("url") or files[0].get("external", {}).get("url")
                     if f_url:
                         downloaded = download_image(f_url, IMG_DIR_MEMBERS, f"profile_{safe_name}")
                         if downloaded: profile_img_path = downloaded
                         
-                # 회사 로고 다운로드
+                # 회사 로고 다운로드 (SVG도 완벽 대응)
                 logo_img_path = None
-                logo_files = props["Company_Logo"]["files"]
+                logo_files = props["Company Logo"]["files"]
                 if logo_files:
                     l_url = logo_files[0].get("file", {}).get("url") or logo_files[0].get("external", {}).get("url")
                     if l_url:
                         downloaded = download_image(l_url, IMG_DIR_MEMBERS, f"logo_{safe_name}")
                         if downloaded: logo_img_path = downloaded
 
-                # 명단 갱신
-                existing_members = [m for m in existing_members if m.get("page_id") != p_id]
-                existing_members.append({
+                member_data = {
                     "name": name, "role": role, "email": email, "affiliation": affiliation,
                     "year": year, "image": profile_img_path, "company_logo": logo_img_path, "page_id": p_id
-                })
+                }
+
+                # 중복 방지를 위해 기존 목록에서 일단 제거
+                existing_members["current"] = [m for m in existing_members["current"] if m.get("page_id") != p_id]
+                existing_members["alumni"] = [m for m in existing_members["alumni"] if m.get("page_id") != p_id]
+                
+                # 💡 [핵심] Year(졸업 연도) 값이 존재하면 졸업생(Alumni), 비어있으면 재학생(Current)으로 분류
+                if year is not None:
+                    existing_members["alumni"].append(member_data)
+                else:
+                    existing_members["current"].append(member_data)
+                    
                 update_status(p_id, "Published")
-                print(f"   ✅ 멤버 업데이트 완료: {name}")
+                print(f"   ✅ 멤버 업데이트 완료: {name} (Role: {role})")
             except Exception as e:
-                print('Error',e)
+                print(f"   ⚠️ 멤버 업데이트 실패 ({name}): {e}")
                 continue
 
         with open(MEMBERS_YAML_PATH, 'w', encoding='utf-8') as f:
