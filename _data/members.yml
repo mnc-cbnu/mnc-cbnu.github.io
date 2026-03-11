@@ -1,79 +1,77 @@
 current:
-  - name: Jongpil Youn
-    role: Ph.D. Student
-    image: /assets/img/jongpil.jpg
-    email: whdvlf1919@chungbuk.ac.kr
-  - name: Irina Em
-    role: Ph.D. Student
-    image: /assets/img/irina.jpg
-    email: ira.em@chungbuk.ac.kr
-  - name: Jeongtak Na
-    role: Ph.D. Student
-    image: /assets/img/jeongtak.jpg
-    email: jeongtak_na@chungbuk.ac.kr
-
+- name: Jongpil Youn
+  role: Ph.D. Student
+  image: /assets/img/jongpil.jpg
+  email: whdvlf1919@chungbuk.ac.kr
+- name: Irina Em
+  role: Ph.D. Student
+  image: /assets/img/irina.jpg
+  email: ira.em@chungbuk.ac.kr
+- name: Jeongtak Na
+  role: Ph.D. Student
+  image: /assets/img/jeongtak.jpg
+  email: jeongtak_na@chungbuk.ac.kr
 alumni:
-  - name: Yongje Shin
-    role: Ph.D. Student
-    workplace: School of Smart IT, Semyung University
-    year: 2022
-    image: test
-  - name: Hyunseok Choi
-    role: Ph.D. Student
-    workplace: Department of Computer Engineering, Seowon University
-    year: 2023
-    image: test
-  - name: Youngju Nam
-    role: Ph.D. Student
-    year: 2023
-    workplace: Department of Software, Kunsan National University
-    image: test
-  - name: Mugerwa Dick
-    role: Ph.D. Student
-    year: 2022
-    workplace: Kyambogo University
-    image: test
-
-  - name: Yoon Min
-    role: M.S. Student
-    year: 2017
-    image: test
-  - name: Hoewon Kim
-    year: 2017
-    role: M.S. Student
-    image: test
-  - name: Jaeyeong Jang
-    role: M.S. Student
-    year: 2017
-    image: test
-  - name: Jinhyuk Yim
-    role: M.S. Student
-    year: 2017
-    image: test
-  - name: Hyunkyu Lee
-    role: M.S. Student
-    year: 2017
-    image: test
-  - name: Jaejeong Bang
-    role: M.S. Student
-    year: 2020
-    image: test
-  - name: Donggeun Shin
-    role: M.S. Student
-    year: 2021
-    image: test
-  - name: Yoonhyeong Lee
-    role: M.S. Student
-    year: 2020
-    image: test
-  - name: Sungjin Park
-    role: M.S. Student
-    year: 2020
-    image: test
-  - name: Gayeong Kim
-    role: M.S. Student
-    year: 2024
-    image: test
-  - name: Baigalmaa Khulan
-    role: M.S. Student
-    image: test
+- name: Yongje Shin
+  role: Ph.D. Student
+  workplace: School of Smart IT, Semyung University
+  year: 2022
+  image: test
+- name: Hyunseok Choi
+  role: Ph.D. Student
+  workplace: Department of Computer Engineering, Seowon University
+  year: 2023
+  image: test
+- name: Youngju Nam
+  role: Ph.D. Student
+  year: 2023
+  workplace: Department of Software, Kunsan National University
+  image: test
+- name: Mugerwa Dick
+  role: Ph.D. Student
+  year: 2022
+  workplace: Kyambogo University
+  image: test
+- name: Yoon Min
+  role: M.S. Student
+  year: 2017
+  image: test
+- name: Hoewon Kim
+  year: 2017
+  role: M.S. Student
+  image: test
+- name: Jaeyeong Jang
+  role: M.S. Student
+  year: 2017
+  image: test
+- name: Jinhyuk Yim
+  role: M.S. Student
+  year: 2017
+  image: test
+- name: Hyunkyu Lee
+  role: M.S. Student
+  year: 2017
+  image: test
+- name: Jaejeong Bang
+  role: M.S. Student
+  year: 2020
+  image: test
+- name: Donggeun Shin
+  role: M.S. Student
+  year: 2021
+  image: test
+- name: Yoonhyeong Lee
+  role: M.S. Student
+  year: 2020
+  image: test
+- name: Sungjin Park
+  role: M.S. Student
+  year: 2020
+  image: test
+- name: Gayeong Kim
+  role: M.S. Student
+  year: 2024
+  image: test
+- name: Baigalmaa Khulan
+  role: M.S. Student
+  image: test
