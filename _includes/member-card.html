@@ -1,5 +1,5 @@
 <div class="member-card" style="display: flex; align-items: center; width: 100%;">
-  <img src="{{ member.image | relative_url }}" alt="{{ member.name }}"
+  <img src="{{ member.image | default: '/assets/img/default.jpg' }}" alt="{{ member.name }}"
     style="border-radius: 50%; width: 96px; height: 96px; object-fit: cover;">
 
   <div class="member-info" style="margin-left: 16px;">
