@@ -490,7 +490,7 @@ def main():
                 
                 # 프로필 이미지 다운로드
                 profile_img_path = "/assets/img/default-avatar.png"
-                files = props["Profile Image"]["files"]
+                files = props["Profile"]["files"]
                 if files:
                     f_url = files[0].get("file", {}).get("url") or files[0].get("external", {}).get("url")
                     if f_url:
@@ -499,7 +499,7 @@ def main():
                         
                 # 회사 로고 다운로드 (SVG도 완벽 대응)
                 logo_img_path = None
-                logo_files = props["Company Logo"]["files"]
+                logo_files = props["Company_Logo"]["files"]
                 if logo_files:
                     l_url = logo_files[0].get("file", {}).get("url") or logo_files[0].get("external", {}).get("url")
                     if l_url:
