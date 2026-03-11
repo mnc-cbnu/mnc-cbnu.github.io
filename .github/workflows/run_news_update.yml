@@ -37,6 +37,8 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
           DATABASE_ID_PUBS: ${{ secrets.DATABASE_ID_PUBS }}
+          DATABASE_ID_PAGES: ${{ secrets.DATABASE_ID_PAGES }}
+          DATABASE_ID_MEMBERS: ${{ secrets.DATABASE_ID_MEMBERS }}
         run: python update_news.py
 
       # 5. 변경 사항이 있으면 깃허브에 저장(Commit & Push)
