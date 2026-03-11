@@ -410,7 +410,7 @@ def main():
                 # 본문 내용을 마크다운으로 변환 (이미지는 해당 페이지 이름의 폴더에 저장)
                 blocks = get_block_children(p_id)
                 content = blocks_to_markdown(blocks, f"assets/img/{page_name.lower()}", page_name.lower())
-                
+                print(page_name)
                 # 페이지 이름에 따라 저장할 경로와 Front Matter 다르게 설정
                 if page_name == "Professor":
                     # 섹션별 파싱 후 _data/professor.yml 로 저장
@@ -482,7 +482,7 @@ def main():
                 
                 # 프로필 이미지 다운로드
                 profile_img_path = "/assets/img/default-avatar.png" # 사진이 없을 때 기본 이미지
-                files = props["Profile Image"]["files"]
+                files = props["Profile"]["files"]
                 if files:
                     f_url = files[0].get("file", {}).get("url") or files[0].get("external", {}).get("url")
                     if f_url:
@@ -491,7 +491,7 @@ def main():
                         
                 # 회사 로고 다운로드
                 logo_img_path = None
-                logo_files = props["Company Logo"]["files"]
+                logo_files = props["Company_Logo"]["files"]
                 if logo_files:
                     l_url = logo_files[0].get("file", {}).get("url") or logo_files[0].get("external", {}).get("url")
                     if l_url:
@@ -507,6 +507,7 @@ def main():
                 update_status(p_id, "Published")
                 print(f"   ✅ 멤버 업데이트 완료: {name}")
             except Exception as e:
+                print('Error',e)
                 continue
 
         with open(MEMBERS_YAML_PATH, 'w', encoding='utf-8') as f:
