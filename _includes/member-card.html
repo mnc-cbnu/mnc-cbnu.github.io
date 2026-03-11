@@ -8,11 +8,11 @@
     <div class="member-role" style="font-size: 14px; color: #555;">
       {{ member.role }} {% if member.year %}(Class of {{ member.year }}){% endif %}
     </div>
-    {% if member.email != blank %}
+    {% if member.email.size > 0 %}
     <div class="member-email" style="font-size: 13px; color: #777;">✉️ {{ member.email }}</div>
     {% endif %}
 
-    {% if member.affiliation != blank %}
+    {% if member.affiliation.size > 0 %}
     <div class="member-affiliation" style="font-size: 13px; color: #777;">📍 {{ member.affiliation }}</div>
     {% endif %}
   </div>
