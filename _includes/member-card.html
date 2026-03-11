@@ -1,20 +1,20 @@
-<div class="member-card">
-  <img src="{{ member.image | default: '/assets/img/default.jpg' }}" alt="{{ member.name }}"
-    onerror="this.onerror=null;this.src='/assets/img/default.jpg';" />
+<div class="member-card" style="display: flex; align-items: center; width: 100%;">
+  <img src="{{ member.image | relative_url }}" alt="{{ member.name }}"
+    style="border-radius: 50%; width: 96px; height: 96px; object-fit: cover;">
 
-  <div class="member-info">
-    <div class="member-name">{{ member.name }}</div>
-    <div class="member-affiliation">
+  <div class="member-info" style="margin-left: 16px;">
+    <div class="member-name" style="font-size: 16px; font-weight: 600;">{{ member.name }}</div>
+    <div class="member-role" style="font-size: 14px; color: #555;">
       {{ member.role }} {% if member.year %}(Class of {{ member.year }}){% endif %}
     </div>
-    {% if member.topic %}
-    <div class="member-affiliation">{{ member.topic }}</div>
-    {% endif %}
-    {% if member.workplace %}
-    <div class="member-affiliation">{{ member.workplace }}</div>
-    {% endif %}
-    {% if member.email %}
-    <div class="member-email">{{ member.email }}</div>
-    {% endif %}
+    {% if member.email %}<div class="member-email" style="font-size: 13px; color: #777;">📧 {{ member.email }}</div>{%
+    endif %}
+    {% if member.affiliation %}<div class="member-affiliation" style="font-size: 13px; color: #777;">📍 {{
+      member.affiliation }}</div>{% endif %}
   </div>
+
+  {% if member.company_logo %}
+  <img src="{{ member.company_logo | relative_url }}" alt="Company Logo"
+    style="margin-left: auto; width: 80px; height: auto; object-fit: contain; border-radius: 0; background: transparent; padding-right: 10px;">
+  {% endif %}
 </div>

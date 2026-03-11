@@ -10,6 +10,8 @@ import re
 NOTION_TOKEN = os.environ.get("NOTION_TOKEN")
 DATABASE_ID_NEWS = os.environ.get("DATABASE_ID")      # News/Notice DB
 DATABASE_ID_PUBS = os.environ.get("DATABASE_ID_PUBS") # 논문 DB
+DATABASE_ID_MEMBERS = os.environ.get("DATABASE_ID_MEMBERS")
+DATABASE_ID_PAGES = os.environ.get("DATABASE_ID_PAGES")
 
 if not NOTION_TOKEN:
     print("Error: NOTION_TOKEN 환경변수 누락")
@@ -135,7 +137,61 @@ def blocks_to_markdown(blocks, save_dir, prefix):
         except:
             pass
     return text
-
+def blocks_to_sections(blocks, save_dir, prefix):
+    """Notion 블록을 '# 제목' 기준으로 쪼개서 딕셔너리로 반환"""
+    sections = {"Profile": "", "Profile_Image": "/assets/img/professor.jpg"} 
+    current_section = "Profile"
+    img_count = 1
+    heading_count = 0  # 💡 [추가됨] 제목이 몇 번 나왔는지 세는 카운터
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    for b in blocks:
+        try:
+            b_type = b["type"]
+            
+            # 1. 제목(Heading) 처리
+            if b_type in ["heading_1", "heading_2", "heading_3"]:
+                clean_title = "".join([t["plain_text"] for t in b[b_type]["rich_text"]]).strip()
+                
+                # 💡 [핵심] 문서의 첫 번째 제목(보통 교수님 이름)은 카드로 쪼개지 않고 프로필 영역에 큰 글씨로 추가합니다!
+                if heading_count == 0 and current_section == "Profile":
+                    sections["Profile"] += f"# {clean_title}\n\n"
+                    heading_count += 1
+                    continue
+                    
+                # 두 번째 제목부터는 새로운 카드(섹션)으로 분리합니다.
+                current_section = clean_title
+                sections[current_section] = "" 
+                heading_count += 1
+                continue 
+                
+            # 2. 텍스트 내용 처리
+            elif "rich_text" in b.get(b_type, {}):
+                content = parse_rich_text(b[b_type]["rich_text"])
+                if b_type == "bulleted_list_item": sections[current_section] += f"- {content}\n"
+                elif b_type == "numbered_list_item": sections[current_section] += f"1. {content}\n"
+                else: sections[current_section] += f"{content}\n\n"
+                
+            # 3. 이미지 처리
+            elif b_type == "image":
+                img_url = b["image"].get("file", {}).get("url") or b["image"].get("external", {}).get("url")
+                if img_url:
+                    img_filename = f"{prefix}_{timestamp}_img{img_count}"
+                    local_img_path = download_image(img_url, save_dir, img_filename)
+                    if local_img_path:
+                        # 맨 처음 나오는 이미지는 무조건 교수님 프로필 사진으로 지정
+                        if current_section == "Profile" and sections["Profile_Image"] == "/assets/img/professor.jpg":
+                            sections["Profile_Image"] = local_img_path
+                        else:
+                            sections[current_section] += f"![image]({local_img_path})\n\n"
+                    img_count += 1
+        except:
+            pass
+            
+    # 글자 끝의 쓸데없는 줄바꿈들 정리
+    for key in sections:
+        sections[key] = sections[key].strip()
+    return sections
 # ================= Main Logic =================
 def main():
     print("=== 🔄 홈페이지 업데이트 시작 ===")
@@ -324,6 +380,137 @@ def main():
         if count > 0 or unpublish_pubs:
             print(f"   ✅ 신규 {count}건 업데이트, 숨김 {len(unpublish_pubs)}건 처리 완료")
 
+
+
+        # ---------------------------------------------------------
+    # [3] Website Pages (Professor, Home 등 단일 페이지) 처리
+    # ---------------------------------------------------------
+    if DATABASE_ID_PAGES:
+        print("\n[3] Website Pages 처리 중...")
+        
+        # Unpublish 처리 (파일 삭제)
+        unpublish_pages = get_pages(DATABASE_ID_PAGES, "Unpublish")
+        for p in unpublish_pages:
+            try:
+                page_name = p["properties"]["Page Name"]["title"][0]["plain_text"]
+                if page_name == "Professor":
+                    if os.path.exists("professor/index.md"): os.remove("professor/index.md")
+                elif page_name == "Home":
+                    if os.path.exists("_includes/home_intro.md"): os.remove("_includes/home_intro.md")
+                update_status(p["id"], "Draft")
+            except: pass
+
+        # 신규/수정 페이지 발행 (Ready -> Published)
+        pages_to_update = get_pages(DATABASE_ID_PAGES, "Ready")
+        for p in pages_to_update:
+            try:
+                p_id = p["id"]
+                page_name = p["properties"]["Page Name"]["title"][0]["plain_text"]
+                
+                # 본문 내용을 마크다운으로 변환 (이미지는 해당 페이지 이름의 폴더에 저장)
+                blocks = get_block_children(p_id)
+                content = blocks_to_markdown(blocks, f"assets/img/{page_name.lower()}", page_name.lower())
+                
+                # 페이지 이름에 따라 저장할 경로와 Front Matter 다르게 설정
+                if page_name == "Professor":
+                    # 섹션별 파싱 후 _data/professor.yml 로 저장
+                    blocks = get_block_children(p_id)
+                    sections = blocks_to_sections(blocks, "assets/img/professor", "prof")
+                    
+                    os.makedirs("_data", exist_ok=True)
+                    with open("_data/professor.yml", "w", encoding="utf-8") as f:
+                        yaml.dump(sections, f, allow_unicode=True, sort_keys=False)
+                    
+                    update_status(p_id, "Published")
+                    print(f"   ✅ 페이지 업데이트 완료: {page_name}")
+                    
+                elif page_name == "Homeintro":
+                    # Home 연구실 소개 부분은 메인 화면의 일부분이므로 _includes에 조각으로 저장
+                    filepath = "_includes/home_intro.md"
+                    os.makedirs("_includes", exist_ok=True)
+                    full_content = content # 조각 파일이므로 Front Matter 생략
+                    
+                else:
+                    continue # 다른 이름의 페이지는 무시
+                
+                # 파일 저장
+                with open(filepath, "w", encoding="utf-8") as f:
+                    f.write(full_content)
+                    
+                update_status(p_id, "Published")
+                print(f"   ✅ 페이지 업데이트 완료: {page_name}")
+            except Exception as e:
+                print(f"   ⚠️ 페이지 업데이트 실패 ({page_name}): {e}")
+                continue
+        
+
+        # ---------------------------------------------------------
+    # [4] Members 처리
+    # ---------------------------------------------------------
+    if DATABASE_ID_MEMBERS:
+        print("\n[4] Members 처리 중...")
+        MEMBERS_YAML_PATH = "_data/members.yml"
+        IMG_DIR_MEMBERS = "assets/img/members"
+        os.makedirs(IMG_DIR_MEMBERS, exist_ok=True)
+        
+        # 기존 yml 데이터 읽기
+        existing_members = []
+        if os.path.exists(MEMBERS_YAML_PATH):
+            with open(MEMBERS_YAML_PATH, 'r', encoding='utf-8') as f:
+                existing_members = yaml.safe_load(f) or []
+
+        # Unpublish 처리
+        unpublish_members = get_pages(DATABASE_ID_MEMBERS, "Unpublish")
+        for p in unpublish_members:
+            existing_members = [m for m in existing_members if m.get("page_id") != p["id"]]
+            update_status(p["id"], "Draft")
+            
+        # 신규/수정 페이지 (Ready -> Published)
+        ready_members = get_pages(DATABASE_ID_MEMBERS, "Ready")
+        for p in ready_members:
+            try:
+                p_id = p["id"]
+                props = p["properties"]
+                
+                name = props["이름"]["title"][0]["plain_text"]
+                role = props["Role"]["select"]["name"] if props.get("Role", {}).get("select") else ""
+                email = props["Email"]["email"] if props.get("Email", {}).get("email") else ""
+                affiliation = "".join([t["plain_text"] for t in props.get("Affiliation", {}).get("rich_text", [])])
+                year = props["Year"]["number"] if props.get("Year", {}).get("number") else None
+                
+                safe_name = re.sub(r'[\\/*?:"<>|]', "", name).replace(" ", "_")
+                
+                # 프로필 이미지 다운로드
+                profile_img_path = "/assets/img/default-avatar.png" # 사진이 없을 때 기본 이미지
+                files = props["Profile Image"]["files"]
+                if files:
+                    f_url = files[0].get("file", {}).get("url") or files[0].get("external", {}).get("url")
+                    if f_url:
+                        downloaded = download_image(f_url, IMG_DIR_MEMBERS, f"profile_{safe_name}")
+                        if downloaded: profile_img_path = downloaded
+                        
+                # 회사 로고 다운로드
+                logo_img_path = None
+                logo_files = props["Company Logo"]["files"]
+                if logo_files:
+                    l_url = logo_files[0].get("file", {}).get("url") or logo_files[0].get("external", {}).get("url")
+                    if l_url:
+                        downloaded = download_image(l_url, IMG_DIR_MEMBERS, f"logo_{safe_name}")
+                        if downloaded: logo_img_path = downloaded
+
+                # 명단 갱신
+                existing_members = [m for m in existing_members if m.get("page_id") != p_id]
+                existing_members.append({
+                    "name": name, "role": role, "email": email, "affiliation": affiliation,
+                    "year": year, "image": profile_img_path, "company_logo": logo_img_path, "page_id": p_id
+                })
+                update_status(p_id, "Published")
+                print(f"   ✅ 멤버 업데이트 완료: {name}")
+            except Exception as e:
+                continue
+
+        with open(MEMBERS_YAML_PATH, 'w', encoding='utf-8') as f:
+            yaml.dump(existing_members, f, allow_unicode=True, sort_keys=False)
     print("\n=== ✨ 모든 업데이트 완료 ===")
 
 if __name__ == "__main__":

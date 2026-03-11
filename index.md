@@ -5,11 +5,9 @@ title: Home
 
 <div class="home-grid-container">
   
-  <div class="box area-intro">
-    <h2>👋 연구실 소개</h2>
-    <p>
-      충북대학교 모바일 네트워크 컴퓨팅 연구실(MNC Lab)입니다.<br>
-    </p>
+<div class="box area-intro">
+    {% capture home_intro_content %}{% include home_intro.md %}{% endcapture %}
+    {{ home_intro_content | markdownify }}
   </div>
 
   <div class="box area-notice">
