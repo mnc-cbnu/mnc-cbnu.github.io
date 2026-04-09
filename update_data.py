@@ -44,6 +44,7 @@ def download_image(img_url, save_dir, filename):
             if not filename.endswith(('.png', '.jpg', '.jpeg')):
                 filename += ext
             filepath = os.path.join(save_dir, filename)
+            filepath = filepath.replace('\\','/')
             with open(filepath, 'wb') as f:
                 f.write(res.content)
             return filepath

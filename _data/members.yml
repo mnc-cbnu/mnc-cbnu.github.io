@@ -6,7 +6,7 @@ Alumni:
     image: ""
     year: 2022
     affiliation: School of Smart IT, Semyung University
-    company_logo: /assets/img/members\logo_Yongje_Shin.png
+    company_logo: /assets/img/members/logo_Yongje_Shin.png
     order: 4
   - id: 4334b9e9-a300-838e-8943-01e9dff63358
     name: Mugerwa Dick
@@ -15,7 +15,7 @@ Alumni:
     image: ""
     year: 2022
     affiliation: Kyambogo University
-    company_logo: /assets/img/members\logo_Mugerwa_Dick.png
+    company_logo: /assets/img/members/logo_Mugerwa_Dick.png
     order: 5
   - id: ce34b9e9-a300-8269-be46-816bf896ac1b
     name: Hyunseok Choi
@@ -24,7 +24,7 @@ Alumni:
     image: ""
     year: 2023
     affiliation: Department of Computer Engineering, Seowon University
-    company_logo: /assets/img/members\logo_Hyunseok_Choi.png
+    company_logo: /assets/img/members/logo_Hyunseok_Choi.png
     order: 6
   - id: 8144b9e9-a300-839c-ab13-811f005bbd30
     name: Youngju Nam
@@ -33,7 +33,7 @@ Alumni:
     image: ""
     year: 2023
     affiliation: Department of Software, Kunsan National University
-    company_logo: /assets/img/members\logo_Youngju_Nam.png
+    company_logo: /assets/img/members/logo_Youngju_Nam.png
     order: 7
   - id: 02c4b9e9-a300-82c7-99ff-810f07da1473
     name: Yoon Min
@@ -148,7 +148,7 @@ Current:
     name: Jeongtak Na
     role: Ph.D. Student
     email: jeongtak_na@chungbuk.ac.kr
-    image: /assets/img/members\profile_Jeongtak Na.jpg
+    image: /assets/img/members/profile_Jeongtak Na.jpg
     year: null
     affiliation: ""
     company_logo: ""
