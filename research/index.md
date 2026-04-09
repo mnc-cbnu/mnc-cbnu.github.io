@@ -69,11 +69,94 @@ margin-bottom: 10px; /* 리스트 항목들 사이의 넉넉한 여백 */
 line-height: 1.8;
 }
 
-@media (max-width: 768px) {
-.card { padding: 20px; }
-.card h2 { font-size: 20px; }
-.card-content { text-align: left; } /* 모바일은 좌측 정렬이 읽기 편함 */
+
+
+
+
+@media (max-width: 768px) {    
+
+/* 1. 💡 핵심: 홈페이지 전체의 80% 너비 제한을 풀고 100% 꽉 채우기 */  
+
+  .container {      
+
+max-width: 100% !important;      
+
+padding: 0 10px !important; /* 모바일 화면 양끝 여백 최소화 */    
+
 }
+    /* 2. 카드 안쪽 여백 대폭 축소 (내용물이 들어갈 공간 확보) */    
+
+.card {       
+
+padding: 20px 15px; /* 위아래 20px, 좌우 15px로 확 줄임 */ 
+
+     border-radius: 8px;  
+
+  }
+    /* 3. 카드 사이의 간격 줄이기 */   
+
+ .research-container {    
+
+  gap: 20px;     
+
+ margin-top: 10px;   
+
+ }
+    /* 4. 제목 크기 모바일에 맞게 축소 */    
+
+.card h2 {
+
+       font-size: 19px; 
+
+      margin-bottom: 15px; 
+
+     padding-bottom: 8px;   
+
+ }
+    /* 5. 이미지 아래 여백 축소 */    
+
+.card img { 
+
+     margin-bottom: 15px;   
+
+ }
+    /* 6. 텍스트 좌측 정렬 (모바일에서는 양쪽 정렬 시 글씨 사이가 벌어져 어색함) */   
+
+ .card-content { 
+
+      font-size: 15px; /* 모바일 전용으로 글씨 크기 약간 축소 */  
+
+    line-height: 1.6;      text-align: left !important; /* 무조건 좌측 정렬 */   
+
+ }
+    /* 7. 리스트(-) 들여쓰기 여백 최적화 */
+
+    .card-content ul, .card-content ol { 
+
+     padding-left: 20px;
+
+      margin-bottom: 15px;
+
+    }
+
+        .card-content li {
+
+      margin-bottom: 8px;
+
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
 </style>
 
 <div class="page-content" style="max-width: 1000px; margin: 0 auto; padding: 20px;">
