@@ -438,7 +438,7 @@ if __name__ == "__main__":
                 authors = parse_rich_text(props.get("Authors", {}).get("rich_text", []))
                 
                 year_data = props.get("Year", {}).get("number")
-                year = str(int(year_data)) if year_data else "9999"
+                year = int(year_data) if year_data else "9999"
 
                 venue_data = copy.deepcopy(props.get("Venue", {}).get("rich_text", []))
                 if venue_data:
