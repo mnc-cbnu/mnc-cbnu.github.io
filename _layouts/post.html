@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<style>
+    /* 💡 게시글 본문 안의 이미지는 절대 잘리지 않고 원본 비율(auto)을 유지하도록 강제합니다 */
+    .post-body img {
+        max-width: 100%;
+        height: auto !important;
+        object-fit: contain !important;
+        display: block;
+        margin: 20px auto;
+        /* 가운데 정렬 및 위아래 여백 */
+        border-radius: 8px;
+        /* (선택) 사진 모서리를 살짝 둥글게 */
+    }
+</style>
+<div class="page-content">
+    <div class="box">
+        <h1 style="margin-bottom: 10px;">{{ page.title }}</h1>
+        <p style="color: #888; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 30px;">
+            {{ page.date | date: "%Y년 %m월 %d일" }}
+        </p>
+
+        <div class="post-body">
+            {{ content }}
+        </div>
+
+        <div style="margin-top: 50px; text-align: right;">
+            <a href="/{{ page.category }}/"
+                style="padding: 10px 20px; background: #0056b3; color: white; border-radius: 5px; text-decoration: none;">목록으로</a>
+        </div>
+    </div>
+</div>

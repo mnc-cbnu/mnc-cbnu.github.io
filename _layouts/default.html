@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <style>
+        /* 기본 초기화 및 배경색 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* 상단 대형 배너 영역 */
+        .hero-banner {
+            width: 100%;
+            height: 300px;
+            /* 💡 주의: 실제 배너 이미지 경로로 변경해 주세요! */
+            background-image: url('/assets/img/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 검은색 내비게이션 바 */
+        .navbar {
+            border-bottom: none;
+            background-color: #000;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            margin: 0 20px;
+            font-size: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: inline-block;
+            line-height: 1.2;
+        }
+
+        .nav-container {
+            /* background: #000; */
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            /* 메뉴 중앙 정렬 */
+            align-items: center;
+        }
+
+        .navbar a:hover {
+            color: #aaa;
+        }
+
+        /* 메인 컨텐츠 영역 (가운데 정렬) */
+        .container {
+            max-width: 80%;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* 하얀색 카드 디자인 공통 클래스 */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* 제목 스타일 */
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .view-all {
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* 멤버 카드 격자(Grid) 디자인 */
+        .member-grid {
+            display: grid;
+            /* 화면 크기에 맞춰 한 줄에 들어가는 카드 개수 자동 조절 (최소 가로길이 350px) */
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 28px;
+            margin-top: 24px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 40px 0;
+        }
+
+        /* =========================================
+       📱 모바일(화면 폭 768px 이하) 반응형 디자인
+       ========================================= */
+        @media (max-width: 768px) {
+
+            /* 1. 전체 컨테이너 여백 줄이기 */
+            .container {
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+
+            /* 2. 상단 검은색 메뉴바(Navbar) 가로 스크롤 허용 또는 줄바꿈 */
+            .navbar {
+                display: flex;
+                flex-wrap: wrap;
+                /* 자리가 모자라면 아랫줄로 넘김 */
+                justify-content: center;
+                padding: 10px;
+                gap: 10px;
+                /* 메뉴 사이 간격 */
+            }
+
+            .navbar a {
+                margin: 5px 10px;
+                font-size: 14px;
+                /* 모바일에서는 메뉴 글씨를 살짝 작게 */
+            }
+
+            /* 3. 섹션 제목 글씨 크기 줄이기 */
+            .section-title {
+                font-size: 18px;
+                flex-direction: column;
+                /* 제목과 View all 버튼을 위아래로 분리 */
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            /* 4. 메인 화면의 반반 나누어진 카드(공지사항, 뉴스)를 위아래 1줄로 풀기 */
+            /* (이전에 index.html에서 style="display: flex; gap: 30px;" 로 묶었던 부분을 위한 처리) */
+            .card-row {
+                flex-direction: column;
+                gap: 20px !important;
+            }
+        }
+
+        /* =========================================
+       📋 게시판 (News, Notice 공통) 스타일
+       ========================================= */
+        .page-content {
+            max-width: 900px;
+            /* 게시판은 너무 넓으면 읽기 힘드므로 살짝 좁게 */
+            margin: 0 auto;
+        }
+
+        .box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .content-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10px;
+            border-bottom: 1px solid #f0f0f0;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .list-item:hover {
+            background-color: #f9f9fc;
+            /* 마우스 올렸을 때 살짝 배경색 변화 */
+        }
+
+        .list-item .title {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .list-item .date {
+            font-size: 0.9rem;
+            color: #888;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero-banner">
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            {% for item in site.data.navigation %}
+            {% if item.show_in_menu %}
+            <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </nav>
+
+    <main class="container">
+        {{ content }}
+    </main>
+    {% include footer.html %}
+</body>
+
+</html>
