@@ -10,7 +10,7 @@ permalink: /notice/
 
     <div class="content-body">
       {% if site.categories.notice.size > 0 %}
-        {% for post in site.categories.news %}
+        {% for post in site.categories.notice %}
           <a href="{{ post.url | relative_url }}" class="list-item">
             <span class="title">{{ post.title }}</span>
             <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
