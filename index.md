@@ -48,8 +48,8 @@ title: Home
   {% for section in site.data.home_intro %}
     <h1 style="color: #0056b3; font-size: 28px; margin-bottom: 15px; border: none; padding: 0;">
       {{ section[0] }} </h1>
-    <div style="font-size: 16px; color: #555; line-height: 1.6; max-width: 800px; margin: 0 auto;">
-      {{ section[1] | markdownify }} </div>
+    <div style="font-size: 16px; color: #555; line-height: 2; max-width: 800px; margin: 0 auto;">
+      {{ section[1] | newline_to_br }} </div>
   {% endfor %}
 
 </section>
