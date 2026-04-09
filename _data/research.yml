@@ -1,29 +1,29 @@
-- - Research on Vehicular Cloud Computing (VCC)
-  - |-
-    ![image](/assets/img/img_33d4b9e9.png)
-
-    The Research of Vehicular Cloud Computing (VCC)
-
-    VCC is an emerging research field that leverages the resources of vehicles, such as their computing, storage, and communication capabilities, to create a cloud-like infrastructure.
-
-    This dynamic and mobile cloud can provide various services to vehicles and their passengers, including traffic management, infotainment, and safety-critical applications.
-
-    Key research areas in VCC include dynamic resource allocation, mobility management, cloud recontruction, and efficient communication protocols.
-
-    Researchers are exploring how to effectively manage the dynamic and unpredictable nature of VCC environments, ensuring reliable and secure services.
-- - Research on V2V Precaching
+- - The Research of Vehicular Cloud Computing (VCC)
   - |-
     ![image](/assets/img/img_33d4b9e9.png)
 
 
 
-    Research on V2V Precaching in Content-Centric Vehicular Networks (CCVN)
-    CCVN shifts the communication paradigm from location-based addressing to content-based retrieval, which is inherently suited for the high mobility of vehicles.
+    * VCC is an emerging research field that leverages the resources of vehicles, such as their computing, storage, and communication capabilities, to create a cloud-like infrastructure.
+    * This dynamic and mobile cloud can provide various services to vehicles and their passengers, including traffic management, infotainment, and safety-critical applications.
+    * Key research areas in VCC include dynamic resource allocation, mobility management, cloud recontruction, and efficient communication protocols.
+    * Researchers are exploring how to effectively manage the dynamic and unpredictable nature of VCC environments, ensuring reliable and secure services.
+- - Research on V2V Precaching in Content-Centric Vehicular Networks (CCVN)
+  - |-
+    ![image](/assets/img/img_33d4b9e9.png)
 
-    V2V precaching is a proactive strategy that stores popular data in the local caches of neighboring vehicles before an explicit request is made, effectively turning vehicles into mobile data hubs.
 
-    Current research focuses on developing sophisticated mobility prediction and content popularity models to determine the optimal timing and location for data placement.
 
-    This approach significantly minimizes content delivery latency and reduces the signaling overhead on the core network by utilizing the short-range communication of moving nodes.
+    * CCVN shifts the communication paradigm from location-based addressing to content-based retrieval, which is inherently suited for the high mobility of vehicles.
+    * V2V precaching is a proactive strategy that stores popular data in the local caches of neighboring vehicles before an explicit request is made, effectively turning vehicles into mobile data hubs.
+    * Current research focuses on developing sophisticated mobility prediction and content popularity models to determine the optimal timing and location for data placement.
+    * This approach significantly minimizes content delivery latency and reduces the signaling overhead on the core network by utilizing the short-range communication of moving nodes.
+    * Modern studies increasingly leverage Machine Learning (ML) and cooperative caching schemes to handle the unpredictable topology and intermittent connectivity of the vehicular environment
+- - Research on V2I Precaching in Content-Centric Vehicular Networks (CCVNs)
+  - |-
+    ![image](/assets/img/img_33d4b9e9.png)
 
-    Modern studies increasingly leverage Machine Learning (ML) and cooperative caching schemes to handle the unpredictable topology and intermittent connectivity of the vehicular environment
+    * CCVNs proactively stores popular content at Roadside Units (RSUs) or edge servers based on content names to facilitate faster retrieval.
+    * This strategy aims to significantly reduce content delivery latency and backhaul pressure by predicting vehicle trajectories and pre-positioning data before a vehicle enters a specific RSU's coverage area.
+    * Research focuses on optimizing cache replacement policies and developing high-accuracy mobility prediction models to effectively manage the intermittent connectivity of high-speed vehicles.
+    * Recent studies leverage Deep Reinforcement Learning (DRL) to dynamically allocate cache resources, balancing the trade-off between storage costs and user Quality of Service (QoS).

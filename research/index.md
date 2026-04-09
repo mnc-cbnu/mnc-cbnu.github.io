@@ -58,6 +58,17 @@ text-align: justify; / 양쪽 끝을 가지런하게 맞춤 */
 margin-bottom: 15px;
 }
 
+.card-content ul, .card-content ol {
+margin-top: 5px;
+margin-bottom: 20px;
+padding-left: 25px; /* 글머리 기호 안쪽 여백 */
+}
+
+.card-content li {
+margin-bottom: 10px; /* 리스트 항목들 사이의 넉넉한 여백 */
+line-height: 1.8;
+}
+
 @media (max-width: 768px) {
 .card { padding: 20px; }
 .card h2 { font-size: 20px; }
@@ -66,10 +77,6 @@ margin-bottom: 15px;
 </style>
 
 <div class="page-content" style="max-width: 1000px; margin: 0 auto; padding: 20px;">
-
-<h1 style="color: #0056b3; font-size: 32px; margin-bottom: 40px; text-align: center;">
-Research Areas
-</h1>
 
 <div class="research-container">
 {% for section in site.data.research %}
