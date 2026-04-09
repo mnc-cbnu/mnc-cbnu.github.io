@@ -80,12 +80,46 @@ def blocks_to_markdown(blocks, save_dir="assets/img", prefix=""):
                 text = "".join([t["plain_text"] for t in b["bulleted_list_item"].get("rich_text", [])])
                 md_content += f"* {text}\n"
             elif b_type == "image":
-                img_url = b["image"].get("file", {}).get("url") or b["image"].get("external", {}).get("url")
-                if img_url:
-                    img_filename = f"{prefix}_img_{b['id'][:8]}" if prefix else f"img_{b['id'][:8]}"
-                    local_img_path = download_image(img_url, save_dir, img_filename)
-                    if local_img_path:
-                        md_content += f"![image](/{local_img_path})\n\n"
+                image_data = b.get("image", {})
+                image_url = ""
+                
+                # 1. 이미지 URL 추출
+                if image_data.get("type") == "external":
+                    image_url = image_data.get("external", {}).get("url", "")
+                elif image_data.get("type") == "file":
+                    image_url = image_data.get("file", {}).get("url", "")
+
+                if image_url:
+                    try:
+                        # 2. 💡 [핵심] 블록의 고유 ID를 가져와서 절대 겹치지 않는 파일명 만들기
+                        block_id = b["id"] 
+                        
+                        # 확장자 추출 (기본값은 png)
+                        ext = ".png"
+                        if ".jpg" in image_url.lower() or ".jpeg" in image_url.lower():
+                            ext = ".jpg"
+                        elif ".gif" in image_url.lower():
+                            ext = ".gif"
+
+                        # 💡 예: img_a1b2c3d4-e5f6...jpg 형태로 저장
+                        image_filename = f"img_{block_id}{ext}" 
+                        image_filepath = os.path.join(save_dir, image_filename)
+                        
+                        # 폴더가 없으면 생성
+                        os.makedirs(save_dir, exist_ok=True)
+
+                        # 이미지 다운로드 및 저장
+                        img_response = requests.get(image_url)
+                        if img_response.status_code == 200:
+                            with open(image_filepath, 'wb') as handler:
+                                handler.write(img_response.content)
+                            
+                            # 3. 마크다운에 이미지 태그 기록
+                            md_content += f"![image](/assets/img/{image_filename})\n\n"
+                        else:
+                            print(f" ⚠️ 이미지 다운로드 실패 (상태 코드: {img_response.status_code})")
+                    except Exception as e:
+                        print(f" ⚠️ 이미지 처리 중 에러 발생: {e}")
         except Exception as e:
             continue
     return md_content
