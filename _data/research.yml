@@ -1,6 +1,6 @@
 - - The Research of Vehicular Cloud Computing (VCC)
   - |-
-    ![image](/assets/img/img_33d4b9e9.png)
+    ![image](/assets/img/img_33d4b9e9-a300-8019-b525-da82b646484b.png)
 
 
 
@@ -10,7 +10,7 @@
     * Researchers are exploring how to effectively manage the dynamic and unpredictable nature of VCC environments, ensuring reliable and secure services.
 - - Research on V2V Precaching in Content-Centric Vehicular Networks (CCVN)
   - |-
-    ![image](/assets/img/img_33d4b9e9.png)
+    ![image](/assets/img/img_33d4b9e9-a300-808b-95c4-eab6eeb33cf3.png)
 
 
 
@@ -21,7 +21,7 @@
     * Modern studies increasingly leverage Machine Learning (ML) and cooperative caching schemes to handle the unpredictable topology and intermittent connectivity of the vehicular environment
 - - Research on V2I Precaching in Content-Centric Vehicular Networks (CCVNs)
   - |-
-    ![image](/assets/img/img_33d4b9e9.png)
+    ![image](/assets/img/img_33d4b9e9-a300-80b2-8ce2-fe8127326036.png)
 
     * CCVNs proactively stores popular content at Roadside Units (RSUs) or edge servers based on content names to facilitate faster retrieval.
     * This strategy aims to significantly reduce content delivery latency and backhaul pressure by predicting vehicle trajectories and pre-positioning data before a vehicle enters a specific RSU's coverage area.
