@@ -43,13 +43,15 @@ title: Home
   .pc-venue { color: #0056b3; font-weight: bold; font-size: 13px; margin-bottom: 4px; }
   .pc-authors { font-size: 13px; color: #666; }
 </style>
-<section class="card" style="margin-bottom: 30px; padding: 40px 30px; text-align: center; background: linear-gradient(to right, #f8f9fa, #e9ecef);">
+<section style="margin-bottom: 50px; padding: 20px 10px; text-align: center;">
   
   {% for section in site.data.home_intro %}
-    <h1 style="color: #0056b3; font-size: 28px; margin-bottom: 15px; border: none; padding: 0;">
-      {{ section[0] }} </h1>
-    <div style="font-size: 16px; color: #555; line-height: 2; max-width: 800px; margin: 0 auto;">
-      {{ section[1] | newline_to_br }} </div>
+    <h1 style="color: #0056b3; font-size: 32px; margin-bottom: 20px; border: none; padding: 0;">
+      {{ section[0] }}
+    </h1>
+    <div style="font-size: 17px; color: #444; line-height: 1.8; max-width: 850px; margin: 0 auto;">
+      {{ section[1] | newline_to_br }}
+    </div>
   {% endfor %}
 
 </section>
