@@ -1,164 +1,164 @@
 Alumni:
-  - id: 9254b9e9-a300-8357-897c-811c17ebcc63
-    name: Yongje Shin
-    role: Ph.D. Student
-    email: ""
-    image: ""
-    year: 2022
-    affiliation: School of Smart IT, Semyung University
-    company_logo: /assets/img/members/logo_Yongje_Shin.png
-    order: 4
-  - id: 4334b9e9-a300-838e-8943-01e9dff63358
-    name: Mugerwa Dick
-    role: Ph.D. Student
-    email: ""
-    image: ""
-    year: 2022
-    affiliation: Kyambogo University
-    company_logo: /assets/img/members/logo_Mugerwa_Dick.png
-    order: 5
-  - id: ce34b9e9-a300-8269-be46-816bf896ac1b
-    name: Hyunseok Choi
-    role: Ph.D. Student
-    email: ""
-    image: ""
-    year: 2023
-    affiliation: Department of Computer Engineering, Seowon University
-    company_logo: /assets/img/members/logo_Hyunseok_Choi.png
-    order: 6
-  - id: 8144b9e9-a300-839c-ab13-811f005bbd30
-    name: Youngju Nam
-    role: Ph.D. Student
-    email: ""
-    image: ""
-    year: 2023
-    affiliation: Department of Software, Kunsan National University
-    company_logo: /assets/img/members/logo_Youngju_Nam.png
-    order: 7
-  - id: 02c4b9e9-a300-82c7-99ff-810f07da1473
-    name: Yoon Min
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: 2017
-    affiliation: ""
-    company_logo: ""
-    order: 8
-  - id: 40f4b9e9-a300-830e-a609-01481c2f03e6
-    name: Hoewon Kim
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: 2017
-    affiliation: ""
-    company_logo: ""
-    order: 9
-  - id: cad4b9e9-a300-83e8-bebc-019ce2d64049
-    name: Jaeyeong Jang
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: 2017
-    affiliation: ""
-    company_logo: ""
-    order: 10
-  - id: 8064b9e9-a300-833e-989d-017510084d7b
-    name: Jinhyuk Yim
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: 2017
-    affiliation: ""
-    company_logo: ""
-    order: 11
-  - id: 6c34b9e9-a300-83c3-8a76-01f084c70193
-    name: Hyunkyu Lee
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: 2017
-    affiliation: ""
-    company_logo: ""
-    order: 12
-  - id: dae4b9e9-a300-8300-933a-811cf78d4302
-    name: Jaejeong Bang
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: 2021
-    affiliation: ""
-    company_logo: ""
-    order: 13
-  - id: da54b9e9-a300-8334-9479-81078e6f379f
-    name: Donggeun Shin
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: 2020
-    affiliation: ""
-    company_logo: ""
-    order: 14
-  - id: f924b9e9-a300-83cc-bb8a-01d84b2ab4a2
-    name: Yoonhyeong Lee
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: 2020
-    affiliation: ""
-    company_logo: ""
-    order: 15
-  - id: 3cb4b9e9-a300-8293-bc94-0110dc4c7f59
-    name: Sungjin Park
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: 2020
-    affiliation: ""
-    company_logo: ""
-    order: 16
-  - id: b424b9e9-a300-8265-a1d1-01dc0f8e3296
-    name: Gayeong Kim
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: 2024
-    affiliation: ""
-    company_logo: ""
-    order: 17
+- id: 9254b9e9-a300-8357-897c-811c17ebcc63
+  name: Yongje Shin
+  role: Ph.D. Student
+  email: ''
+  image: /assets/img/members/profile_Yongje Shin.jpg
+  year: 2022
+  affiliation: School of Smart IT, Semyung University
+  company_logo: /assets/img/members/logo_Yongje_Shin.png
+  order: 4
+- id: 4334b9e9-a300-838e-8943-01e9dff63358
+  name: Mugerwa Dick
+  role: Ph.D. Student
+  email: ''
+  image: ''
+  year: 2022
+  affiliation: Kyambogo University
+  company_logo: /assets/img/members/logo_Mugerwa_Dick.png
+  order: 5
+- id: ce34b9e9-a300-8269-be46-816bf896ac1b
+  name: Hyunseok Choi
+  role: Ph.D. Student
+  email: ''
+  image: /assets/img/members/profile_Hyunseok Choi.jpg
+  year: 2023
+  affiliation: Department of Computer Engineering, Seowon University
+  company_logo: /assets/img/members/logo_Hyunseok_Choi.png
+  order: 6
+- id: 8144b9e9-a300-839c-ab13-811f005bbd30
+  name: Youngju Nam
+  role: Ph.D. Student
+  email: ''
+  image: /assets/img/members/profile_Youngju Nam.jpg
+  year: 2023
+  affiliation: Department of Software, Kunsan National University
+  company_logo: /assets/img/members/logo_Youngju_Nam.png
+  order: 7
+- id: 02c4b9e9-a300-82c7-99ff-810f07da1473
+  name: Yoon Min
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: 2017
+  affiliation: ''
+  company_logo: ''
+  order: 8
+- id: 40f4b9e9-a300-830e-a609-01481c2f03e6
+  name: Hoewon Kim
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: 2017
+  affiliation: ''
+  company_logo: ''
+  order: 9
+- id: cad4b9e9-a300-83e8-bebc-019ce2d64049
+  name: Jaeyeong Jang
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: 2017
+  affiliation: ''
+  company_logo: ''
+  order: 10
+- id: 8064b9e9-a300-833e-989d-017510084d7b
+  name: Jinhyuk Yim
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: 2017
+  affiliation: ''
+  company_logo: ''
+  order: 11
+- id: 6c34b9e9-a300-83c3-8a76-01f084c70193
+  name: Hyunkyu Lee
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: 2017
+  affiliation: ''
+  company_logo: ''
+  order: 12
+- id: dae4b9e9-a300-8300-933a-811cf78d4302
+  name: Jaejeong Bang
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: 2021
+  affiliation: ''
+  company_logo: ''
+  order: 13
+- id: da54b9e9-a300-8334-9479-81078e6f379f
+  name: Donggeun Shin
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: 2020
+  affiliation: ''
+  company_logo: ''
+  order: 14
+- id: f924b9e9-a300-83cc-bb8a-01d84b2ab4a2
+  name: Yoonhyeong Lee
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: 2020
+  affiliation: ''
+  company_logo: ''
+  order: 15
+- id: 3cb4b9e9-a300-8293-bc94-0110dc4c7f59
+  name: Sungjin Park
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: 2020
+  affiliation: ''
+  company_logo: ''
+  order: 16
+- id: b424b9e9-a300-8265-a1d1-01dc0f8e3296
+  name: Gayeong Kim
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: 2024
+  affiliation: ''
+  company_logo: ''
+  order: 17
 Current:
-  - id: 56c4b9e9-a300-828e-8a54-01cc6a405fcf
-    name: Jongpil Youn
-    role: Ph.D. Student
-    email: whdvlf1919@chungbuk.ac.kr
-    image: ""
-    year: null
-    affiliation: ""
-    company_logo: ""
-    order: 1
-  - id: d4f4b9e9-a300-8367-9855-0198635e6ca0
-    name: Irina Em
-    role: Ph.D. Student
-    email: ira.em@chungbuk.ac.kr
-    image: ""
-    year: null
-    affiliation: ""
-    company_logo: ""
-    order: 2
-  - id: fef4b9e9-a300-838f-ac20-019b25a362ff
-    name: Jeongtak Na
-    role: Ph.D. Student
-    email: jeongtak_na@chungbuk.ac.kr
-    image: /assets/img/members/profile_Jeongtak_Na.jpg
-    year: null
-    affiliation: ""
-    company_logo: ""
-    order: 3
-  - id: 05d4b9e9-a300-8375-a96e-016f5953fa10
-    name: Baigalmaa Khulan
-    role: M.S. Student
-    email: ""
-    image: ""
-    year: null
-    affiliation: ""
-    company_logo: ""
-    order: 18
+- id: 56c4b9e9-a300-828e-8a54-01cc6a405fcf
+  name: Jongpil Youn
+  role: Ph.D. Student
+  email: whdvlf1919@chungbuk.ac.kr
+  image: /assets/img/members/profile_Jongpil Youn.jpg
+  year: null
+  affiliation: ''
+  company_logo: ''
+  order: 1
+- id: d4f4b9e9-a300-8367-9855-0198635e6ca0
+  name: Irina Em
+  role: Ph.D. Student
+  email: ira.em@chungbuk.ac.kr
+  image: ''
+  year: null
+  affiliation: ''
+  company_logo: ''
+  order: 2
+- id: fef4b9e9-a300-838f-ac20-019b25a362ff
+  name: Jeongtak Na
+  role: Ph.D. Student
+  email: jeongtak_na@chungbuk.ac.kr
+  image: /assets/img/members/profile_Jeongtak_Na.jpg
+  year: null
+  affiliation: ''
+  company_logo: ''
+  order: 3
+- id: 05d4b9e9-a300-8375-a96e-016f5953fa10
+  name: Baigalmaa Khulan
+  role: M.S. Student
+  email: ''
+  image: ''
+  year: null
+  affiliation: ''
+  company_logo: ''
+  order: 18
