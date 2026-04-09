@@ -52,7 +52,8 @@ permalink: /research/
     .profile-photo { width: 100%; max-width: 100%; }
   }
 </style>
-<h2> Coming soon</h2>
+<div>
+
+<p> Coming soon
+
 </div>
-
-
