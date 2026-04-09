@@ -435,6 +435,7 @@ if __name__ == "__main__":
                 props = p["properties"]
                 title_prop = props.get("Title") or props.get("이름")
                 title_text = parse_rich_text(title_prop["title"]) if title_prop else "제목 없음"
+                title_text.replace('*','')
                 authors = parse_rich_text(props.get("Authors", {}).get("rich_text", []))
                 
                 year_data = props.get("Year", {}).get("number")
