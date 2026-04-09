@@ -58,7 +58,7 @@ Research Areas
 <div class="card">
 <h2>{{ section[0] }}</h2>
 <div style="font-size: 16px; color: #444; line-height: 1.8; word-break: keep-all;">
-{{ section[1] | newline_to_br}}
+{{ section[1] | markdownify }}
 </div>
 </div>
 {% endfor %}

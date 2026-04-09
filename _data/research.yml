@@ -11,3 +11,20 @@
     Key research areas in VCC include dynamic resource allocation, mobility management, cloud recontruction, and efficient communication protocols.
 
     Researchers are exploring how to effectively manage the dynamic and unpredictable nature of VCC environments, ensuring reliable and secure services.
+
+
+
+    ![image](/assets/img/img_33d4b9e9.png)
+
+
+
+    Research on V2V Precaching in Content-Centric Vehicular Networks (CCVN)
+    CCVN shifts the communication paradigm from location-based addressing to content-based retrieval, which is inherently suited for the high mobility of vehicles.
+
+    V2V precaching is a proactive strategy that stores popular data in the local caches of neighboring vehicles before an explicit request is made, effectively turning vehicles into mobile data hubs.
+
+    Current research focuses on developing sophisticated mobility prediction and content popularity models to determine the optimal timing and location for data placement.
+
+    This approach significantly minimizes content delivery latency and reduces the signaling overhead on the core network by utilizing the short-range communication of moving nodes.
+
+    Modern studies increasingly leverage Machine Learning (ML) and cooperative caching schemes to handle the unpredictable topology and intermittent connectivity of the vehicular environment
