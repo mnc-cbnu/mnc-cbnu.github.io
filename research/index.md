@@ -47,7 +47,7 @@ margin: 0 auto 20px auto; / 이미지 가운데 정렬 및 아래 여백 */
 }
 </style>
 
-<div class="page-content" style="max-width: 1000px; margin: 0 auto; padding: 20px;">
+<div class="page-content" style="max-width: 1500px; margin: 0 auto; padding: 20px;">
 
 <h1 style="color: #0056b3; font-size: 32px; margin-bottom: 30px; text-align: center;">
 Research Areas
@@ -58,7 +58,7 @@ Research Areas
 <div class="card">
 <h2>{{ section[0] }}</h2>
 <div style="font-size: 16px; color: #444; line-height: 1.8; word-break: keep-all;">
-{{ section[1] | markdownify }}
+{{ section[1] | newline_to_br}}
 </div>
 </div>
 {% endfor %}
