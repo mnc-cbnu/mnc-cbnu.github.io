@@ -27,3 +27,11 @@
     * This strategy aims to significantly reduce content delivery latency and backhaul pressure by predicting vehicle trajectories and pre-positioning data before a vehicle enters a specific RSU's coverage area.
     * Research focuses on optimizing cache replacement policies and developing high-accuracy mobility prediction models to effectively manage the intermittent connectivity of high-speed vehicles.
     * Recent studies leverage Deep Reinforcement Learning (DRL) to dynamically allocate cache resources, balancing the trade-off between storage costs and user Quality of Service (QoS).
+- - Research on Multimedia Data Delivery in UAV-based Vehicular Networks
+  - |-
+    ![image](/assets/img/img_33d4b9e9-a300-801a-a940-fddf65b7402e.png)
+
+    * UAV-based Vehicular Networks utilize Unmanned Aerial Vehicles as flexible, high-altitude relays or edge servers to provide the high-bandwidth connectivity required for bandwidth-intensive multimedia traffic.
+    * Research primarily focuses on joint trajectory optimization and resource allocation to maintain a stable Quality of Experience (QoE) for high-definition video streaming amidst high mobility.
+    * Sophisticated interference management and beamforming techniques are being developed to mitigate signal fluctuations caused by the dynamic movement of both aerial and ground nodes.
+    * Furthermore, current studies integrate AI-driven predictive modeling to proactively adjust to channel conditions, ensuring seamless and low-latency data delivery in complex urban environments.
