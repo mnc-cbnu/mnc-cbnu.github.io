@@ -292,7 +292,7 @@ if __name__ == "__main__":
                     file_info = props["Company Logo"]["files"][0]
                     img_url_raw = file_info.get("file", {}).get("url") or file_info.get("external", {}).get("url")
                     if img_url_raw:
-                        img_filename = f"logo_{name}.png" # 로고는 보통 png 유지
+                        img_filename = f"logo_{name.replace(' ','_')}.png" # 로고는 보통 png 유지
                         local_path = download_image(img_url_raw, "assets/img/members", img_filename)
                         if local_path: company_logo = f"/{local_path}"
 
