@@ -24,17 +24,17 @@ layout: default
         <div class="post-body">
             {{ content }}
         </div>
-
-        <div style="margin-top: 50px; text-align: right;">
-            <a href="/{{ page.category }}/"
-                style="padding: 10px 20px; background: #0056b3; color: white; border-radius: 5px; text-decoration: none;">목록으로</a>
-        </div>
-        {% if site.joey_id %}
+        {% if site.joey_url %}
         <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
         <div class="comments-section" style="max-width: 850px; margin: 0 auto; padding: 20px;">
             <iframe src="{{ site.joey_url }}"
                 style="width: 100%; min-height: 500px; border: none; border-radius: 8px;"></iframe>
         </div>
         {% endif %}
+        <div style="margin-top: 50px; text-align: right;">
+            <a href="/{{ page.category }}/"
+                style="padding: 10px 20px; background: #0056b3; color: white; border-radius: 5px; text-decoration: none;">목록으로</a>
+        </div>
+
     </div>
 </div>
