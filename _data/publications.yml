@@ -88,6 +88,10 @@
     authors: Y Nam, H Choi, Y Shin, E Lee
     page_id: 3214b9e9-a300-81e1-b689-db13a311477b
   conference:
+  - title: Set Ranking-Based Precaching Protocol in Vehicular Ad hoc Networks. IEEE
+      20th Consumer Communications & Networking Conference (CCNC), 963-964, 2023
+    authors: Y Nam, H Choi, J Bang, Y Shin, E Lee
+    page_id: 3214b9e9-a300-813f-a316-ffcb9a872d30
   - title: Distributive V2V Multi-hop Pre-caching scheme based on bidirectional vehicle
       mobility information in CCVNs. Annual Conference of KIPS, 113-114, 2023
     authors: MK Kim, TH Kim, GY Shim, GY Kim, ES Lee
@@ -96,10 +100,6 @@
       IEEE 20th Consumer Communications & Networking Conference (CCNC), 849-854, 2023
     authors: Y Nam, H Choi, Y Shin, D Mugerwa, E Lee
     page_id: 3214b9e9-a300-8189-9061-ecb8819235d0
-  - title: Set Ranking-Based Precaching Protocol in Vehicular Ad hoc Networks. IEEE
-      20th Consumer Communications & Networking Conference (CCNC), 963-964, 2023
-    authors: Y Nam, H Choi, J Bang, Y Shin, E Lee
-    page_id: 3214b9e9-a300-813f-a316-ffcb9a872d30
   - title: Enhanced Hybrid Energy-Efficient Distributed Clustering Protocol for IoT-Based
       WSNs with Multiple Sinks. IEEE Sensors Applications Symposium (SAS), 1-6, 2023
     authors: D Mugerwa, Y Nam, H Choi, Y Kwon, E Lee
@@ -856,48 +856,6 @@
     authors: 우부재， 최영환， 박수창， 이의신， 전야， 박호성， 김상하
     page_id: 3214b9e9-a300-814f-8764-f4e0b3080268
   conference:
-  - title: A data delivery mechanism to support mobile users in wireless sensor networks.
-      The 9th International Conference on Advanced Communication Technology 1, 245-250,
-      2007
-    authors: E Lee, Y Choi, S Park, D Lee, SH Kim
-    page_id: 3214b9e9-a300-8152-842d-ee0fe655e925
-  - title: Stable Application Layer Multicast for Mobile Ad hoc Networks. Proceedings
-      of the Korean Information Science Society Conference, 230-234, 2007
-    authors: FC Yu, YH Choi, SC Park, ES Lee, Y Tian, HS Park, SH Kim
-    page_id: 3214b9e9-a300-8167-9d99-dd252f378c4c
-  - title: Data Dissemination Protocol Supporting the Mobility for Tightly Coupled
-      Sink Groups in Wireless Sensor Networks. Proceedings of the Korean Information
-      Science Society Conference, 160-165, 2007
-    authors: YH Choi, FC Yu, SC Park, ES Lee, SH Kim
-    page_id: 3214b9e9-a300-818e-94f9-e4f7c17ebc64
-  - title: 'IGAP: an Information GAthering Protocol for mobile user in infrastructureless
-      area. The 9th International Conference on Advanced Communication Technology
-      1, 85-89, 2007'
-    authors: D Lee, E Lee, S Park, B Kim, Y Choi, SH Kim
-    page_id: 3214b9e9-a300-818f-87c9-dc4da3081b89
-  - title: Analysis of Mobility Models and Novel Inquirer Mobility in Wireless Sensor
-      Networks. Proceedings of the Korean Information Science Society Conference,
-      166-170, 2007
-    authors: YH Choi, SC Park, ES Lee, FC Yu, SH Kim
-    page_id: 3214b9e9-a300-819f-9289-f39fcdd4aeda
-  - title: Routing Hole Detour Scheme Based on Geographic Routing in Wireless Sensor
-      Networks. Proceedings of the Korean Information Science Society Conference,
-      225-229, 2007
-    authors: FC Yu, YH Choi, SC Park, ES Lee, Y Tian, HS Park, SH Kim
-    page_id: 3214b9e9-a300-81c0-aeb2-f5d90bdb189f
-  - title: A novel communication architecture to support mobile users in wireless
-      sensor fields. 2007 IEEE 65th Vehicular Technology Conference-VTC2007-Spring,
-      66-70, 2007
-    authors: S Park, B Kim, E Lee, D Lee, Y Choi, SH Kim
-    page_id: 3214b9e9-a300-81cf-b0bb-fa61b04f5ad4
-  - title: A stability-based overlay multicast for Mobile Ad Hoc Networks. 2007 IEEE
-      66th Vehicular Technology Conference, 46-50, 2007
-    authors: F Yu, S Park, Y Choi, D Lee, E Lee, Y Tian, SH Kim
-    page_id: 3214b9e9-a300-81db-8731-d8a8baabaf85
-  - title: An edge nodes energy efficient hole modeling in wireless sensor networks.
-      IEEE GLOBECOM 2007-IEEE Global Telecommunications Conference, 4724-4728, 2007
-    authors: F Yu, Y Choi, S Park, E Lee, Y Tian, SH Kim
-    page_id: 3214b9e9-a300-81db-9f5c-ccd2a804f34d
   - title: A Communication Architecture for Supporting Mobile User in Wireless Sensor
       Networks. The 9th International Conference on Advanced Communication Technology
       1, 450-455, 2007
@@ -987,6 +945,48 @@
       Proceedings of the Korean Information Science Society Conference, 120-121, 2007
     authors: MS Jin, YH Choi, ES Lee, SC Park, F Yu, SH Kim
     page_id: 3214b9e9-a300-8180-9d00-dee81e33a2bf
+  - title: A data delivery mechanism to support mobile users in wireless sensor networks.
+      The 9th International Conference on Advanced Communication Technology 1, 245-250,
+      2007
+    authors: E Lee, Y Choi, S Park, D Lee, SH Kim
+    page_id: 3214b9e9-a300-8152-842d-ee0fe655e925
+  - title: A novel communication architecture to support mobile users in wireless
+      sensor fields. IEEE 65th Vehicular Technology Conference-VTC2007-Spring, 66-70,
+      2007
+    authors: S Park, B Kim, E Lee, D Lee, Y Choi, SH Kim
+    page_id: 3214b9e9-a300-81cf-b0bb-fa61b04f5ad4
+  - title: A stability-based overlay multicast for Mobile Ad Hoc Networks. IEEE 66th
+      Vehicular Technology Conference, 46-50, 2007
+    authors: F Yu, S Park, Y Choi, D Lee, E Lee, Y Tian, SH Kim
+    page_id: 3214b9e9-a300-81db-8731-d8a8baabaf85
+  - title: An edge nodes energy efficient hole modeling in wireless sensor networks.
+      IEEE GLOBECOM 2007-IEEE Global Telecommunications Conference, 4724-4728, 2007
+    authors: F Yu, Y Choi, S Park, E Lee, Y Tian, SH Kim
+    page_id: 3214b9e9-a300-81db-9f5c-ccd2a804f34d
+  - title: Routing Hole Detour Scheme Based on Geographic Routing in Wireless Sensor
+      Networks. Proceedings of the Korean Information Science Society Conference,
+      225-229, 2007
+    authors: FC Yu, YH Choi, SC Park, ES Lee, Y Tian, HS Park, SH Kim
+    page_id: 3214b9e9-a300-81c0-aeb2-f5d90bdb189f
+  - title: Stable Application Layer Multicast for Mobile Ad hoc Networks. Proceedings
+      of the Korean Information Science Society Conference, 230-234, 2007
+    authors: FC Yu, YH Choi, SC Park, ES Lee, Y Tian, HS Park, SH Kim
+    page_id: 3214b9e9-a300-8167-9d99-dd252f378c4c
+  - title: 'IGAP: an Information GAthering Protocol for mobile user in infrastructureless
+      area. The 9th International Conference on Advanced Communication Technology
+      1, 85-89, 2007'
+    authors: D Lee, E Lee, S Park, B Kim, Y Choi, SH Kim
+    page_id: 3214b9e9-a300-818f-87c9-dc4da3081b89
+  - title: Data Dissemination Protocol Supporting the Mobility for Tightly Coupled
+      Sink Groups in Wireless Sensor Networks. Proceedings of the Korean Information
+      Science Society Conference, 160-165, 2007
+    authors: YH Choi, FC Yu, SC Park, ES Lee, SH Kim
+    page_id: 3214b9e9-a300-818e-94f9-e4f7c17ebc64
+  - title: Analysis of Mobility Models and Novel Inquirer Mobility in Wireless Sensor
+      Networks. Proceedings of the Korean Information Science Society Conference,
+      166-170, 2007
+    authors: YH Choi, SC Park, ES Lee, FC Yu, SH Kim
+    page_id: 3214b9e9-a300-819f-9289-f39fcdd4aeda
 2006:
   journal: []
   conference:
