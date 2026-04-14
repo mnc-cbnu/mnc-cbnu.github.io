@@ -42,7 +42,7 @@ Alumni:
   image: ''
   year: 2017
   affiliation: 롯데정보통신
-  company_logo: ''
+  company_logo: /assets/img/members/logo_Yoon_Min.png
   order: 8
 - id: 40f4b9e9-a300-830e-a609-01481c2f03e6
   name: Hoewon Kim
@@ -51,7 +51,7 @@ Alumni:
   image: ''
   year: 2017
   affiliation: LG 에릭슨
-  company_logo: ''
+  company_logo: /assets/img/members/logo_Hoewon_Kim.png
   order: 9
 - id: cad4b9e9-a300-83e8-bebc-019ce2d64049
   name: Jaeyeong Jang
@@ -69,7 +69,7 @@ Alumni:
   image: ''
   year: 2017
   affiliation: 한국중부발전
-  company_logo: ''
+  company_logo: /assets/img/members/logo_Jinhyuk_Yim.png
   order: 11
 - id: 6c34b9e9-a300-83c3-8a76-01f084c70193
   name: Hyunkyu Lee
@@ -78,7 +78,7 @@ Alumni:
   image: ''
   year: 2017
   affiliation: 롯데정보통신
-  company_logo: ''
+  company_logo: /assets/img/members/logo_Hyunkyu_Lee.png
   order: 12
 - id: dae4b9e9-a300-8300-933a-811cf78d4302
   name: Jaejeong Bang
@@ -87,7 +87,7 @@ Alumni:
   image: ''
   year: 2021
   affiliation: 현대오토에버
-  company_logo: ''
+  company_logo: /assets/img/members/logo_Jaejeong_Bang.png
   order: 13
 - id: da54b9e9-a300-8334-9479-81078e6f379f
   name: Donggeun Shin
@@ -105,7 +105,7 @@ Alumni:
   image: ''
   year: 2020
   affiliation: LIG 넥스원
-  company_logo: ''
+  company_logo: /assets/img/members/logo_Yoonhyeong_Lee.png
   order: 15
 - id: 3cb4b9e9-a300-8293-bc94-0110dc4c7f59
   name: Sungjin Park
@@ -114,7 +114,7 @@ Alumni:
   image: ''
   year: 2020
   affiliation: 지역정보개발원
-  company_logo: ''
+  company_logo: /assets/img/members/logo_Sungjin_Park.png
   order: 16
 - id: b424b9e9-a300-8265-a1d1-01dc0f8e3296
   name: Gayeong Kim
