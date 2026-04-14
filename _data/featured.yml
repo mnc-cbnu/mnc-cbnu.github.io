@@ -1,3 +1,9 @@
+- title: Precaching Scheme based on Mobility and Caching Information of Vehicles in
+    Intermittently Connected Vehicular Networks
+  authors: I Em, E Lee
+  venue: 8th International Conference on Information Communication and Signal Processing
+  year: 2025
+  page_id: 3214b9e9-a300-81e6-94b4-e68adfdfbbe2
 - title: Dynamic Relay Assignment Scheme for Efficient V2V Content Precaching in Content-Centric
     Internet of Vehicles
   authors: Jongpil Youn, Youngju Nam and Euisin Lee
@@ -10,13 +16,6 @@
   venue: Sensors 25 (13), 4078
   year: 2025
   page_id: 3214b9e9-a300-81f6-88e4-f01ea28fa4b6
-- title: Precaching Scheme based on Mobility and Caching Information of Vehicles in
-    Intermittently Connected Vehicular Networks
-  authors: I Em, E Lee
-  venue: 2025 8th International Conference on Information Communication and Signal
-    Processing
-  year: 2025
-  page_id: 3214b9e9-a300-81e6-94b4-e68adfdfbbe2
 - title: Resource cluster-based resource search and allocation scheme for vehicular
     clouds in vehicular ad hoc networks
   authors: H Choi, Y Lee, G Kim, E Lee, Y Nam
